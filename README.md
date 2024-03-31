@@ -1,7 +1,7 @@
 =======
-# NOURISH UP
+# Boys and Girls Club
 WordPress Theme
 
 * Developer: Lisa DeBona
-* Date Created: 11.15.2023
-* Date Modified: 12.12.2023
+* Date Created: 03.29.2025
+* Date Modified: 03.31.2025
