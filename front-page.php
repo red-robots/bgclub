@@ -63,8 +63,14 @@
             $bgcolor = ($n['bgcolor']) ? $n['bgcolor'] : 'transparent';
             if ($number || $description) { ?>
             <div class="block" style="background-color:<?php echo $bgcolor ?>">
-              <?php if ($number) { ?>
-                <div class="number"><?php echo $number ?></div>
+              <?php if ($number) { 
+                $number = trim($number);
+                $dataNum = str_replace('%','',$number);
+                $dataNumExtra = (strpos($number, '%') !== false) ? '%' : '';
+                ?>
+                <div class="number">
+                  <span class="count" data-number="<?php echo $dataNum ?>"><?php echo $dataNum ?></span><?php echo $dataNumExtra ?>
+                </div>
               <?php } ?>
               <?php if ($description) { ?>
                 <div class="description"><?php echo $description ?></div>
@@ -72,6 +78,51 @@
             </div>
             <?php } ?>
           <?php } ?>
+        </div>
+        <?php } ?>
+      </div>
+    </section>
+    <?php } ?>
+
+
+    <?php if( $event_title = get_field('event_title') ) { 
+      $shortcode_left = get_field('shortcode_left');
+      $shortcode_right = get_field('shortcode_right');
+    ?>
+    <section class="events-content-block">
+      <div class="wrapper">
+        <h2 class="section-title"><?php echo $event_title ?></h2>
+        <?php if ($shortcode_left || $shortcode_right) { ?>
+        <div class="flexwrap">
+          <?php if ($shortcode_left && do_shortcode($shortcode_left) ) { ?>
+          <div class="flexcol left">
+            <?php echo do_shortcode($shortcode_left); ?>
+          </div>
+          <?php } ?>
+
+          <?php if ($shortcode_right && do_shortcode($shortcode_right) ) { ?>
+          <div class="flexcol right">
+            <?php 
+              if(strpos($shortcode_right, 'show=') !== false) {
+                $shortcodeStr = explode('show=', $shortcode_right);
+                $displayNum = end($shortcodeStr);
+                $displayNum = preg_replace('/[^0-9]/', '', $displayNum);   
+              }  
+              $cal = get_field('calendar_link');
+              $cLink = ( isset($cal['url']) && $cal['url'] ) ? $cal['url'] : '';
+              $cTitle = ( isset($cal['title']) && $cal['title'] ) ? $cal['title'] : '';
+              $cTarget = ( isset($cal['target']) && $cal['target'] ) ? $cal['target'] : '_self';
+            ?>
+            <div id="gcalendarData"><?php echo do_shortcode($shortcode_right) ?></div>
+            <div id="gCalendarList" data-show="<?php echo $displayNum ?>"></div>
+            <?php if ($cLink && $cTitle) { ?>
+            <div class="buttondiv">
+              <a href="<?php echo $cLink ?>" target="<?php echo $cTarget ?>" class="button-green"><?php echo $cTitle ?></a>
+            </div> 
+            <?php } ?>
+          </div>
+          <?php } ?>
+
         </div>
         <?php } ?>
       </div>

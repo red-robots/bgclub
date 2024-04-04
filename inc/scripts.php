@@ -32,6 +32,12 @@ function bellaworks_scripts() {
   );
 
   wp_enqueue_script( 
+    'bellaworks-inview', 
+    get_template_directory_uri() . '/assets/js/vendor/jquery.inview.js', 
+    array(), '20240404', true 
+  );
+
+  wp_enqueue_script( 
     'bellaworks-custom', 
     get_template_directory_uri() . '/assets/js/custom/custom.js', 
     array(), '20230420', true 
