@@ -1433,6 +1433,23 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .events-content-block .post-item .inside .imagecol a,.events-content-block .post-item .inside .imagecol img{display:block;width:100%;float:left}
 .events-content-block .post-item .inside .imagecol img{width:100%;height:auto}
 .events-content-block .post-item .readmore{margin-top:20px}
+.site-footer{font-size:14px;line-height:1.5;color:#202020;position:relative;overflow:visible}
+.site-footer:before{content:"";display:block;width:100%;height:50%;position:absolute;top:-30%;left:0;background-image:url("assets/img/Footer_Graphic.svg");background-size:cover;background-position:top center;background-repeat:no-repeat}
+.site-footer .footer-inner{background:#c7c9cb;padding-top:80px;padding-bottom:80px;position:relative;z-index:10}
+.site-footer a{color:#202020;text-decoration:none}
+.site-footer a:hover,.site-footer a:focus{color:#006fba}
+.site-footer .footer-flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.site-footer .footer-logo{width:15%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.site-footer .footer-logo img{width:200px;height:auto}
+.site-footer .flexcol address{margin:0;font-style:normal}
+.site-footer .flexcol address a{text-decoration:underline}
+.site-footer .flexcol .mailing-address{margin-bottom:30px}
+.site-footer .footerNavigation ul>li{margin:0 0 6px}
+.site-footer .footerNavigation ul{margin:0;padding:0;list-style:none}
+.site-footer .footerNavigation ul ul{display:none}
+.site-footer .footer-social-media{margin-top:30px;margin-left:-6px;margin-right:-6px}
+.site-footer .footer-social-media a{display:inline-block;color:#5a5b5e;font-size:30px;margin:5px 6px}
+.site-footer .footer-social-media a:hover,.site-footer .footer-social-media a:focus{color:#006fba}
 @media screen and (min-width:1300px){.intro-content-block .wrapper{max-width:70vw;padding-top:15vw;padding-bottom:10vw}
 }@media screen and (min-width:1500px){.events-content-block .post-item{padding:4vw 3vw}
 .events-content-block .post-item .inside .textcol{padding-left:2vw}
