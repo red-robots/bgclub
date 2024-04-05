@@ -54,6 +54,7 @@ const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v
 
         <a href="#" id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
 
+        <div class="navOverlay"></div>
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <?php
           wp_nav_menu(

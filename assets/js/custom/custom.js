@@ -95,6 +95,17 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(document).on('click','#menu-toggle', function(e){
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('.site-header').toggleClass('nav-open');
+  });
+  $(document).on('click','.navOverlay', function(e){
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('#menu-toggle').trigger('click');
+  });
+
   function getUnique(value, index, array) {
     return array.indexOf(value) === index;
   }
