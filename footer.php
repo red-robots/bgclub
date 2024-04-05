@@ -2,7 +2,7 @@
 	<?php
 	$siteLogo = get_field('footer_logo','option');   
 	?>
-	
+	<?php get_template_part('parts/newsletter-widget'); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
     <div class="footer-inner">
   		<div class="wrapper">

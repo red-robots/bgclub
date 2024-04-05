@@ -344,7 +344,7 @@ a,input,button,textarea,select {
 .events-content-block {
   background: #EDEEEF;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   h2.section-title {
     text-align: center;
     color: #818386;
@@ -565,6 +565,115 @@ a,input,button,textarea,select {
   }
 }
 
+.newsletter-footer-widget {
+  background: $blue;
+  color: #FFF;
+  .flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .imageCol, .textCol {
+      width: 50%;
+      @media screen and (max-width: 960px) {
+        width: 100%;
+      }
+    }
+    .imageCol {
+      margin: 0 0!important;
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        @media screen and (min-width: 961px) {
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    .textCol {
+      min-height: 28em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 80px;
+      @media screen and (min-width: 1599px) {
+        min-height: 32em;
+      }
+      .inner {
+        padding: 40px 5vw;
+        @media screen and (min-width: 1599px) {
+          padding: 50px 10vw;
+        }
+      }
+      .small-title {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+      h2 {
+        margin: 0 0;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.2;
+      }
 
+      .signup-form-html {
+        margin-top: 25px;
+        position: relative;
+        ::placeholder {
+          color: #59BAE6;
+          font-size: 16px;
+        }
+        form {
+          position: relative;
+          input[type="email"],
+          input[type="text"] {
+            border: 1px solid #FFF;
+            border-radius: 0;
+            padding: 12px 70px 12px 20px;
+            font-size: 16px;
+            color: #000;
+            width: 100%;
+            height: 50px;
+            transition: all ease .3s;
+            &:focus {
+              background-color: #fff;
+              border-color: #80bdff;
+              outline: 0;
+              box-shadow: 0 0 0 0.2rem rgba(27,32,37,.25);
+            }
+          }
+          input[type="submit"], button {
+            position: absolute;
+            top: 2px;
+            right: 0;
+            width: 65px;
+            height: 47px;
+            z-index: 10;
+            border: none;
+            text-indent: -99em;
+            overflow: hidden;
+            background-color: #FFF;
+            padding: 0 0;
+            i {
+              display: inline-block;
+              position: absolute;
+              top: 11px;
+              right: 20px;
+              text-indent: 0;
+              color: #3aa0cf;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
