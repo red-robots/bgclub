@@ -1481,7 +1481,7 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .newsletter-footer-widget .flexwrap .imageCol,.newsletter-footer-widget .flexwrap .textCol{width:50%}
 .newsletter-footer-widget .flexwrap .imageCol{margin:0 0 !important;position:relative}
 .newsletter-footer-widget .flexwrap .imageCol img{width:100%;height:auto}
-.newsletter-footer-widget .flexwrap .textCol{min-height:28em;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-bottom:80px}
+.newsletter-footer-widget .flexwrap .textCol{min-height:35em;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-bottom:80px}
 .newsletter-footer-widget .flexwrap .textCol .inner{padding:40px 5vw}
 .newsletter-footer-widget .flexwrap .textCol .small-title{font-size:22px;font-weight:600;line-height:1.2}
 .newsletter-footer-widget .flexwrap .textCol h2{margin:0;font-size:36px;font-weight:600;line-height:1.2}
