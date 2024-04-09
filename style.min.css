@@ -1546,7 +1546,7 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .site-footer .footer-flexwrap .flexcol{width:100% !important;padding:10px 0;text-align:center}
 .site-footer .footer-flexwrap .flexcol.footer-logo{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-bottom:20px}
 .site-footer:before{height:120px;top:-120px}
-}@media screen and (max-width:768px){.about-intro .flexwrap .flexcol{width:50%}
+}@media screen and (max-width:768px){.about-intro .flexwrap .flexcol{width:100% !important}
 .about-intro .flexwrap figure img{position:relative;height:auto}
 }@media screen and (max-width:500px){.numbers-content .numCol .block .number{font-size:3rem}
 .numbers-content .numCol .block .description{font-size:1.1rem}

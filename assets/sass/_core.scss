@@ -606,7 +606,7 @@ a,input,button,textarea,select {
   }
   @media screen and (max-width: 768px) {
     .flexwrap .flexcol {
-      width: 50%;
+      width: 100%!important;
     }
     .flexwrap figure img {
       position: relative;
