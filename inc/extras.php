@@ -248,9 +248,11 @@ add_action('acf/input/admin_footer', 'bella_acf_input_admin_footer');
 add_shortcode( 'upcoming_events', 'upcoming_events_func' );
 function upcoming_events_func( $atts ) {
   $a = shortcode_atts( array(
+    'all' => '',
     'show' => 3,
   ), $atts );
   $perpage = (isset($a['show']) && $a['show']) ? $a['show'] : 3;
+  $show_all = (isset($a['all']) && $a['all']) ? 'show-all' : '';
   $output = '';
   ob_start();
   include( locate_template('parts/events-feeds.php') ); 

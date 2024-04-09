@@ -12,19 +12,34 @@
  * @package bellaworks
  */
 get_header(); 
+global $post;
+$slug = $post->post_name;
+$content_parts['events'] = 'content-upcoming-events';
 ?>
 
 <div id="primary" class="content-area-full generic-layout">
 	<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-      <?php if(!has_post_thumbnail()) { ?>
-      <h1 class="page-title"><span><?php the_title(); ?></span></h1>
-      <?php } ?>
+
+      <?php if ( array_key_exists($slug, $content_parts) ){ ?>
+
+        <div class="hero-section">
+          <div class="wrapper">
+            <h1><?php the_title(); ?></h1>
+          </div>
+        </div>
+        <?php get_template_part('parts/' . $content_parts[$slug] ); ?>
+        
+      <?php } else { ?>
+
+        <h1 class="page-title"><span><?php the_title(); ?></span></h1>
 			
-      <div class="entry-content">
-        <?php the_content(); ?>
-      </div>  
+        <div class="entry-content">
+          <?php the_content(); ?>
+        </div>  
+
+      <?php } ?>
 
 		<?php endwhile; ?>
 

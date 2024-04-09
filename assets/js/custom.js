@@ -139,6 +139,9 @@ jQuery(document).ready(function ($) {
       $('#gCalendarList').html('<ul class="calendarItems">' + upcomingEvents + '</ul>');
       $('#gCalendarList').addClass('animated fadeIn');
       $('.events-content-block .simcal-calendar').hide();
+    } else {
+      $('.events-content-block .flexcol.left').addClass('fullwidth');
+      $('.events-content-block .flexcol.right').hide();
     }
   }
 

@@ -4599,63 +4599,89 @@
 })(document, jQuery);
 "use strict";
 
-/**
- * author Remy Sharp
- * url http://remysharp.com/2009/01/26/element-in-view-event-plugin/
- */
-(function ($) {
-  function getViewportHeight() {
-    var height = window.innerHeight; // Safari, Opera
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
-    var mode = document.compatMode;
-
-    if (mode || !$.support.boxModel) {
-      // IE, Gecko
-      height = mode == 'CSS1Compat' ? document.documentElement.clientHeight : // Standards
-      document.body.clientHeight; // Quirks
-    }
-
-    return height;
+!function (a) {
+  "function" == typeof define && define.amd ? define(["jquery"], a) : "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) ? module.exports = a(require("jquery")) : a(jQuery);
+}(function (a) {
+  function i() {
+    var b,
+        c,
+        d = {
+      height: f.innerHeight,
+      width: f.innerWidth
+    };
+    return d.height || (b = e.compatMode, (b || !a.support.boxModel) && (c = "CSS1Compat" === b ? g : e.body, d = {
+      height: c.clientHeight,
+      width: c.clientWidth
+    })), d;
   }
 
-  $(window).scroll(function () {
-    var vpH = getViewportHeight(),
-        scrolltop = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop,
-        elems = []; // naughty, but this is how it knows which elements to check for
+  function j() {
+    return {
+      top: f.pageYOffset || g.scrollTop || e.body.scrollTop,
+      left: f.pageXOffset || g.scrollLeft || e.body.scrollLeft
+    };
+  }
 
-    $.each($.cache, function () {
-      if (this.events && this.events.inview) {
-        elems.push(this.handle.elem);
-      }
-    });
-
-    if (elems.length) {
-      $(elems).each(function () {
-        var $el = $(this),
-            top = $el.offset().top,
-            height = $el.height(),
-            inview = $el.data('inview') || false;
-
-        if (scrolltop > top + height || scrolltop + vpH < top) {
-          if (inview) {
-            $el.data('inview', false);
-            $el.trigger('inview', [false]);
-          }
-        } else if (scrolltop < top + height) {
-          if (!inview) {
-            $el.data('inview', true);
-            $el.trigger('inview', [true]);
-          }
-        }
+  function k() {
+    if (b.length) {
+      var e = 0,
+          f = a.map(b, function (a) {
+        var b = a.data.selector,
+            c = a.$element;
+        return b ? c.find(b) : c;
       });
-    }
-  }); // kick the event to pick up any elements already in view.
-  // note however, this only works if the plugin is included after the elements are bound to 'inview'
 
-  $(function () {
-    $(window).scroll();
+      for (c = c || i(), d = d || j(); e < b.length; e++) {
+        if (a.contains(g, f[e][0])) {
+          var h = a(f[e]),
+              k = {
+            height: h[0].offsetHeight,
+            width: h[0].offsetWidth
+          },
+              l = h.offset(),
+              m = h.data("inview");
+          if (!d || !c) return;
+          l.top + k.height > d.top && l.top < d.top + c.height && l.left + k.width > d.left && l.left < d.left + c.width ? m || h.data("inview", !0).trigger("inview", [!0]) : m && h.data("inview", !1).trigger("inview", [!1]);
+        }
+      }
+    }
+  }
+
+  var c,
+      d,
+      h,
+      b = [],
+      e = document,
+      f = window,
+      g = e.documentElement;
+  a.event.special.inview = {
+    add: function add(c) {
+      b.push({
+        data: c,
+        $element: a(this),
+        element: this
+      }), !h && b.length && (h = setInterval(k, 250));
+    },
+    remove: function remove(a) {
+      for (var c = 0; c < b.length; c++) {
+        var d = b[c];
+
+        if (d.element === this && d.data.guid === a.guid) {
+          b.splice(c, 1);
+          break;
+        }
+      }
+
+      b.length || (clearInterval(h), h = null);
+    }
+  }, a(f).on("scroll resize scrollstop", function () {
+    c = d = null;
+  }), !g.addEventListener && g.attachEvent && g.attachEvent("onfocusin", function () {
+    d = null;
   });
-})(jQuery);
+});
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -20112,88 +20138,3 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     window.Zepto.fn.waypoint = createExtension(window.Zepto);
   }
 })();
-"use strict";
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-!function (a) {
-  "function" == typeof define && define.amd ? define(["jquery"], a) : "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) ? module.exports = a(require("jquery")) : a(jQuery);
-}(function (a) {
-  function i() {
-    var b,
-        c,
-        d = {
-      height: f.innerHeight,
-      width: f.innerWidth
-    };
-    return d.height || (b = e.compatMode, (b || !a.support.boxModel) && (c = "CSS1Compat" === b ? g : e.body, d = {
-      height: c.clientHeight,
-      width: c.clientWidth
-    })), d;
-  }
-
-  function j() {
-    return {
-      top: f.pageYOffset || g.scrollTop || e.body.scrollTop,
-      left: f.pageXOffset || g.scrollLeft || e.body.scrollLeft
-    };
-  }
-
-  function k() {
-    if (b.length) {
-      var e = 0,
-          f = a.map(b, function (a) {
-        var b = a.data.selector,
-            c = a.$element;
-        return b ? c.find(b) : c;
-      });
-
-      for (c = c || i(), d = d || j(); e < b.length; e++) {
-        if (a.contains(g, f[e][0])) {
-          var h = a(f[e]),
-              k = {
-            height: h[0].offsetHeight,
-            width: h[0].offsetWidth
-          },
-              l = h.offset(),
-              m = h.data("inview");
-          if (!d || !c) return;
-          l.top + k.height > d.top && l.top < d.top + c.height && l.left + k.width > d.left && l.left < d.left + c.width ? m || h.data("inview", !0).trigger("inview", [!0]) : m && h.data("inview", !1).trigger("inview", [!1]);
-        }
-      }
-    }
-  }
-
-  var c,
-      d,
-      h,
-      b = [],
-      e = document,
-      f = window,
-      g = e.documentElement;
-  a.event.special.inview = {
-    add: function add(c) {
-      b.push({
-        data: c,
-        $element: a(this),
-        element: this
-      }), !h && b.length && (h = setInterval(k, 250));
-    },
-    remove: function remove(a) {
-      for (var c = 0; c < b.length; c++) {
-        var d = b[c];
-
-        if (d.element === this && d.data.guid === a.guid) {
-          b.splice(c, 1);
-          break;
-        }
-      }
-
-      b.length || (clearInterval(h), h = null);
-    }
-  }, a(f).on("scroll resize scrollstop", function () {
-    c = d = null;
-  }), !g.addEventListener && g.attachEvent && g.attachEvent("onfocusin", function () {
-    d = null;
-  });
-});

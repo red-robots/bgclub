@@ -97,12 +97,7 @@ a,input,button,textarea,select {
 }
 
 .wrapper {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
+  @include wrapper();
 }
 
 .announcement {
@@ -372,6 +367,9 @@ a,input,button,textarea,select {
         margin-top: 20px;
       }
     }
+    .flexcol.fullwidth {
+      width: 100%!important;
+    }
   }
 
   #gcalendarData {
@@ -475,6 +473,86 @@ a,input,button,textarea,select {
   }
 }
 
+.hero-section {
+  background: $green;
+  .wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 230px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  h1 {
+    display: block;
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #FFF;
+    margin: 0 0;
+  }
+}
+
+.all-upcoming-events {
+  background: #EDEEEF;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .newsfeeds-wrapper {
+    @include wrapper();
+  }
+  .news {
+    display: flex;
+    flex-wrap: wrap;
+    .post-item {
+      width: 100%;
+      padding: 20px;
+      @media screen and (min-width: 821px ) {
+        width: 50%;
+      }
+      .inside {
+        background: #FFF;
+        padding: 50px 20px;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        @media screen and (min-width: 1500px) {
+          padding: 5vw;
+        }
+        div.wrap,
+        div.readmore {
+          width: 100%;
+        }
+      }
+      figure {
+        margin: 0 0 35px;
+        text-align: center;
+        img {
+          width: 200px;
+          height: auto;
+        }
+      }
+      h2.post-title {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin: 0 0 35px;
+      }
+      .event-date {
+        margin-bottom: 35px;
+      }
+      .excerpt {
+        font-size: 0.85em;
+        line-height: 1.6;
+      }
+      .readmore {
+        margin-top: 30px;
+      }
+    }
+  }
+}
 
 .site-footer {
   font-size: 14px;

@@ -52,23 +52,23 @@ if ( $entries->have_posts() ) {
         $timings = array();
         if( $start_time = get_field('start_time', $post_id) ) {
           $stime = date('g:ia', strtotime($start_time));
-          if (strpos($stime, ':00') !== false) {
-            $stime = str_replace(':00','',$stime);
-          }
+          // if (strpos($stime, ':00') !== false) {
+          //   $stime = str_replace(':00','',$stime);
+          // }
           $timings[] = $stime;
         }
         if( $end_time = get_field('end_time', $post_id) ) {
           $etime = date('g:ia', strtotime($end_time));
-          if (strpos($etime, ':00') !== false) {
-            $etime = str_replace(':00','',$etime);
-          }
+          // if (strpos($etime, ':00') !== false) {
+          //   $etime = str_replace(':00','',$etime);
+          // }
           $timings[] = $etime;
         }
         $time_range = '';
         if($timings) {
           $time_range = implode(' - ', $timings);
           if($event_date) {
-            $event_date .= ' <b>|</b> ' . $time_range;
+            $event_date .= ' <div class="event-times">' . $time_range . '</div>';
           }
         }
 
@@ -89,7 +89,7 @@ if ( $entries->have_posts() ) {
           if($is_past_events) {
             if($stDate < $nowTime) {
               if($time_range) {
-                $event_date = date('l, F d, Y', strtotime($start_date))  . ' | ' . $time_range;
+                $event_date = date('l, F d, Y', strtotime($start_date))  . ' <div class="event-times">' . $time_range . '</div>';
               } else {
                 $event_date = date('l, F d, Y', strtotime($start_date));
               }
@@ -98,35 +98,72 @@ if ( $entries->have_posts() ) {
 
           if($stDate==$endDateStr) {
             if($time_range) {
-              $event_date = date('l, F d, Y', strtotime($start_date)) . ' | ' . $time_range;
+              $event_date = date('l, F d, Y', strtotime($start_date)) . ' <div class="event-times">' . $time_range . '</div>';
             } else {
               $event_date = date('l, F d, Y', strtotime($start_date));
             }
           }
 
+
+          // $start_time = get_field('start_time');
+          // $end_time = get_field('end_time');
+          // $event_times = array($start_time, $end_time);
+          // if( $times = array_filter($event_times) ) {
+          //   $event_times = implode(' - ', $times);
+          //   $event_date .= '<div class="event-times">'.$event_times.'</div>';
+          // }
+
         }
         ?>
         <article class="post-item event-item">
           <div class="inside">
-            <div class="textcol fxcol">
-              <div class="event-title">
-                <h2 class="post-title"><?php echo get_the_title()?></h2>
-                <?php if($event_date) { ?>
-                <div class="event-date"><?php echo $event_date?></div>
-                <?php } ?>
-              </div>
-              
-              <div class="excerpt"><?php echo $excerpt ?></div>
-              <div class="readmore"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
-            </div>
 
-            <?php if($imageUrl) { ?>
-            <figure class="imagecol fxcol">
-              <a href="<?php echo get_permalink() ?>">
-                <img src="<?php echo $imageUrl?>" alt="<?php echo $imgAlt?>" class="post-image" />
-              </a>
-            </figure>
+            <?php if ( isset($show_all) && $show_all ) { ?>
+
+              <div class="wrap">
+                <?php if($imageUrl) { ?>
+                <figure class="imagecol fxcol">
+                  <img src="<?php echo $imageUrl?>" alt="<?php echo $imgAlt?>" class="post-image" />
+                </figure>
+                <?php } ?>
+
+                <div class="textcol fxcol">
+                  <div class="event-title">
+                    <h2 class="post-title"><?php echo get_the_title()?></h2>
+                    <?php if($event_date) { ?>
+                    <div class="event-date"><?php echo $event_date?></div>
+                    <?php } ?>
+                  </div>
+                  
+                  <div class="excerpt"><?php echo $excerpt ?></div>
+                </div>
+              </div>
+
+              <div class="readmore"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
+
+            <?php } else { ?> 
+              <div class="textcol fxcol">
+                <div class="event-title">
+                  <h2 class="post-title"><?php echo get_the_title()?></h2>
+                  <?php if($event_date) { ?>
+                  <div class="event-date"><?php echo $event_date?></div>
+                  <?php } ?>
+                </div>
+                
+                <div class="excerpt"><?php echo $excerpt ?></div>
+                <div class="readmore"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
+              </div>
+
+              <?php if($imageUrl) { ?>
+              <figure class="imagecol fxcol">
+                <a href="<?php echo get_permalink() ?>">
+                  <img src="<?php echo $imageUrl?>" alt="<?php echo $imgAlt?>" class="post-image" />
+                </a>
+              </figure>
+              <?php } ?>
             <?php } ?>
+
+
           </div>
         </article>
       <?php $i++; endwhile; wp_reset_postdata(); ?>

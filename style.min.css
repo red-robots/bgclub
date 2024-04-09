@@ -1411,6 +1411,7 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .events-content-block .flexwrap .flexcol.right{width:30%;padding-left:30px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .events-content-block .flexwrap .flexcol.right #gcalendarData,.events-content-block .flexwrap .flexcol.right #gCalendarList,.events-content-block .flexwrap .flexcol.right .buttondiv{width:100%}
 .events-content-block .flexwrap .flexcol.right .buttondiv{margin-top:20px}
+.events-content-block .flexwrap .flexcol.fullwidth{width:100% !important}
 .events-content-block #gcalendarData .simcal-calendar{height:1px;min-height:1px;overflow:hidden;opacity:0}
 .events-content-block #gcalendarData .simcal-calendar p{margin:0}
 .events-content-block #gcalendarData .simcal-calendar a.post-edit-link{display:none}
@@ -1433,6 +1434,21 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .events-content-block .post-item .inside .imagecol a,.events-content-block .post-item .inside .imagecol img{display:block;width:100%;float:left}
 .events-content-block .post-item .inside .imagecol img{width:100%;height:auto}
 .events-content-block .post-item .readmore{margin-top:20px}
+.hero-section{background:#7fb02c}
+.hero-section .wrapper{padding-top:30px;padding-bottom:30px;min-height:230px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.hero-section h1{display:block;width:100%;font-size:3.5rem;font-weight:600;line-height:1.2;color:#fff;margin:0}
+.all-upcoming-events{background:#edeeef;padding-top:60px;padding-bottom:60px}
+.all-upcoming-events .newsfeeds-wrapper{max-width:1400px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px;position:relative}
+.all-upcoming-events .news{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.all-upcoming-events .news .post-item{width:100%;padding:20px}
+.all-upcoming-events .news .post-item .inside{background:#fff;padding:50px 20px;text-align:center;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:justify;align-content:space-between}
+.all-upcoming-events .news .post-item .inside div.wrap,.all-upcoming-events .news .post-item .inside div.readmore{width:100%}
+.all-upcoming-events .news .post-item figure{margin:0 0 35px;text-align:center}
+.all-upcoming-events .news .post-item figure img{width:200px;height:auto}
+.all-upcoming-events .news .post-item h2.post-title{font-size:25px;font-weight:500;line-height:1.2;margin:0 0 35px}
+.all-upcoming-events .news .post-item .event-date{margin-bottom:35px}
+.all-upcoming-events .news .post-item .excerpt{font-size:.85em;line-height:1.6}
+.all-upcoming-events .news .post-item .readmore{margin-top:30px}
 .site-footer{font-size:14px;line-height:1.5;color:#202020;position:relative;overflow:visible}
 .site-footer:before{content:"";display:block;width:100%;height:50%;position:absolute;top:-30%;left:0;background-image:url("assets/img/Footer_Graphic.svg");background-size:cover;background-position:top center;background-repeat:no-repeat}
 .site-footer .footer-inner{background:#c7c9cb;padding-top:80px;padding-bottom:80px;position:relative;z-index:10}
@@ -1470,10 +1486,12 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .newsletter-footer-widget .flexwrap .textCol .signup-form-html form input[type=email]:focus,.newsletter-footer-widget .flexwrap .textCol .signup-form-html form input[type=text]:focus{background-color:#fff;border-color:#80bdff;outline:0;-webkit-box-shadow:0 0 0 .2rem rgba(27,32,37,.25);box-shadow:0 0 0 .2rem rgba(27,32,37,.25)}
 .newsletter-footer-widget .flexwrap .textCol .signup-form-html form input[type=submit],.newsletter-footer-widget .flexwrap .textCol .signup-form-html form button{position:absolute;top:2px;right:0;width:65px;height:47px;z-index:10;border:0;text-indent:-99em;overflow:hidden;background-color:#fff;padding:0}
 .newsletter-footer-widget .flexwrap .textCol .signup-form-html form input[type=submit] i,.newsletter-footer-widget .flexwrap .textCol .signup-form-html form button i{display:inline-block;position:absolute;top:11px;right:20px;text-indent:0;color:#3aa0cf;font-size:24px}
-@media screen and (min-width:961px){.newsletter-footer-widget .flexwrap .imageCol img{height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
+@media screen and (min-width:821px){.all-upcoming-events .news .post-item{width:50%}
+}@media screen and (min-width:961px){.newsletter-footer-widget .flexwrap .imageCol img{height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
 }@media screen and (min-width:1300px){.intro-content-block .wrapper{max-width:70vw;padding-top:15vw;padding-bottom:10vw}
 }@media screen and (min-width:1500px){.events-content-block .post-item{padding:4vw 3vw}
 .events-content-block .post-item .inside .textcol{padding-left:2vw}
+.all-upcoming-events .news .post-item .inside{padding:5vw}
 }@media screen and (min-width:1599px){.newsletter-footer-widget .flexwrap .textCol{min-height:40em}
 .newsletter-footer-widget .flexwrap .textCol .inner{padding:50px 10vw}
 }@media screen and (max-width:1230px){.site-header{overflow:hidden}
