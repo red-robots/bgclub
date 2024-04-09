@@ -27,3 +27,54 @@ if($intro_image || $intro_text) { ?>
   </div>
 </section>
 <?php } ?>
+
+<?php 
+$core_title = get_field('core_title');
+$core_texts = get_field('core_text');
+$core_gallery = get_field('core_gallery');
+$core_class = ($core_texts && $core_gallery) ? 'half':'full';
+if( $core_title || $core_text ) { ?>
+<section class="about-core-section section-wide">
+  <div class="wrapper">
+    <?php if ($core_title) { ?>
+     <h2 class="title"><?php echo $core_title ?></h2> 
+    <?php } ?>
+
+    <div class="flexwrap <?php echo $core_class ?>">
+      <?php if ($core_texts) { ?>
+      <div class="textwrap">
+        <?php foreach ($core_texts as $c) { 
+          $icon = $c['icon'];
+          $title = $c['title'];
+          $text = $c['text'];
+          ?>
+          <div class="text-inner">
+            <?php if ($icon) { ?>
+            <div class="icondiv">
+              <img src="<?php echo $icon['url'] ?>" alt="">
+            </div> 
+            <?php } ?>
+
+            <?php if ($title) { ?>
+            <div class="titlediv"><?php echo $title ?></div> 
+            <?php } ?>
+
+            <?php if ($text) { ?>
+            <div class="textdiv"><?php echo $text ?></div> 
+            <?php } ?>
+          </div>
+        <?php } ?>
+      </div>
+      <?php } ?>
+
+      <?php if ($core_gallery) { ?>
+      <div class="galleries">
+        <?php foreach ($core_gallery as $g) { ?>
+          <img src="<?php echo $g['url'] ?>" alt="<?php echo $g['title'] ?>">
+        <?php } ?>
+      </div>
+      <?php } ?>
+    </div>
+  </div>
+</section>
+<?php } ?>
