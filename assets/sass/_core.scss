@@ -491,6 +491,7 @@ a,input,button,textarea,select {
     line-height: 1.2;
     color: #FFF;
     margin: 0 0;
+    text-align: center;
   }
 }
 
@@ -552,6 +553,86 @@ a,input,button,textarea,select {
       .readmore {
         margin-top: 30px;
       }
+    }
+  }
+}
+
+.section-wide {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #818386;
+  h2 {
+    color: #818386;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0;
+  }
+}
+.about-intro {
+  .flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+    .flexcol.textCol {
+      min-height: 30em;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    &.half {
+      .flexcol {
+        width: 50%;
+        &.textCol {
+          padding: 80px 30px;
+          @media screen and (min-width: 1400px) {
+            padding: 5vw 3vw;
+          }
+        }
+      }
+    }
+    figure {
+      margin: 0 0;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .flexwrap .flexcol {
+      width: 50%;
+    }
+    .flexwrap figure img {
+      position: relative;
+      height: auto;
+    }
+  }
+}
+
+.about-fullwidth {
+  background: $yellow;
+  color: #FFF;
+  .wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 2.3rem;
+    font-weight: 300;
+    line-height: 1.5;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @media screen and (min-width:1400px) {
+      padding-top: 5vw;
+      padding-bottom: 5vw;
     }
   }
 }

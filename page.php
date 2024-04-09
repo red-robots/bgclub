@@ -15,6 +15,7 @@ get_header();
 global $post;
 $slug = $post->post_name;
 $content_parts['events'] = 'content-upcoming-events';
+$content_parts['about-us'] = 'content-about-us';
 ?>
 
 <div id="primary" class="content-area-full generic-layout">
