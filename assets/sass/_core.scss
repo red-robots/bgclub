@@ -654,8 +654,18 @@ a,input,button,textarea,select {
       padding: 0 15vw;
     }
   }
+  .flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .flexwrap.full {
     @include wrapper();
+  }
+  .flexwrap .galleries {
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   .text-inner {
     text-align: center;
@@ -663,6 +673,18 @@ a,input,button,textarea,select {
     .icondiv {
       img {
         width: 50px;
+        height: auto;
+      }
+    }
+  }
+  .flexwrap.half {
+    .textwrap,
+    .galleries {
+      width: 50%;
+    }
+    .galleries {
+      img {
+        width: 100%;
         height: auto;
       }
     }
