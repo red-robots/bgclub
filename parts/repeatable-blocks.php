@@ -1,188 +1,184 @@
-<?php if( have_rows('repeatable_blocks', $post_id) ) { ?>
-  <?php $i=1; while( have_rows('repeatable_blocks',$post_id) ): the_row(); ?>
-    
-    <?php /* HERO */
-    if( get_row_layout() == 'banner' ) { 
-      $image = get_sub_field('image');
-      $small_text = get_sub_field('small_text');
-      $large_text = get_sub_field('large_text');
-      $page_title = ($large_text) ? $large_text : get_the_title($post_id); 
-      if($image) { ?>
-      <div class="repeatable-hero repeatable">
-        <?php if($small_text || $large_text) { ?>
-        <div class="heroText">
-          <div class="wrapper">
-            <?php if($small_text) { ?>
-            <div class="sm-title"><?php echo $small_text; ?></div>
-            <?php } ?>
+<?php if( have_rows('flexible_content', $post_id) ) { ?>
+  <?php $i=1; while( have_rows('flexible_content',$post_id) ): the_row(); ?>
 
-            <?php if($large_text) { ?>
-            <h1 class="big-title"><?php echo $large_text; ?></h1>
+    <?php if( get_row_layout() == 'two_column_image_and_text' ) { 
+      $title = get_sub_field('title');
+      $content = get_sub_field('textcontent');
+      $buttons = get_sub_field('buttons');
+      $bgcolor = (get_sub_field('bgcolor')) ? get_sub_field('bgcolor') : '#FFF';
+      $textcolor = (get_sub_field('textcolor')) ? get_sub_field('textcolor') : '#6F6F6F';
+      $has_paper_edge = get_sub_field('has_paper_edge');
+      $image = get_sub_field('image');
+      $image_position = get_sub_field('image_position');
+      $column_class = ( ($title || $content) && $image ) ? 'half':'full';
+      if($image_position) {
+        $column_class .=' image-' . $image_position;
+      }
+      $paper_edge = ($has_paper_edge) ? ' has-paper-edge':'';
+      if($title || $content || $image) { ?>
+      <div class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> repeatable<?php echo $paper_edge ?>">
+        <style>
+          .two_column_image_and_text--<?php echo $i ?> h2,
+          .two_column_image_and_text--<?php echo $i ?> p {color:<?php echo $textcolor ?>;}
+          <?php if ($has_paper_edge) { ?>
+            .two_column_image_and_text--<?php echo $i ?> .roughEdgePaper{fill:<?php echo $bgcolor ?>!important}
+          <?php } ?>
+        </style>
+        <?php if ($has_paper_edge) { ?>
+          <div class="paper-edge"><?php echo get_template_part('parts/paper-edge'); ?></div>
+        <?php } ?>
+        <div class="repeatable-inner" style="background-color:<?php echo $bgcolor ?>;color:<?php echo $textcolor ?>">
+          <?php if ($has_paper_edge) { ?>
+            <?php if ($title) { ?>
+            <div class="wrapper">
+              <h2 class="s-title fullwidth"><?php echo $title ?></h2>
+            </div>
+            <?php } ?>
+          <?php } ?>
+          <div class="flexwrap <?php echo $column_class ?>">
+            <?php if ( $title || $content ) { ?>
+              <div class="textcol">
+                <div class="inside">
+                  <?php if (!$has_paper_edge) { ?>
+                    <?php if ($title) { ?>
+                    <h2 class="s-title"><?php echo $title ?></h2>
+                    <?php } ?>
+                  <?php } ?>
+                  <?php if ($content) { ?>
+                  <div class="textwrap"><?php echo $content ?></div>
+                  <?php } ?>
+                </div>
+              </div>
+            <?php } ?>
+            <?php if ( $image ) { ?>
+              <div class="imagecol">
+                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
+              </div>
             <?php } ?>
           </div>
         </div>
-        <?php } ?>
-        <span class="overlay-background"></span>
-        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" class="hero-image" />
       </div>
       <?php } ?>
-    <?php } ?>
+    <?php } 
 
 
-    <?php /* INTRO */
-    if( get_row_layout() == 'intro' ) { 
-      $title = get_sub_field('title');
-      $content = get_sub_field('content');
-      if($title || $content) { ?>
-      <div class="repeatable-intro repeatable">
+    else if( get_row_layout() == 'fullwidth_content' ) {  
+      $content = get_sub_field('textcontent');
+      $bgcolor = (get_sub_field('bgcolor')) ? get_sub_field('bgcolor') : '#F8AE00';
+      $textcolor = (get_sub_field('textcolor')) ? get_sub_field('textcolor') : '#FFFFFF';
+      if($content) { ?>
+      <div class="fullwidth_content_repeatable repeatable" style="background-color:<?php echo $bgcolor ?>;color:<?php echo $textcolor ?>">
         <div class="wrapper">
-          <?php if ($title) { ?>
-          <h2><?php echo $title ?></h2>
-          <?php } ?>
-          <?php if ($content) { ?>
           <div class="textwrap"><?php echo $content ?></div>
-          <?php } ?>
         </div>
       </div>
       <?php } ?>
-    <?php } ?>
+    <?php } 
 
 
-    <?php /* 3-COLUMNS ROW */
-    if( get_row_layout() == 'multiple_columns' ) { 
-      $columns = get_sub_field('columns');
-      if( have_rows('columns') ) { ?>
-      <div class="repeatable-columns repeatable">
-        <div class="wrapper">
-          <div class="rcolumns">
-          <?php while( have_rows('columns') ) : the_row(); 
-            $icon = get_sub_field('icon');
-            $bgcolor = get_sub_field('icon_bgcolor');
-            $title = get_sub_field('title');
-            $content = get_sub_field('content');
-            $btn = get_sub_field('button');
-            $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
-            $btnName = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
-            $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
-            $styleColor = ($bgcolor) ? $bgcolor : '#81C674';
-            ?>
-            <div class="rcolumn">
+    else if( get_row_layout() == 'two_column_image_and_downloads' ) {  
+      $title = get_sub_field('title');
+      $buttons = get_sub_field('buttons');
+      $image = get_sub_field('image');
+      $image_position = get_sub_field('image_position');
+      $column_class = ( ($title || $buttons) && $image ) ? 'half':'full';
+      if($image_position) {
+        $column_class .= ' image-' . $image_position;
+      }
+      if($title || $buttons || $image) { ?>
+      <div class="two_column_image_and_downloads repeatable">
+        <div class="flexwrap <?php echo $column_class ?>">
+          <?php if ( $title || $buttons ) { ?>
+            <div class="textcol">
               <div class="inside">
-                <?php if($icon) { ?>
-                <div class="icondiv" style="background:<?php echo $styleColor?>"><span style="background-image:url('<?php echo $icon['url']?>')"></span></div>
+                <?php if ($title) { ?>
+                  <h2 class="s-title"><?php echo $title ?></h2>
                 <?php } ?>
-                <?php if($title || $content) { ?>
-                <div class="textwrap">
-                  <?php if($title) { ?>
-                  <h3 class="coltitle"><?php echo $title?></h3>
-                  <?php } ?>
-                  <div class="text"><?php echo $content?></div>
-                  <?php if($btnName && $btnLink) { ?>
-                  <div class="morelink"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div>
+                <?php if ($buttons) { ?>
+                <div class="buttons">
+                  <?php foreach ($buttons as $bt) { 
+                    if( $b = $bt['button'] ) {
+                      $btnUrl = $b['url'];
+                      $btnTitle = $b['title'];
+                      $btnTarget = ( isset($b['target']) && $b['target'] ) ? $b['target'] : '_self';
+                      ?>
+                      <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="repeatable-btn btn-round"><?php echo $btnTitle ?></a>
+                    <?php } ?>
                   <?php } ?>
                 </div>
                 <?php } ?>
               </div>
             </div>
-          <?php endwhile; ?>
+          <?php } ?>
+          <?php if ( $image ) { ?>
+            <div class="imagecol">
+              <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
+            </div>
+          <?php } ?>
+        </div>
+      </div>
+      <?php } ?>
+    <?php } 
+
+    else if( get_row_layout() == 'two_column_icons_and_gallery' ) { 
+      $title = get_sub_field('title');
+      $content_repeater = get_sub_field('content');
+      $gallery_position = get_sub_field('gallery_position');
+      $gallery = get_sub_field('gallery');
+      $column_class = ( $content_repeater && $gallery ) ? 'half':'full';
+      if($gallery_position) {
+        $column_class .= ' gallery-'.$gallery_position;
+      }
+      if( $title || $content_repeater || $gallery ) { ?>
+      <div class="two_column_icons_and_gallery repeatable">
+        <?php if ($title) { ?>
+          <div class="wrapper titlediv">
+            <h2 class="s-title"><?php echo $title ?></h2>
           </div>
+        <?php } ?>
+        <div class="flexwrap <?php echo $column_class ?>">
+          <?php if ($content_repeater) { ?>
+            <div class="textcol">
+              <div class="inside">
+              <?php foreach ($content_repeater as $c) { 
+                $c_icon = $c['icon'];
+                $c_title = $c['title'];
+                $c_text = $c['text'];
+                if($c_title || $c_text) { ?>
+                <div class="icon-text">
+                  <?php if ($c_icon) { ?>
+                   <div class="c-icon">
+                     <img src="<?php echo $c_icon['url'] ?>" alt="">
+                   </div> 
+                  <?php } ?>
+                  <?php if ($c_title) { ?>
+                   <h3 class="c-title"><?php echo $c_title ?></h3>
+                  <?php } ?>
+                  <?php if ($c_text) { ?>
+                   <div class="c-text"><?php echo $c_text ?></div>
+                  <?php } ?>
+                </div>
+                <?php } ?>
+              <?php } ?>
+              </div>
+            </div>
+          <?php } ?>
+
+          <?php if ($gallery) { $count = count($gallery); ?>
+          <div class="imagecol">
+            <div class="gallery-column galler-count-<?php echo $count ?>">
+            <?php foreach ($gallery as $g) { ?>
+              <figure>
+                <img src="<?php echo $g['url'] ?>" alt="<?php echo $g['title'] ?>" class="gallery"> 
+              </figure>
+            <?php } ?>
+            </div>
+          </div>
+          <?php } ?>
         </div>
       </div>
       <?php } ?>
     <?php } ?>
-
-
-    <?php /* FULLWIDTH BLOCK WITH IMAGE AND TEXT */
-    if( get_row_layout() == 'fullwidth_image_text' ) { 
-      $bgcolor = get_sub_field('bgcolor');
-      $bgcolor = ($bgcolor) ? $bgcolor : '#32845C';
-
-      $textcolor = get_sub_field('textcolor');
-      $textcolor = ($textcolor) ? $textcolor : '#FFFFFF';
-      $image = get_sub_field('image');
-      $image_position = get_sub_field('image_position');
-      $image_position = ($image_position) ? ' ' . $image_position : ' img_left';
-      $title = get_sub_field('title');
-      $content = get_sub_field('content');
-      $btn = get_sub_field('button'); 
-      $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
-      $btnLink = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
-      $btnName = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
-      $colClass = ($image && ($title||$content)) ? 'half':'full';
-
-      $blockWidth = get_sub_field('block_type');
-      $block_type = $blockWidth;
-      $block_type .= $image_position;
-      ?>
-      <style>
-        .repeatable-image-text-block h2,
-        .repeatable-image-text-block p,
-        .repeatable-image-text-block *,
-        .repeatable-image-text-block a {
-          color: <?php echo $textcolor?>!important;
-        }
-        .repeatable-image-text-block .item-link a {
-          color: <?php echo $textcolor?>!important;
-          border-bottom-color: <?php echo $textcolor?>!important;
-        }
-        .repeatable-image-text-block .item-link a:after {
-          border-left-color: <?php echo $textcolor?>!important;
-        }
-        .repeatable-image-text-block .item-link a:hover {
-          color:#FEBC11!important;
-          border-bottom-color:#FEBC11!important;
-        }
-        .repeatable-image-text-block .item-link a:hover:after {
-          border-left-color:#FEBC11!important;
-        }
-      </style>
-      <div class="repeatable-image-text-block repeatable block-type-<?php echo $block_type?>">
-        <?php if($blockWidth=='full') { ?>
-          <div class="wrapper">
-            <div class="inner-block" style="background-color:<?php echo $bgcolor?>">
-              <div class="flexwrap <?php echo $colClass?>">
-                <?php if($image) { ?>
-                  <figure class="imageCol">
-                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                  </figure>
-                <?php } ?>
-                <?php if($title||$content) { ?>
-                  <div class="textCol">
-                    <div class="inside">
-                      <?php if($title) { ?><h2 class="item-title"><?php echo $title?></h2><?php } ?>  
-                      <?php if($content) { ?><div class="item-text"><?php echo $content?></div><?php } ?>  
-                      <?php if($btnLink && $btnName) { ?><div class="item-link"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div><?php } ?>  
-                    </div>
-                  </div>
-                <?php } ?>
-              </div>
-            </div>
-          </div>
-        <?php } else { ?>
-          <div class="wrapper">
-            <div class="inner-block" style="background-color:<?php echo $bgcolor?>">
-              <div class="flexwrap <?php echo $colClass?>">
-                <?php if($image) { ?>
-                  <figure class="imageCol">
-                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
-                  </figure>
-                <?php } ?>
-                <?php if($title||$content) { ?>
-                  <div class="textCol">
-                    <div class="inside">
-                      <?php if($title) { ?><h2 class="item-title"><?php echo $title?></h2><?php } ?>  
-                      <?php if($content) { ?><div class="item-text"><?php echo $content?></div><?php } ?>  
-                      <?php if($btnLink && $btnName) { ?><div class="item-link"><a href="<?php echo $btnLink?>" target="<?php echo $btnTarget?>"><?php echo $btnName?></a></div><?php } ?>  
-                    </div>
-                  </div>
-                <?php } ?>
-              </div>
-            </div>
-          </div>
-        <?php } ?>
-      </div>
-    <?php } ?>
-
 
   <?php $i++; endwhile; ?>
 <?php } ?>

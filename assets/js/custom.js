@@ -82,6 +82,45 @@ jQuery(document).ready(function ($) {
   //   });
   // }
 
+  if ($('.repeatable.has-paper-edge').length) {
+    $('.repeatable.has-paper-edge').each(function () {
+      $(this).prev().addClass('adjust-padding-bottom');
+    });
+  }
+
+  $(window).on('load resize', function () {
+    verticalGalleryColumn();
+  });
+
+  function verticalGalleryColumn() {
+    if ($('.two_column_icons_and_gallery').length) {
+      $('.two_column_icons_and_gallery').each(function () {
+        if ($(this).find('.flexwrap.half').length) {
+          var iconsDivHeight = $(this).find('.textcol .inside').outerHeight() + 160;
+
+          if ($(this).find('.imagecol').length) {
+            $(this).find('.imagecol').css('height', iconsDivHeight + 'px');
+            var countImages = $(this).find('.imagecol').find('img').length;
+
+            if (countImages > 1) {
+              var imageHeight = 100 / countImages;
+              $(this).find('.imagecol').find('figure').each(function () {
+                var parent = $(this).parent();
+                parent.addClass('multiple-images');
+                $(this).css({
+                  'width': 'auto',
+                  'height': imageHeight + '%'
+                });
+              });
+            }
+
+            $(this).find('.imagecol').addClass('show');
+          }
+        }
+      });
+    }
+  }
+
   if ($('.events-content-block .simcal-events li').length) {
     var upcomingEvents = '';
     var ctr = 1;
