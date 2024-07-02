@@ -23,18 +23,18 @@ function js_custom_init() {
         'plural'    => 'Events',
         'single'    => 'Event',
         'menu_icon' => 'dashicons-calendar-alt',
-        'menu_position'=> 5,
+        'menu_position'=> 25,
         'supports'  => array('title','editor','thumbnail'),
       ),
-      // array(
-      //   'post_type' => 'upcoming-events',
-      //   'menu_name' => 'Upcoming Events',
-      //   'plural'    => 'Upcoming Events',
-      //   'single'    => 'Upcoming Event',
-      //   'menu_icon' => 'dashicons-calendar-alt',
-      //   'menu_position'=> 5,
-      //   'supports'  => array('title','editor')
-      // )
+      array(
+        'post_type' => 'board',
+        'menu_name' => 'Team',
+        'plural'    => 'Team',
+        'single'    => 'Team',
+        'menu_icon' => 'dashicons-businessman',
+        'menu_position'=> 25,
+        'supports'  => array('title','editor')
+      )
     );
     
     if($post_types) {
@@ -137,6 +137,13 @@ function build_taxonomies() {
       'plural'    => 'Activity Types',
       'single'    => 'Activity Type',
       'taxonomy'  => 'activity-type'
+    ),
+    array(
+      'post_type' => array('board'),
+      'menu_name' => 'Team Department',
+      'plural'    => 'Team Department',
+      'single'    => 'Team Department',
+      'taxonomy'  => 'team-department'
     )
   );
 
@@ -219,6 +226,14 @@ function set_custom_cpt_columns($columns) {
         unset($columns['date']);
         $columns['title'] = __( 'Title', 'bellaworks' );
         $columns['image'] = __( 'Featured Image', 'bellaworks' );
+        $columns['date'] = __( 'Date', 'bellaworks' );
+    }
+    else if($post_type=='board') {
+        unset($columns['date']);
+        unset($columns['taxonomy-team-department']);
+        $columns['title'] = __( 'Name', 'bellaworks' );
+        $columns['image'] = __( 'Photo', 'bellaworks' );
+        $columns['taxonomy-team-department'] = __( 'Department', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
     else if($post_type=='post') {

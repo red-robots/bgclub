@@ -118,6 +118,8 @@ a,input,button,textarea,select {
 }
 
 .site-header {
+  position: relative;
+  z-index: 999;
   .wrapper {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -158,11 +160,12 @@ a,input,button,textarea,select {
     list-style: none;
   }
   ul.menu-wrapper {
-    display: inline-block;
+    display: inline-flex;
   }
   ul > li {
     display: inline-block;
-    float: left;
+    position: relative;
+    padding: 6px 5px;
   }
   ul > li > a {
     display: inline-block;
@@ -172,13 +175,51 @@ a,input,button,textarea,select {
     text-transform: uppercase;
     letter-spacing: 0.085em;
     color: #818386;
-    padding: 0.3em .75em;
-    margin: .3em .3em;
+    padding: 10px 15px;
+    margin: 0 0;
   }
   ul > li:hover > a,
   ul > li > a:hover {
     color: $green;
   } 
+}
+
+.main-navigation ul > li > a {
+  position: relative;
+}
+.main-navigation ul > li ul.sub-menu {
+  display: block;
+  position: absolute;
+  width: 280px;
+  background: #FFF;
+  box-shadow: 0 5px 15px rgba(0,0,0,.15);
+  top: 50px;
+  z-index: -9999;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  border-top: 5px solid $green;
+  transform: translateY(-5px);
+  transition: all ease .3s;
+}
+.main-navigation ul > li ul.sub-menu > li {
+  width: 100%;
+  float: left;
+  padding: 0 0;
+  a {
+    display: block;
+    padding: 10px 15px;
+    &:hover, &:focus {
+      color: #FFF;
+      background: $green;
+    }
+  }
+}
+.main-navigation ul > li:hover ul {
+  height: auto;
+  opacity: 1;
+  z-index: 999;
+  transform: translateY(0);
 }
 
 .flexwap {
