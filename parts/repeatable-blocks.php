@@ -1,4 +1,6 @@
-<?php if( have_rows('flexible_content', $post_id) ) { ?>
+<?php 
+$post_id = get_the_ID();
+if( have_rows('flexible_content', $post_id) ) { ?>
   <?php $i=1; while( have_rows('flexible_content',$post_id) ): the_row(); ?>
 
     <?php if( get_row_layout() == 'two_column_image_and_text' ) { 
