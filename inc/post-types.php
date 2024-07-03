@@ -18,7 +18,7 @@ function js_custom_init() {
         'supports'  => array('title','editor','thumbnail'),
       ),
       array(
-        'post_type' => 'board',
+        'post_type' => 'team',
         'menu_name' => 'Team',
         'plural'    => 'Team',
         'single'    => 'Team',
@@ -93,13 +93,13 @@ add_action( 'init', 'build_taxonomies', 0 );
 function build_taxonomies() {
 
   $post_types = array(
-    array(
-      'post_type' => array('team','careers'),
-      'menu_name' => 'Divisions Taxonomy',
-      'plural'    => 'Divisions',
-      'single'    => 'Division',
-      'taxonomy'  => 'divisions'
-    ),
+    // array(
+    //   'post_type' => array('team','careers'),
+    //   'menu_name' => 'Divisions Taxonomy',
+    //   'plural'    => 'Divisions',
+    //   'single'    => 'Division',
+    //   'taxonomy'  => 'divisions'
+    // ),
     array(
       'post_type' => array('communities'),
       'menu_name' => 'Community Status',
@@ -130,7 +130,7 @@ function build_taxonomies() {
       'taxonomy'  => 'activity-type'
     ),
     array(
-      'post_type' => array('board'),
+      'post_type' => array('team'),
       'menu_name' => 'Team Department',
       'plural'    => 'Team Department',
       'single'    => 'Team Department',
@@ -219,7 +219,7 @@ function set_custom_cpt_columns($columns) {
         $columns['image'] = __( 'Featured Image', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
-    else if($post_type=='board') {
+    else if($post_type=='team') {
         unset($columns['date']);
         unset($columns['taxonomy-team-department']);
         $columns['title'] = __( 'Name', 'bellaworks' );
@@ -292,7 +292,7 @@ function custom_post_column( $column, $post_id ) {
             break;
         }
     }
-    else if($post_type=='board') {
+    else if($post_type=='team') {
       switch ( $column ) {
         case 'photo' :
           $img_src = get_field('photo',$post_id);

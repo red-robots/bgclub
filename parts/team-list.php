@@ -1,7 +1,7 @@
 <?php
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
 $perpage = -1;
-$post_type = "board";
+$post_type = "team";
 $taxonomy = "team-department";
 
 $term_args = array(
