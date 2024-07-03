@@ -98,6 +98,9 @@ a,input,button,textarea,select {
 
 .wrapper {
   @include wrapper();
+  @media screen and (max-width: 1280px) {
+    max-width: 100%;
+  }
 }
 
 .announcement {
@@ -1249,6 +1252,75 @@ a,input,button,textarea,select {
             }
           }
         }
+      }
+    }
+  }
+}
+
+.boxes-type-container {
+  padding: 40px 0;
+  .section-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 0 15px;
+    color: $gray;
+    @media screen and (max-width: 500px) {
+      font-size: 3rem;
+    }
+  }
+  .infogroup {
+    margin: 60px 0;
+  }
+  .team-images-block {
+    .flexwrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: -15px;
+      margin-right: -15px;
+      @media screen and (max-width: 500px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    .infobox {
+      width: 25%;
+      padding: 15px;
+      text-align: center;
+      @media screen and (max-width: 960px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 500px) {
+        width: 100%;
+      }
+      figure {
+        margin: 0 0;
+        position: relative;
+        padding-bottom: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    .name-info {
+      color: $gray;
+      padding: 15px 0;
+      .name {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+      }
+      .jobtitle {
+        font-size: 1.12rem;
       }
     }
   }

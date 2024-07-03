@@ -8,15 +8,6 @@
 add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
-      // array(
-      //   'post_type' => 'stories',
-      //   'menu_name' => 'Stories',
-      //   'plural'    => 'Stories',
-      //   'single'    => 'Story',
-      //   'menu_icon' => 'dashicons-megaphone',
-      //   'supports'  => array('title','editor','thumbnail'),
-      //   'menu_position'=> 5
-      // ),
       array(
         'post_type' => 'events',
         'menu_name' => 'Events',
@@ -232,7 +223,7 @@ function set_custom_cpt_columns($columns) {
         unset($columns['date']);
         unset($columns['taxonomy-team-department']);
         $columns['title'] = __( 'Name', 'bellaworks' );
-        $columns['image'] = __( 'Photo', 'bellaworks' );
+        $columns['photo'] = __( 'Photo', 'bellaworks' );
         $columns['taxonomy-team-department'] = __( 'Department', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
@@ -301,13 +292,18 @@ function custom_post_column( $column, $post_id ) {
             break;
         }
     }
-    else if($post_type=='post') {
+    else if($post_type=='board') {
       switch ( $column ) {
-        case 'featured' :
-          $featured = get_field('featured_story',$post_id);
-          if($featured) {
-            echo '<div title="Featured Story" class="dashicons dashicons-star-filled" style="color: #ecb618; font-size: 27px; position: relative; top: 7px;"></div>';
+        case 'photo' :
+          $img_src = get_field('photo',$post_id);
+          $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;border:1px solid #CCC;overflow:hidden;">';
+          if($img_src) {
+            $the_photo .= '<span style="display:block;width:100%;height:100%;background:url('.$img_src['url'].') top center no-repeat;background-size:cover;transform:scale(1.2)"></span>';
+          } else {
+            $the_photo .= '<i class="dashicons dashicons-format-image" style="font-size:25px;position:relative;top:13px;left: -3px;opacity:0.3;"></i>';
           }
+          $the_photo .= '</span>';
+          echo $the_photo;
           break;
       }
   }
