@@ -219,5 +219,21 @@ jQuery(document).ready(function ($) {
       }
     });
     return _toConsumableArray(new Set(uniqueElements));
-  }
+  } //CUSTOM MODAL
+
+
+  $(document).on('click', '.popupinfo', function (e) {
+    e.preventDefault();
+    var d = new Date();
+    $('.modalWrapper').addClass('show');
+    var pageinfo = $(this).attr('data-href') + '?t=' + d.getTime();
+    $('.modalContent').load(pageinfo + ' .teamInfo', function () {});
+  });
+  $(document).on('click', '.modalCloseBtn', function (e) {
+    e.preventDefault();
+    $('.modalWrapper').removeClass('show');
+    setTimeout(function () {
+      $('.modalContent').html("");
+    }, 200);
+  });
 });

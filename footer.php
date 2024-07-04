@@ -64,6 +64,13 @@
 
 </div><!-- #page -->
 
+<div class="modalWrapper">
+  <div class="modalContainer">
+    <button class="modalCloseBtn"><span class="sr">Close</span></button>
+    <div class="modalContent"></div>
+  </div>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 </html>

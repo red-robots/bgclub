@@ -1056,6 +1056,195 @@ a,input,button,textarea,select {
   }
 }
 
+body.single-team {
+  main .entry-content {
+    padding: 50px 0;
+    min-height: 25em;
+  }
+  .titlediv {
+    width: 100%;
+    text-align: center;
+    .jobtitle {
+      font-size: 1.5em;
+      color: #FFF;
+    }
+  }
+}
+
+.teamInfo {
+  .flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.half {
+    .details {
+      width: 70%;
+    }
+    .photo {
+      width: 28%;
+      figure {
+        margin: 0 0 20px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .info {
+        position: relative;
+        margin: 8px 0;
+      }
+      .info:has([class*="fa-"]) {
+        padding-left: 30px;
+        [class*="fa-"] {
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 16px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+/*=== CUSTOM MODAL ===*/
+body.modal-open {
+  overflow: hidden;
+}
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  background-color: rgba(0,0,0,.75);
+  padding: 20px 20px 50px;
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transition: all ease .3s;
+  .modalContainer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: #FFF;
+    padding: 40px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+    min-height: 300px;
+    overflow: hidden;
+    @media screen and (max-width: 500px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &.show {
+    display: flex;
+    overflow: auto;
+    .modalContainer {
+      animation-duration: 0.8s;
+      animation-fill-mode: both;
+      animation-name: zoomIn;
+    }
+  }
+  .modalCloseBtn {
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(255,255,255,.85);
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 50;
+    &:before, &:after {
+      content: "";
+      display: block;
+      width: 65%;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      left: 3px;
+      top: 12px;
+      transition: all ease .3s;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    &:hover, &:focus {
+      &:before, &:after {
+        background: $lightblue;
+      }
+    }
+    &:focus {
+      outline: 1px dotted $lightblue;
+    }
+  }
+}
+
+.modalContent {
+  .teamName {
+    display: block!important;
+    color: #303030;
+    h2 {
+      margin: 0 0;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+  .wrapper {
+    padding: 0 0;
+  }
+  .wrapper * {
+    color: #303030;
+  }
+  .photo {
+    * {
+      font-size: 0.9em;
+    }
+    a {
+      color: $blue;
+    }
+    
+  }
+  .teamInfo.half {
+    .details {
+      width: 60%;
+    }
+    .photo {
+      width: 33.33%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .teamInfo.half {
+      .details, .photo {
+        width: 100%;
+      }
+      .photo {
+        max-width: 350px;
+        width: 100%;
+        margin: 30px auto 0;
+        .info {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
 /*=== FOOTER ===*/
 .site-footer {
   font-size: 14px;
@@ -1298,7 +1487,23 @@ a,input,button,textarea,select {
       figure {
         margin: 0 0;
         position: relative;
+        overflow: hidden;
         padding-bottom: 100%;
+        position: relative;
+        &:after {
+          content:"";
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          border: 5px solid $green; 
+          transition: all ease .3s;
+          z-index: 10;
+          opacity: 0;
+        }
         img {
           width: 100%;
           height: 100%;
@@ -1307,12 +1512,34 @@ a,input,button,textarea,select {
           left: 0;
           object-fit: cover;
           object-position: center;
+          transition: all ease .3s;
+          z-index: 5;
+        }
+      }
+    }
+    .infocontent {
+      display: block;
+      text-decoration: none;
+      color: $gray;
+    }
+    a.infocontent {
+      transition: all ease .3s;
+      &:hover, &:focus {
+        figure img {
+          transform: scale(1.05);
+        }
+        figure:after {
+          opacity: 1!important;
+        }
+        .name-info {
+          color: $green;
         }
       }
     }
     .name-info {
       color: $gray;
       padding: 15px 0;
+      transition: all ease .3s;
       .name {
         font-size: 1.4rem;
         font-weight: 400;

@@ -261,3 +261,13 @@ function upcoming_events_func( $atts ) {
   return $output;
 }
 
+
+function getParentTermId($term_slug) {
+  global $wpdb;
+  $query = 'SELECT term_id FROM '.$wpdb->prefix.'terms WHERE slug="'.$term_slug.'"';
+  $result = $wpdb->get_row($query);
+  return ($result) ? $result->term_id : '';
+}
+
+
+
