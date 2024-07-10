@@ -271,3 +271,13 @@ function getParentTermId($term_slug) {
 
 
 
+function custom_get_children_terms($parent_id) {
+  global $wpdb;
+  // $query = 'SELECT terms.*, posts.* FROM '.$wpdb->prefix.'term_taxonomy term_tax, '.$wpdb->prefix.'term_relationships term_rel, '.$wpdb->prefix.'terms terms, '.$wpdb->prefix.'posts posts WHERE term_tax.parent='.$parent_id.' AND term_tax.term_id=terms.term_id AND term_rel.term_taxonomy_id=terms.term_id AND term_rel.object_id=posts.ID';
+
+  $query = 'SELECT terms.* FROM '.$wpdb->prefix.'term_taxonomy term_tax, '.$wpdb->prefix.'terms terms WHERE term_tax.parent='.$parent_id.' AND term_tax.term_id=terms.term_id AND term_tax.count>0';
+
+  $result = $wpdb->get_results($query);
+  return ($result) ? $result : '';
+}
+

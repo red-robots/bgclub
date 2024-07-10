@@ -4,18 +4,14 @@ $perpage = -1;
 $post_type = "team";
 $taxonomy = "team-department";
 
-// $term_args = array(
-//   'post_type'   => $post_type,
-//   'taxonomy'    => $taxonomy,
-//   'parent'      => 0,
-//   'hide_empty'  => true
-// );
+$term_args = array(
+  'post_type'   => $post_type,
+  'taxonomy'    => $taxonomy,
+  'parent'      => 0,
+  'hide_empty'  => true
+);
 
-// $department = get_terms( $term_args );
-
-$parent_id = 19; /* Team */
-$department = custom_get_children_terms($parent_id);
-
+$department = get_terms( $term_args );
 if($department) { ?>
 <div class="boxes-type-container">
   <div class="wrapper">
@@ -25,7 +21,6 @@ if($department) { ?>
 
         <?php  
         $term_id = $e->term_id;
-
         $args = array(
           'post_type'         => $post_type,
           'posts_per_page'    => $perpage,
@@ -34,15 +29,10 @@ if($department) { ?>
             array (
               'taxonomy' => $taxonomy,
               'field' => 'term_id',
-              'terms' => $term_id
+              'terms' => array($e->term_id)
             )
           ),
         );
-
-        // echo "<pre>";
-        // print_r($args);
-        // echo "</pre>";
-
         $entries = new WP_Query($args);
         if ( $entries->have_posts() ) {  $count = $entries->found_posts; ?>
         <div class="team-images-block count-<?php echo $count ?>">

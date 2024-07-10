@@ -1520,7 +1520,8 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 body.single-team main .entry-content{padding:50px 0;min-height:25em}
 body.single-team .titlediv{width:100%;text-align:center}
 body.single-team .titlediv .jobtitle{font-size:1.5em;color:#fff}
-.teamInfo .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+body:not(.home) .site-main{min-height:40em}
+.teamInfo .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .teamInfo.half .details{width:70%}
 .teamInfo.half .photo{width:28%}
 .teamInfo.half .photo figure{margin:0 0 20px}
@@ -1589,7 +1590,7 @@ body.modal-open{overflow:hidden}
 .boxes-type-container .infogroup{margin:60px 0}
 .boxes-type-container .team-images-block .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-15px;margin-right:-15px}
 .boxes-type-container .team-images-block .infobox{width:25%;padding:15px;text-align:center}
-.boxes-type-container .team-images-block .infobox figure{margin:0;position:relative;overflow:hidden;padding-bottom:100%;position:relative}
+.boxes-type-container .team-images-block .infobox figure{margin:0;position:relative;overflow:hidden;padding-bottom:115%;position:relative}
 .boxes-type-container .team-images-block .infobox figure:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;pointer-events:none;border:5px solid #7fb02c;-webkit-transition:all ease .3s;transition:all ease .3s;z-index:10;opacity:0}
 .boxes-type-container .team-images-block .infobox figure img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;-webkit-transition:all ease .3s;transition:all ease .3s;z-index:5}
 .boxes-type-container .team-images-block .infocontent{display:block;text-decoration:none;color:#818386}

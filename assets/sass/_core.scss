@@ -1071,11 +1071,15 @@ body.single-team {
   }
 }
 
+body:not(.home) .site-main {
+  min-height: 40em;
+}
+
 .teamInfo {
   .flexwrap {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
   }
   &.half {
@@ -1488,7 +1492,7 @@ body.modal-open {
         margin: 0 0;
         position: relative;
         overflow: hidden;
-        padding-bottom: 100%;
+        padding-bottom: 115%;
         position: relative;
         &:after {
           content:"";
