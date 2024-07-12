@@ -47,7 +47,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
                     <?php } ?>
                   <?php } ?>
                   <?php if ($content) { ?>
-                  <div class="textwrap"><?php echo $content ?></div>
+                  <div class="textwrap"><?php echo anti_email_spam($content) ?></div>
                   <?php } ?>
                 </div>
               </div>
@@ -69,9 +69,20 @@ if( have_rows('flexible_content', $post_id) ) { ?>
       $bgcolor = (get_sub_field('bgcolor')) ? get_sub_field('bgcolor') : '#F8AE00';
       $textcolor = (get_sub_field('textcolor')) ? get_sub_field('textcolor') : '#FFFFFF';
       if($content) { ?>
-      <div class="fullwidth_content_repeatable repeatable" style="background-color:<?php echo $bgcolor ?>;color:<?php echo $textcolor ?>">
+      <style>
+        #fullwidth_content_repeatable--<?php echo $i ?> h1,
+        #fullwidth_content_repeatable--<?php echo $i ?> h2,
+        #fullwidth_content_repeatable--<?php echo $i ?> h3,
+        #fullwidth_content_repeatable--<?php echo $i ?> h4,
+        #fullwidth_content_repeatable--<?php echo $i ?> h5,
+        #fullwidth_content_repeatable--<?php echo $i ?> h6,
+        #fullwidth_content_repeatable--<?php echo $i ?> p {
+          color: #FFF;
+        }
+      </style>
+      <div id="fullwidth_content_repeatable--<?php echo $i ?>" class="fullwidth_content_repeatable repeatable" style="background-color:<?php echo $bgcolor ?>;color:<?php echo $textcolor ?>">
         <div class="wrapper">
-          <div class="textwrap"><?php echo $content ?></div>
+          <div class="textwrap"><?php echo anti_email_spam($content) ?></div>
         </div>
       </div>
       <?php } ?>
@@ -157,7 +168,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
                    <h3 class="c-title"><?php echo $c_title ?></h3>
                   <?php } ?>
                   <?php if ($c_text) { ?>
-                   <div class="c-text"><?php echo $c_text ?></div>
+                   <div class="c-text"><?php echo anti_email_spam($c_text) ?></div>
                   <?php } ?>
                 </div>
                 <?php } ?>
@@ -180,6 +191,46 @@ if( have_rows('flexible_content', $post_id) ) { ?>
         </div>
       </div>
       <?php } ?>
+    <?php } 
+
+    else if( get_row_layout() == 'simple_fullwidth_content_normal' ) { 
+      $title = get_sub_field('title');
+      $content = get_sub_field('content');
+      $bgcolor = get_sub_field('bgcolor');
+      $textcolor = get_sub_field('textcolor'); ?>
+
+      <?php if($title || $content) { ?>
+        <?php if($bgcolor || $textcolor) { ?>
+        <style>
+          <?php if($bgcolor) { ?>
+            #simple_fullwidth_content_normal--<?php echo $i ?>{
+              background-color: <?php echo $bgcolor ?>;
+            }
+          <?php } ?>
+
+          <?php if($textcolor) { ?>
+          #simple_fullwidth_content_normal--<?php echo $i ?> * {
+            color: <?php echo $textcolor ?>;
+          }
+          <?php } ?>
+        </style>
+        <?php } ?>
+        <div id="simple_fullwidth_content_normal--<?php echo $i ?>" class="simple_fullwidth_content_normal repeatable">
+          <div class="wrapper">
+            <?php if ($title) { ?>
+              <div class="wrapper titlediv">
+                <h2 class="s-title"><?php echo $title ?></h2>
+              </div>
+            <?php } ?>
+            <?php if ($content) { ?>
+              <div class="wrapper textcontent">
+                <?php echo anti_email_spam($content); ?>
+              </div>
+            <?php } ?>
+          </div>
+        </div>
+      <?php } ?>
+
     <?php } ?>
 
   <?php $i++; endwhile; ?>

@@ -15,6 +15,7 @@ html, body, *, ::before, ::after  {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+p {letter-spacing: 0.03em;}
 a,input,button,textarea {
   transition: all ease .3s;
 }
@@ -759,13 +760,17 @@ a,input,button,textarea,select {
 }
 .repeatable {
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.72;
   h2 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
     letter-spacing: .01em;
     color: #818386;
   }
+  h3{font-size: 35px;}
+  h4{font-size: 30px;}
+  h5{font-size: 25px;}
+  h6{font-size: 20px;}
 }
 .two_column_image_and_text {
   position: relative;
@@ -879,6 +884,16 @@ a,input,button,textarea,select {
   }
   &.adjust-padding-bottom .wrapper {
     padding-bottom: 50px;
+  }
+}
+
+.simple_fullwidth_content_normal {
+  padding: 50px 0;
+  @media screen and (min-width: 1380px) {
+    padding: 80px 0;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 5px;
   }
 }
 
@@ -1249,7 +1264,7 @@ body.modal-open {
 }
 
 
-body.page-template-default {
+body:not(.home).page-template-default {
   .site-header {
     box-shadow: 0 -1px 18px rgba(0, 0, 0, .09);
   }
@@ -1281,6 +1296,7 @@ body.page-template-default {
 .site-footer {
   font-size: 14px;
   line-height: 1.5;
+  letter-spacing: 0.03em;
   color: #202020;
   position: relative;
   overflow: visible;
