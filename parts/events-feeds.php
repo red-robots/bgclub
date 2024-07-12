@@ -135,11 +135,11 @@ if ( $entries->have_posts() ) {
                     <?php } ?>
                   </div>
                   
-                  <div class="excerpt"><?php echo $excerpt ?></div>
+                  <div class="excerpt"><?php the_content(); ?></div>
                 </div>
               </div>
 
-              <div class="readmore"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
+              <div class="readmore" style="display:none;"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
 
             <?php } else { ?> 
               <div class="textcol fxcol">
@@ -150,8 +150,8 @@ if ( $entries->have_posts() ) {
                   <?php } ?>
                 </div>
                 
-                <div class="excerpt"><?php echo $excerpt ?></div>
-                <div class="readmore"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
+                <div class="excerpt"><?php the_content(); ?></div>
+                <div class="readmore" style="display:none;"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
               </div>
 
               <?php if($imageUrl) { ?>
