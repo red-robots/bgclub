@@ -1264,7 +1264,7 @@ body.modal-open {
 }
 
 
-body:not(.home).page-template-default {
+body.page-template-default:not(.home):not(.events) {
   .site-header {
     box-shadow: 0 -1px 18px rgba(0, 0, 0, .09);
   }
