@@ -261,6 +261,23 @@ function upcoming_events_func( $atts ) {
   return $output;
 }
 
+add_shortcode( 'past_events', 'past_events_func' );
+function past_events_func( $atts ) {
+  $a = shortcode_atts( array(
+    'all' => '',
+    'show' => 3,
+    'past'=> ''
+  ), $atts );
+  $perpage = (isset($a['show']) && $a['show']) ? $a['show'] : 3;
+  $show_all = (isset($a['all']) && $a['all']) ? 'past' : '';
+  $output = '';
+  ob_start();
+  include( locate_template('parts/events-feeds.php') ); 
+  $output = ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
+
 
 function getParentTermId($term_slug) {
   global $wpdb;

@@ -540,7 +540,7 @@ a,input,button,textarea,select {
   }
 }
 
-.all-upcoming-events {
+.all-events-list {
   background: #EDEEEF;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -600,8 +600,15 @@ a,input,button,textarea,select {
       }
     }
   }
+
+  &.past-events-events {
+    padding-top: 0!important;
+  }
 }
 
+#main:has(.past-events-events) .all-upcoming-events {
+  padding-bottom: 0!important;
+}
 .section-wide {
   font-size: 15px;
   line-height: 1.8;

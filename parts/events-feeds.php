@@ -2,23 +2,91 @@
 $paged = ( get_query_var( 'pg' ) ) ? absint( get_query_var( 'pg' ) ) : 1;
 $current_date = date('Y-m-d H:i:s', strtotime(WP_CURRENT_TIME));
 $current_time = date('H:i:s', strtotime(WP_CURRENT_TIME));
-$args = array(
-  'post_type'         => 'events',
-  'posts_per_page'    => $perpage,
-  'paged'             => $paged,
-  'post_status'       => 'publish',
-  'meta_query'        => array(
-    [
-      'key'       => 'start_date',
-      'compare'   => '>=',
-      'value'     => $current_date,
-      'type'      => 'DATE',
-    ]
-  ),
-  'meta_key'=>'start_date',
-  'orderby'=>'meta_value_num',
-  'order'=>'ASC'
-);
+
+
+
+
+if( $perpage== -1 ) {
+  
+  $args = array(
+    'post_type'         => 'events',
+    'posts_per_page'    => $perpage,
+    'post_status'       => 'publish'
+  );
+
+
+
+  if($show_all=='past') {
+
+    $args['meta_query'] = array(
+      [
+        'key'       => 'start_date',
+        'value'     => $current_date,
+        'compare'   => '<',
+        'type'      => 'DATE',
+      ]
+    );
+
+    $args['meta_key'] = 'start_date';
+    $args['orderby']  = 'meta_value_num';
+    $args['order']    = 'DESC';
+    // $args['order'] = 'ASC';
+
+  } else {
+
+    $args['meta_query'] = array(
+        [
+          'key'       => 'start_date',
+          'compare'   => '>=',
+          'value'     => $current_date,
+          'type'      => 'DATE',
+        ]
+    );
+
+    $args['meta_key'] = 'start_date';
+    $args['orderby'] = 'meta_value_num';
+    $args['order'] = 'ASC';
+
+    // $args = array(
+    //   'post_type'         => 'events',
+    //   'posts_per_page'    => $perpage,
+    //   'post_status'       => 'publish',
+    //   'meta_query'        => array(
+    //     [
+    //       'key'       => 'start_date',
+    //       'compare'   => '>=',
+    //       'value'     => $current_date,
+    //       'type'      => 'DATE',
+    //     ]
+    //   ),
+    //   'meta_key'=>'start_date',
+    //   'orderby'=>'meta_value_num',
+    //   'order'=>'ASC'
+    // );
+
+  }
+
+} else {
+
+  $args = array(
+    'post_type'         => 'events',
+    'posts_per_page'    => $perpage,
+    'paged'             => $paged,
+    'post_status'       => 'publish',
+    'meta_query'        => array(
+      [
+        'key'       => 'start_date',
+        'compare'   => '>=',
+        'value'     => $current_date,
+        'type'      => 'DATE',
+      ]
+    ),
+    'meta_key'=>'start_date',
+    'orderby'=>'meta_value_num',
+    'order'=>'ASC'
+  );
+
+}
 $entries = new WP_Query($args);
 if ( $entries->have_posts() ) {  
   $entries_total = $entries->found_posts;
