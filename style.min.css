@@ -1623,6 +1623,19 @@ body.page-template-default:not(.home):not(.events) #primary h6{font-size:.85rem}
 .boxes-type-container .team-images-block .name-info{color:#818386;padding:15px 0;-webkit-transition:all ease .3s;transition:all ease .3s}
 .boxes-type-container .team-images-block .name-info .name{font-size:1.4rem;font-weight:400;line-height:1.2;letter-spacing:.03em}
 .boxes-type-container .team-images-block .name-info .jobtitle{font-size:1.12rem}
+body.error404 .site-header{-webkit-box-shadow:0 -4px 15px rgba(0,0,0,.12);box-shadow:0 -4px 15px rgba(0,0,0,.12)}
+body.error404 #primary{padding-top:90px}
+body.error404 header.entry-title .wrapper{text-align:center}
+body.error404 header.entry-title .wrapper .small-title{font-size:1.5em;color:#a3a4a4}
+body.error404 header.entry-title .wrapper .page-title{margin:0;font-size:3.85rem}
+body.error404 .innerText{text-align:center}
+body.error404 .sitemap-links{display:inline-block;margin-top:40px}
+body.error404 .sitemap-links ul.menu{-webkit-column-count:3;-moz-column-count:3;column-count:3;-webkit-column-gap:5em;-moz-column-gap:5em;column-gap:5em;margin:0;padding:0}
+body.error404 .sitemap-links ul.menu a{text-decoration:none;color:#006fba}
+body.error404 .sitemap-links ul.menu a:hover,body.error404 .sitemap-links ul.menu a:focus{color:#7fb02c}
+body.error404 .sitemap-links ul.menu>li{list-style:none;text-align:left}
+body.error404 .sitemap-links ul.menu>li>a{font-size:18px}
+body.error404 .sitemap-links ul.menu>li ul.sub-menu a{font-size:16px}
 @media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
 }@media screen and (min-width:961px){.two_column_image_and_text .flexwrap .textcol,.two_column_image_and_text .flexwrap .imagecol{width:50%}
 .two_column_image_and_text .flexwrap .textcol{padding:50px}

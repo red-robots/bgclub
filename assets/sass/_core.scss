@@ -1637,6 +1637,57 @@ body.page-template-default:not(.home):not(.events) {
   }
 }
 
+body.error404 {
+  .site-header {
+    box-shadow: 0 -4px 15px rgba(0,0,0,.12);
+  }
+  #primary {
+    padding-top:90px;
+  }
+  header.entry-title .wrapper {
+    text-align: center;
+    .small-title {
+      font-size: 1.5em;
+      color: #a3a4a4;
+    }
+    .page-title {
+      margin: 0 0;
+      font-size: 3.85rem;
+    }
+  }
+  .innerText {
+    text-align: center;
+  }
+
+  .sitemap-links {
+    display: inline-block;
+    margin-top: 40px;
+    ul.menu {
+      column-count: 3;
+      column-gap: 5em;
+      margin: 0 0;
+      padding: 0 0;
+      a {
+        text-decoration: none;
+        color: $primary;
+        &:hover, &:focus {
+          color: $secondary;
+        }
+      }
+    }
+    ul.menu > li {
+      list-style: none;
+      text-align: left;
+    }
+    ul.menu > li > a {
+      font-size: 18px;
+    }
+    ul.menu > li  ul.sub-menu a {
+      font-size: 16px;
+    }
+  }
+}
+
 @media screen and (max-width: 1230px) {
   .site-header {
     overflow: hidden;
