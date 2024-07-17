@@ -26,10 +26,10 @@
   					$contact_info .= '<address class="mailing-address">'.$mailing_address.'</address>';
   				}
   				if($phone) {
-  					$contact_info .= '<div class="phone">Phone: <a href="tel:'.$phone.'">'.$phone.'</a></div>';
+  					$contact_info .= '<div class="phone">phone: <a href="tel:'.$phone.'">'.$phone.'</a></div>';
   				}
   				if($email) {
-  					$contact_info .= '<div class="email">Email: <a href="mailto:'.antispambot($email,1).'">'.antispambot($email).'</a></div>';
+  					$contact_info .= '<div class="email">email: <a href="mailto:'.antispambot($email,1).'">'.antispambot($email).'</a></div>';
   				}
     				
   				if($contact_info) { ?>
