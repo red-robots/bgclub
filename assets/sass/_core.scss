@@ -1658,33 +1658,32 @@ body.error404 {
   .innerText {
     text-align: center;
   }
-
-  .sitemap-links {
-    display: inline-block;
-    margin-top: 40px;
-    ul.menu {
-      column-count: 3;
-      column-gap: 5em;
-      margin: 0 0;
-      padding: 0 0;
-      a {
-        text-decoration: none;
-        color: $primary;
-        &:hover, &:focus {
-          color: $secondary;
-        }
+}
+.sitemap-links {
+  display: inline-block;
+  margin-top: 40px;
+  ul.menu {
+    column-count: 3;
+    column-gap: 5em;
+    margin: 0 0;
+    padding: 0 0;
+    a {
+      text-decoration: none;
+      color: $primary;
+      &:hover, &:focus {
+        color: $secondary;
       }
     }
-    ul.menu > li {
-      list-style: none;
-      text-align: left;
-    }
-    ul.menu > li > a {
-      font-size: 18px;
-    }
-    ul.menu > li  ul.sub-menu a {
-      font-size: 16px;
-    }
+  }
+  ul.menu > li {
+    list-style: none;
+    text-align: left;
+  }
+  ul.menu > li > a {
+    font-size: 18px;
+  }
+  ul.menu > li  ul.sub-menu a {
+    font-size: 16px;
   }
 }
 
