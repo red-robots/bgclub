@@ -187,7 +187,7 @@ if ( $entries->have_posts() ) {
             $btn = $a['button'];
             $btnName = ( isset($btn['title']) && $btn['title'] ) ? $btn['title'] : '';
             $btnLink = ( isset($btn['url']) && $btn['url'] ) ? $btn['url'] : '';
-            $btnTarget = ( isset($btn['target']) && $btn['target'] ) ? $btn['target'] : '';
+            $btnTarget = ( isset($btn['target']) && $btn['target'] ) ? $btn['target'] : '_self';
             if($btnLink && $btnName) {
               $buttons_html .= '<div class="button-block"><a href="'.$btnLink.'" target="'.$btnTarget.'" class="button-green">'.$btnName.'</a></div>';
             }
