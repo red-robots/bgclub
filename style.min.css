@@ -1608,7 +1608,7 @@ body.page-template-default:not(.home):not(.events) #primary h6{font-size:.85rem}
 .newsletter-footer-widget .flexwrap .textCol .signup-form-html form input[type=submit],.newsletter-footer-widget .flexwrap .textCol .signup-form-html form button{position:absolute;top:2px;right:0;width:65px;height:47px;z-index:10;border:0;text-indent:-99em;overflow:hidden;background-color:#fff;padding:0}
 .newsletter-footer-widget .flexwrap .textCol .signup-form-html form input[type=submit] i,.newsletter-footer-widget .flexwrap .textCol .signup-form-html form button i{display:inline-block;position:absolute;top:11px;right:20px;text-indent:0;color:#3aa0cf;font-size:24px}
 .boxes-type-container{padding:40px 0}
-.boxes-type-container .section-title{text-align:center;font-size:4rem;font-weight:300;line-height:1.2;margin:0 0 15px;color:#818386}
+.boxes-type-container .section-title{text-align:center;font-size:45px;font-weight:600;line-height:1.2;margin:0 0 15px;color:#818386}
 .boxes-type-container .infogroup{margin:60px 0}
 .boxes-type-container .team-images-block .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-15px;margin-right:-15px}
 .boxes-type-container .team-images-block .infobox{width:25%;padding:15px;text-align:center}
@@ -1646,7 +1646,7 @@ body.error404 .innerText{text-align:center}
 .two_column_image_and_text .flexwrap.half .textcol,.two_column_image_and_text .flexwrap.half .imagecol{width:50%}
 .two_column_image_and_text .flexwrap.half .textcol{padding:30px 5vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .two_column_image_and_text .flexwrap.half .textcol .inside{width:100%}
-.two_column_image_and_text .flexwrap.half .textcol .s-title{margin:0 0 20px;font-size:45px;font-weight:600;line-height:1.2}
+.two_column_image_and_text .flexwrap.half .textcol .s-title{margin:0 0 20px;font-size:40px;font-weight:600;line-height:1.2}
 .two_column_image_and_text .flexwrap.half .imagecol img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
 .fullwidth_content_repeatable .wrapper .textwrap{max-width:1000px;margin:0 auto}
 .two_column_image_and_downloads .flexwrap{min-height:600px}
