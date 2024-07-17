@@ -1458,6 +1458,8 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .all-events-list .news .post-item .excerpt{font-size:.85em;line-height:1.6}
 .all-events-list .news .post-item .readmore{margin-top:30px}
 .all-events-list.past-events-events{padding-top:0 !important}
+.all-events-list .button-group{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.all-events-list .button-group .button-block{display:inline-block;padding:10px}
 #main:has(.past-events-events) .all-upcoming-events{padding-bottom:0 !important}
 .section-wide{font-size:15px;line-height:1.8;color:#818386}
 .section-wide h2{color:#818386;font-size:2.5rem;font-weight:600;line-height:1.2;margin:0}
@@ -1696,11 +1698,14 @@ body.page-template-default:not(.home):not(.events) #primary{padding-left:6vw;pad
 .site-footer .footer-flexwrap .flexcol{width:100% !important;padding:10px 0;text-align:center}
 .site-footer .footer-flexwrap .flexcol.footer-logo{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-bottom:20px}
 .site-footer:before{height:120px;top:-120px}
-}@media screen and (max-width:768px){.about-intro .flexwrap .flexcol{width:100% !important}
+}@media screen and (max-width:768px){.all-events-list .button-group .button-block{width:100%;text-align:center}
+.about-intro .flexwrap .flexcol{width:100% !important}
 .about-intro .flexwrap figure img{position:relative;height:auto}
 .modalContent .teamInfo.half .details,.modalContent .teamInfo.half .photo{width:100%}
 .modalContent .teamInfo.half .photo{max-width:350px;width:100%;margin:30px auto 0}
 .modalContent .teamInfo.half .photo .info{text-align:center}
+}@media screen and (max-width:600px){.all-events-list .button-group .button-block{padding:5px 10px}
+.all-events-list .button-group .button-block a{display:block;width:100%}
 }@media screen and (max-width:500px){.modalWrapper .modalContainer{padding-left:20px;padding-right:20px}
 .boxes-type-container .section-title{font-size:3rem}
 .boxes-type-container .team-images-block .flexwrap{padding-left:20px;padding-right:20px}

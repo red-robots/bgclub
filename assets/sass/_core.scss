@@ -604,6 +604,27 @@ a,input,button,textarea,select {
   &.past-events-events {
     padding-top: 0!important;
   }
+
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .button-block {
+      display: inline-block;
+      padding: 10px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+      @media screen and (max-width: 600px) {
+        padding: 5px 10px;
+        a {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 #main:has(.past-events-events) .all-upcoming-events {

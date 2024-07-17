@@ -4,8 +4,6 @@ $current_date = date('Y-m-d H:i:s', strtotime(WP_CURRENT_TIME));
 $current_time = date('H:i:s', strtotime(WP_CURRENT_TIME));
 
 
-
-
 if( $perpage== -1 ) {
   
   $args = array(
@@ -13,7 +11,6 @@ if( $perpage== -1 ) {
     'posts_per_page'    => $perpage,
     'post_status'       => 'publish'
   );
-
 
 
   if($show_all=='past') {
@@ -182,6 +179,23 @@ if ( $entries->have_posts() ) {
           // }
 
         }
+
+        $cta_buttons = get_field('buttons');
+        $buttons_html = '';
+        if($cta_buttons) {
+          foreach($cta_buttons as $a) {
+            $btn = $a['button'];
+            $btnName = ( isset($btn['title']) && $btn['title'] ) ? $btn['title'] : '';
+            $btnLink = ( isset($btn['url']) && $btn['url'] ) ? $btn['url'] : '';
+            $btnTarget = ( isset($btn['target']) && $btn['target'] ) ? $btn['target'] : '';
+            if($btnLink && $btnName) {
+              $buttons_html .= '<div class="button-block"><a href="'.$btnLink.'" target="'.$btnTarget.'" class="button-green">'.$btnName.'</a></div>';
+            }
+          }
+        }
+        if($buttons_html) {
+          $buttons_html = '<div class="readmore button-group">'.$buttons_html.'</div>';
+        }
         ?>
         <article class="post-item event-item">
           <div class="inside">
@@ -207,7 +221,7 @@ if ( $entries->have_posts() ) {
                 </div>
               </div>
 
-              <div class="readmore" style="display:none;"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
+              <?php echo $buttons_html; ?>
 
             <?php } else { ?> 
               <div class="textcol fxcol">
@@ -219,7 +233,8 @@ if ( $entries->have_posts() ) {
                 </div>
                 
                 <div class="excerpt"><?php the_content(); ?></div>
-                <div class="readmore" style="display:none;"><a href="<?php echo get_permalink() ?>" class="button-green">Learn More</a></div>
+
+                <?php echo $buttons_html; ?>
               </div>
 
               <?php if($imageUrl) { ?>
