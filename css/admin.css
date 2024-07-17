@@ -174,16 +174,18 @@ body.post-type-events .acf-field[data-name="end_time"] {
   clear: none;
 }
 .acf-field.acf-field-flexible-content[data-name="flexible_content"] .acf-field-color-picker[data-name="bgcolor"],
-.acf-field.acf-field-flexible-content[data-name="flexible_content"] .acf-field-color-picker[data-name="textcolor"] {
+.acf-field.acf-field-flexible-content[data-name="flexible_content"] .acf-field-color-picker[data-name="textcolor"],
+.acf-field.acf-field-flexible-content[data-name="flexible_content"] .acf-field-color-picker[data-name="link_color"] {
   box-sizing: border-box;
   float: left;
   clear: none;
 }
-.acf-field.acf-field-flexible-content[data-name="flexible_content"] .acf-field-color-picker[data-name="bgcolor"] {
-  width: 20%;
-}
+.acf-field.acf-field-flexible-content[data-name="flexible_content"] .acf-field-color-picker[data-name="bgcolor"],
 .acf-field.acf-field-flexible-content[data-name="flexible_content"] .acf-field-color-picker[data-name="textcolor"] {
-  width: 79%;
+  width: 15%;
+}
+.acf-field.acf-field-flexible-content[data-name="flexible_content"] .acf-field-color-picker[data-name="link_color"] {
+  width: 70%;
 }
 .acf-field.acf-field-true-false[data-name="has_paper_edge"]{
   position: relative;

@@ -889,6 +889,14 @@ a,input,button,textarea,select {
       padding: 60px 0 40px;
     }
   }
+  p a {
+    display: inline-block;
+    &:hover, &:focus {
+      transform: translateY(-2px);
+      opacity: 0.82;
+      text-decoration: none;
+    }
+  }
 }
 .fullwidth_content_repeatable {
   .wrapper {

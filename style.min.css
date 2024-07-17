@@ -1499,6 +1499,8 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .two_column_image_and_text.has-paper-edge .paper-edge svg{width:100%}
 .two_column_image_and_text.has-paper-edge .repeatable-inner{overflow:hidden;position:relative}
 .two_column_image_and_text.has-paper-edge .s-title.fullwidth{width:100%;text-align:center;margin:0;padding:60px 0 40px}
+.two_column_image_and_text p a{display:inline-block}
+.two_column_image_and_text p a:hover,.two_column_image_and_text p a:focus{-webkit-transform:translateY(-2px);transform:translateY(-2px);opacity:.82;text-decoration:none}
 .fullwidth_content_repeatable .wrapper{min-height:300px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .fullwidth_content_repeatable .wrapper .textwrap{width:100%;font-size:2.2rem;font-weight:300;line-height:1.5}
 .fullwidth_content_repeatable.adjust-padding-bottom .wrapper{padding-bottom:50px}

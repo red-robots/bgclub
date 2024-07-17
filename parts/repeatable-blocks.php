@@ -9,6 +9,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
       $buttons = get_sub_field('buttons');
       $bgcolor = (get_sub_field('bgcolor')) ? get_sub_field('bgcolor') : '#FFF';
       $textcolor = (get_sub_field('textcolor')) ? get_sub_field('textcolor') : '#6F6F6F';
+      $link_color = (get_sub_field('link_color')) ? get_sub_field('link_color') : '#6F6F6F';
       $has_paper_edge = get_sub_field('has_paper_edge');
       $image = get_sub_field('image');
       $image_position = get_sub_field('image_position');
@@ -22,7 +23,10 @@ if( have_rows('flexible_content', $post_id) ) { ?>
         <style>
           .two_column_image_and_text--<?php echo $i ?> h2,
           .two_column_image_and_text--<?php echo $i ?> p {color:<?php echo $textcolor ?>;}
-          <?php if ($has_paper_edge) { ?>
+          <?php if ($link_color) { ?>
+            .two_column_image_and_text--<?php echo $i ?> .textcol a{color:<?php echo $link_color ?>;}
+          <?php } 
+            if ($has_paper_edge) { ?>
             .two_column_image_and_text--<?php echo $i ?> .roughEdgePaper{fill:<?php echo $bgcolor ?>!important}
           <?php } ?>
         </style>
