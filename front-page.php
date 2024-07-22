@@ -102,6 +102,7 @@
 
           <?php if ($shortcode_right && do_shortcode($shortcode_right) ) { ?>
           <div class="flexcol right">
+            <div id="eventCalendarList"></div>
             <?php 
               if(strpos($shortcode_right, 'show=') !== false) {
                 $shortcodeStr = explode('show=', $shortcode_right);

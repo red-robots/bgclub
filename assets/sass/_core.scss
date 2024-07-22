@@ -516,6 +516,27 @@ a,input,button,textarea,select {
       margin-top: 20px;
     }
   }
+
+  #eventCalendarList {
+    .simcal-event-details {
+      margin: 25px 0;
+    }
+    p:has(.simcal-event-title) {
+      margin: 0 0 3px;
+      font-size: 18px;
+      line-height: 1.2;
+      color: $primary;
+    }
+    p:has(.simcal-event-start) {
+      margin: 0 0;
+      font-size: 14px;
+      line-height: 1.2;
+      color: $primary;
+    }
+    .simcal-event-start {
+      font-weight: bold;
+    }
+  }
 }
 
 .hero-section {

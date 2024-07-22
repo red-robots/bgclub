@@ -1442,6 +1442,10 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .events-content-block .post-item .inside .imagecol a,.events-content-block .post-item .inside .imagecol img{display:block;width:100%;float:left}
 .events-content-block .post-item .inside .imagecol img{width:100%;height:auto}
 .events-content-block .post-item .readmore{margin-top:20px}
+.events-content-block #eventCalendarList .simcal-event-details{margin:25px 0}
+.events-content-block #eventCalendarList p:has(.simcal-event-title){margin:0 0 3px;font-size:18px;line-height:1.2;color:#006fba}
+.events-content-block #eventCalendarList p:has(.simcal-event-start){margin:0;font-size:14px;line-height:1.2;color:#006fba}
+.events-content-block #eventCalendarList .simcal-event-start{font-weight:bold}
 .hero-section{background:#7fb02c}
 .hero-section .wrapper{padding-top:30px;padding-bottom:30px;min-height:230px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .hero-section h1{display:block;width:100%;font-size:3.5rem;font-weight:600;line-height:1.2;color:#fff;margin:0;text-align:center}

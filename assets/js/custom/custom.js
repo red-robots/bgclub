@@ -68,59 +68,18 @@ jQuery(document).ready(function ($) {
   
 
   if( $('.events-content-block .simcal-events li').length ) {
-    var upcomingEvents = '';
-    var ctr = 1;
-    var maxDisplay = $('#gCalendarList').attr('data-show');
-        maxDisplay = parseInt(maxDisplay);
-    $('.events-content-block .simcal-events li').each(function(){
-      var target = $(this);
-      var date = $(this).find('.simcal-event-start-date').text().trim();
-      var parts = date.split(' ');
-      var sMonth = parts[0];
-      var sDay =  parts[1].replace(/[^0-9]/g, '');
-          sDay = parseInt(sDay);
-      var eventTitle = target.find('span.simcal-event-title').eq(0).text().trim();
-      var startDate = target.find('.simcal-event-start-date').text().trim();
-      var eventDetails = ( target.find('.simcal-event-description').length && target.find('.simcal-event-description').text().trim()  ) ? target.find('.simcal-event-description').html() : '';
-      var eventLink  = '';
-      // if( target.find('a').length ) {
-      //   target.find('a').each(function(){
-      //     if( $(this).text().trim().toLowerCase() == 'see more details' ) {
-      //       eventLink = $(this).attr('href');
-      //     }
-      //   });
-      // }
-
-      if(sMonth==monthName) {
-        if(sDay >= day) {
-          var content = $(this).html();
-          if(ctr <= maxDisplay) {
-            upcomingEvents += '<li class="event-item" data-event-date="'+date+'">';
-              if(eventLink) {
-                upcomingEvents += '<a href="'+eventLink+'" target="_blank" class="details-link">';
-              }
-              upcomingEvents += '<div class="event-title">'+eventTitle+'</div>';
-              upcomingEvents += '<div class="event-start-date">'+startDate+'</div>';
-              if(eventDetails) {
-                upcomingEvents += '<div class="event-details">'+eventDetails+'</div>';
-              }
-              if(eventLink) {
-                upcomingEvents += '</a>';
-              }
-            upcomingEvents += '</li>';
-          }
-          ctr++;
-        }        
+    var maxList = 3;
+    var eventDataList = '';
+    $('.events-content-block .simcal-events li').each(function(k){
+      var i = k+1;
+      if( i<=maxList ) {
+        eventDataList += $(this).html();
       }
     });
-    if(upcomingEvents) {
-      $('#gCalendarList').html('<ul class="calendarItems">'+upcomingEvents+'</ul>');
-      $('#gCalendarList').addClass('animated fadeIn');
-      $('.events-content-block .simcal-calendar').hide();
-    } else {
-      $('.events-content-block .flexcol.left').addClass('fullwidth');
-      $('.events-content-block .flexcol.right').hide();
-    }
+    $('#eventCalendarList').html(eventDataList);
+    $('#gcalendarData, #gCalendarList').hide();
+  } else {
+    $('.events-content-block .flexcol.right').hide();
   }
 
   $('.numbers-content').on('inview', function(event, isInView) {
