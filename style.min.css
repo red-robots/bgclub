@@ -1498,6 +1498,8 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .two_column_image_and_text .flexwrap .textcol,.two_column_image_and_text .flexwrap .imagecol{width:100%;position:relative}
 .two_column_image_and_text .flexwrap .textcol{padding:50px 30px}
 .two_column_image_and_text .flexwrap.half.image-left{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.two_column_image_and_text .flexwrap.half .imagecol{width:50%;position:relative}
+.two_column_image_and_text .flexwrap.half .imagecol img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
 .two_column_image_and_text.has-paper-edge{overflow:visible}
 .two_column_image_and_text.has-paper-edge .paper-edge{position:absolute;left:0;top:-5vw;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
 .two_column_image_and_text.has-paper-edge .paper-edge svg{width:100%}
@@ -1710,7 +1712,8 @@ body.logged-in.admin-bar .main-navigation .primary-menu-container{margin-top:45p
 .events-content-block .flexwrap .flexcol.right{padding-top:40px}
 .site-footer .footer-inner{padding-top:20px;padding-bottom:20px}
 .site-footer .footer-flexwrap .flexcol{width:50%;padding:30px 0}
-}@media screen and (max-width:960px){.two_column_icons_and_gallery .flexwrap .imagecol{height:unset !important}
+}@media screen and (max-width:960px){.two_column_image_and_text .flexwrap .imagecol{width:100% !important;padding-bottom:65%}
+.two_column_icons_and_gallery .flexwrap .imagecol{height:unset !important}
 .two_column_icons_and_gallery .flexwrap .imagecol .gallery-column figure{height:auto !important;width:100% !important;float:left}
 .two_column_icons_and_gallery .flexwrap .imagecol .gallery-column figure img{float:left}
 .newsletter-footer-widget .flexwrap .imageCol,.newsletter-footer-widget .flexwrap .textCol{width:100%}

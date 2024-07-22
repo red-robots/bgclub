@@ -849,6 +849,19 @@ a,input,button,textarea,select {
       &.image-left {
         flex-direction: row-reverse;
       }
+      .imagecol {
+        width: 50%;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
       @media screen and (min-width: 1025px) {
         min-height: 600px;
         .textcol, .imagecol {
@@ -882,6 +895,13 @@ a,input,button,textarea,select {
         }
       }
       
+    }
+
+    @media screen and (max-width: 960px) {
+      .imagecol {
+        width: 100%!important;
+        padding-bottom: 65%;
+      }
     }
   }
   &.has-paper-edge {
