@@ -149,6 +149,15 @@ jQuery(document).ready(function ($) {
     $('.events-content-block .flexcol.right').hide();
   }
 
+  if ($('ul.menu-wrapper li.menu-item-has-children').length) {
+    $('ul.menu-wrapper li.menu-item-has-children').each(function () {
+      $(this).prepend('<button class="dropdownListBtn"><span></span></button>');
+    });
+  }
+
+  $(document).on('click', 'ul.menu-wrapper .dropdownListBtn', function () {
+    $(this).parent().find('ul.sub-menu').slideToggle();
+  });
   $('.numbers-content').on('inview', function (event, isInView) {
     if (isInView) {
       $('.numbers-content .number span.count').each(function () {

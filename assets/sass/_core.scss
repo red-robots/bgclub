@@ -1708,6 +1708,9 @@ body.error404 {
   }
 }
 
+ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
+  display: none;
+}
 @media screen and (max-width: 1230px) {
   .site-header {
     overflow: hidden;
@@ -1754,13 +1757,15 @@ body.error404 {
 
     &.active {
       span.bar {
-        background: transparent;
+        background-color: transparent;
       }
       span.bar:before {
+        background-color: #FFF;
         transform: translateY(10px) rotate(45deg);
       }
       span.bar:after {
-        transform: translateY(-9px) rotate(-45deg);
+        background-color: #FFF;
+        transform: translateY(-10px) rotate(-45deg);
       }
     }
   }
@@ -1821,6 +1826,75 @@ body.error404 {
       animation-duration: 0.5s;
       animation-fill-mode: both;
       animation-name: fadeIn;
+    }
+  }
+
+  .main-navigation ul>li ul.sub-menu {
+    position: relative!important;
+    height: auto!important;
+    opacity: 1!important;
+    transform: translateY(0);
+    top: 0!important;
+    width: 100%!important;
+    border-top: none!important;
+    border-bottom: 3px solid $green;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 10px 0!important;
+    display: none;
+    transition: all ease .4s!important;
+    a {
+      color: #FFF;
+      line-height: 1.4;
+      display: block;
+      padding-left: 15px;
+    }
+  }
+  ul.menu-wrapper > li {
+    margin: 3px 0;
+  }
+  ul.menu-wrapper li.current-menu-ancestor > a,
+  ul.menu-wrapper > li > a:hover,
+  ul.menu-wrapper > li > a:focus,
+  ul.menu-wrapper > li:hover > a {
+    background: $green;
+    color: #FFF!important;
+  }
+  ul.menu-wrapper ul.sub-menu li:hover > a,
+  ul.menu-wrapper ul.sub-menu li a:hover,
+  ul.menu-wrapper ul.sub-menu li a:focus {
+    padding-left: 20px;
+  }
+  ul.menu-wrapper ul.sub-menu li.current-menu-item a {
+    color: rgba(255,255,255,.75);
+  }
+  ul.menu-wrapper li.menu-item-has-children  {
+    position: relative;
+    .dropdownListBtn {
+      appearance: none;
+      border: none;
+      box-shadow: none;
+      margin: 0 0;
+      padding: 0 0;
+      display: block;
+      width: 50px;
+      height: 35px;
+      position: absolute;
+      top: 6px;
+      right: 5px;
+      z-index: 20;
+      background-color: transparent;
+      span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #FFF;
+        border-bottom: 2px solid #FFF;
+        transform: rotate(45deg);
+        position: relative;
+        left: 20px;
+        top: -3px;
+      }
     }
   }
 }
