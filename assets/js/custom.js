@@ -122,15 +122,27 @@ jQuery(document).ready(function ($) {
   }
 
   if ($('.events-content-block .simcal-events li').length) {
-    var maxList = 3;
+    var maxList = 4;
     var eventDataList = '';
+    var eventDataArr = [];
     $('.events-content-block .simcal-events li').each(function (k) {
-      var i = k + 1;
-
-      if (i <= maxList) {
-        eventDataList += $(this).html();
-      }
+      eventDataArr.push($(this).html().trim());
     });
+
+    if (eventDataArr.length) {
+      //Remove duplicates
+      uniqueArray = eventDataArr.filter(function (item, pos, self) {
+        return self.indexOf(item) == pos;
+      });
+      $(uniqueArray).each(function (k, val) {
+        var i = k + 1;
+
+        if (i <= maxList) {
+          eventDataList += val;
+        }
+      });
+    }
+
     $('#eventCalendarList').html(eventDataList);
     $('#gcalendarData, #gCalendarList').hide();
   } else {
