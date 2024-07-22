@@ -1704,6 +1704,7 @@ ul.menu-wrapper ul.sub-menu li.current-menu-item a{color:rgba(255,255,255,.75)}
 ul.menu-wrapper li.menu-item-has-children{position:relative}
 ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;-webkit-box-shadow:none;box-shadow:none;margin:0;padding:0;display:block;width:50px;height:35px;position:absolute;top:6px;right:5px;z-index:20;background-color:transparent}
 ul.menu-wrapper li.menu-item-has-children .dropdownListBtn span{display:block;width:10px;height:10px;border-right:2px solid #fff;border-bottom:2px solid #fff;-webkit-transform:rotate(45deg);transform:rotate(45deg);position:relative;left:20px;top:-3px}
+body.logged-in.admin-bar .main-navigation .primary-menu-container{margin-top:45px}
 }@media screen and (max-width:1024px){.site-header .header-inner .site-logo img{width:215px}
 .events-content-block .flexwrap .flexcol{width:100% !important}
 .events-content-block .flexwrap .flexcol.right{padding-top:40px}

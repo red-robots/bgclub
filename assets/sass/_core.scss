@@ -1897,6 +1897,10 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
       }
     }
   }
+
+  body.logged-in.admin-bar .main-navigation .primary-menu-container {
+    margin-top: 45px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
