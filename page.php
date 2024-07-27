@@ -29,6 +29,14 @@ $content_parts['about-us'] = 'content-about-us';
             <h1><?php the_title(); ?></h1>
           </div>
         </div>
+
+        <?php if (get_the_content()) { ?>
+        <div class="intro-text">
+          <div class="wrapper">
+            <?php the_content() ?>
+          </div>
+        </div> 
+        <?php } ?>
         <?php get_template_part('parts/' . $content_parts[$slug] ); ?>
         
       <?php } else { ?>

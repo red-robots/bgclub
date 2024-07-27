@@ -1644,6 +1644,8 @@ body.error404 .innerText{text-align:center}
 .sitemap-links ul.menu>li>a{font-size:18px}
 .sitemap-links ul.menu>li ul.sub-menu a{font-size:16px}
 ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
+.site-main .intro-text .simcal-calendar{margin-top:80px;margin-bottom:80px;border:1px solid #ccc}
+.site-main .intro-text .simcal-align-right:has(.post-edit-link){margin:10px 0;padding:0 20px;display:inline-block;float:right}
 @media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
 }@media screen and (min-width:961px){.two_column_image_and_text .flexwrap .textcol,.two_column_image_and_text .flexwrap .imagecol{width:50%}
 .two_column_image_and_text .flexwrap .textcol{padding:50px}

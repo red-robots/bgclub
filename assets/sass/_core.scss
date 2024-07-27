@@ -1927,6 +1927,20 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   }
 }
 
+.site-main .intro-text {
+  .simcal-calendar {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border: 1px solid #CCC;
+  }
+  .simcal-align-right:has(.post-edit-link) {
+    margin: 10px 0;
+    padding: 0 20px;
+    display: inline-block;
+    float: right;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .site-header .header-inner .site-logo img {
     width: 215px;
