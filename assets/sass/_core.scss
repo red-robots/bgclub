@@ -739,7 +739,7 @@ a,input,button,textarea,select {
   color: #fff;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: .2em;
+  letter-spacing: .12em;
   line-height: 1.2;
   padding: 8px 30px;
   min-width: 165px;
@@ -823,6 +823,10 @@ a,input,button,textarea,select {
 }
 .two_column_image_and_text {
   position: relative;
+  .buttons {
+    display: flex;
+    gap: 1.2em;
+  }
   h2 {
     color: #FFF;
     margin-top: 0;

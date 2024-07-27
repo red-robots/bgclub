@@ -24,7 +24,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
           .two_column_image_and_text--<?php echo $i ?> h2,
           .two_column_image_and_text--<?php echo $i ?> p {color:<?php echo $textcolor ?>;}
           <?php if ($link_color) { ?>
-            .two_column_image_and_text--<?php echo $i ?> .textcol a{color:<?php echo $link_color ?>;}
+            .two_column_image_and_text--<?php echo $i ?> .textcol a:not(.repeatable-btn){color:<?php echo $link_color ?>;}
           <?php } 
             if ($has_paper_edge) { ?>
             .two_column_image_and_text--<?php echo $i ?> .roughEdgePaper{fill:<?php echo $bgcolor ?>!important}
@@ -52,6 +52,20 @@ if( have_rows('flexible_content', $post_id) ) { ?>
                   <?php } ?>
                   <?php if ($content) { ?>
                   <div class="textwrap"><?php echo anti_email_spam($content) ?></div>
+                  <?php } ?>
+
+                  <?php if ($buttons) { ?>
+                  <div class="buttons">
+                    <?php foreach ($buttons as $bt) { 
+                      if( $b = $bt['button'] ) {
+                        $btnUrl = $b['url'];
+                        $btnTitle = $b['title'];
+                        $btnTarget = ( isset($b['target']) && $b['target'] ) ? $b['target'] : '_self';
+                        ?>
+                        <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="repeatable-btn btn-round"><?php echo $btnTitle ?></a>
+                      <?php } ?>
+                    <?php } ?>
+                  </div>
                   <?php } ?>
                 </div>
               </div>
