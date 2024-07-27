@@ -20,6 +20,7 @@ get_header(); ?>
   
   <main id="main" class="site-main wrapper" role="main">
 		<?php while ( have_posts() ) : the_post(); 
+      $post_id = get_the_ID();
       $today = date('Y-m-d', strtotime(WP_CURRENT_TIME));
       $start_date = get_field('start_date', $post_id);  
       $event_date = '';

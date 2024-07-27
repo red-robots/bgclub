@@ -22,7 +22,7 @@ if ( $news->have_posts() ) {
         $content = ($content) ? strip_tags(strip_shortcodes($content))  : '';
         $excerpt = ($content) ? shortenText( $content, 600, ".", "...") : "";
         ?>
-        <article class="post-item">
+        <article class="post-item" id="post-item-<?php echo get_the_ID() ?>">
           <div class="inside">
             <div class="textcol fxcol">
               <h2 class="post-title"><?php echo get_the_title()?></h2>

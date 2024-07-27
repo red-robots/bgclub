@@ -6,7 +6,7 @@
 
 
 jQuery(document).ready(function ($) {
-
+  var params = {}; location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) { params[k] = v });
   let dateNow = new Date();
   let month = dateNow.getMonth()+1;
   let day = dateNow.getDate();
@@ -162,6 +162,33 @@ jQuery(document).ready(function ($) {
       $('.modalContent').html("");
     },200);
   });
+
+  if( typeof params.pid!="undefined" ) {
+    var pid = params.pid;
+    var selector = '#post-item-' + pid;
+    setTimeout(function(){
+      smoothScrollTo(selector);
+    },100);
+  }
+
+
+  function smoothScrollTo(selector) {
+    var target = $(selector);
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000, function() {
+        var $target = target;
+        $target.focus();
+        if ($target.is(":focus")) {
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); 
+          $target.focus();
+        };
+      });
+    }
+  }
 
 }); 
 

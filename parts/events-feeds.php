@@ -197,7 +197,7 @@ if ( $entries->have_posts() ) {
           $buttons_html = '<div class="readmore button-group">'.$buttons_html.'</div>';
         }
         ?>
-        <article class="post-item event-item">
+        <article class="post-item event-item" id="post-item-<?php echo get_the_ID() ?>">
           <div class="inside">
 
             <?php if ( isset($show_all) && $show_all ) { ?>
@@ -239,7 +239,7 @@ if ( $entries->have_posts() ) {
 
               <?php if($imageUrl) { ?>
               <figure class="imagecol fxcol">
-                <a href="<?php echo get_permalink() ?>">
+                <a href="<?php echo get_site_url() ?>/events/?pid=<?php echo get_the_ID() ?>">
                   <img src="<?php echo $imageUrl?>" alt="<?php echo $imgAlt?>" class="post-image" />
                 </a>
               </figure>
