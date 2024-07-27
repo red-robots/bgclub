@@ -42,7 +42,12 @@ function bellaworks_scripts() {
     array(), '20220202', true 
   );
 
-  
+  wp_enqueue_script( 
+    'aos', 
+    'https://unpkg.com/aos@2.3.1/dist/aos.js', 
+    array(), '2.3.1', true 
+  );
+
 
   wp_enqueue_script( 
     'bellaworks-custom', 

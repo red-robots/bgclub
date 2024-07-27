@@ -1400,8 +1400,10 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .join-the-club .flexwap .flexcol figure{margin:0;overflow:hidden;position:relative;padding-bottom:80%}
 .join-the-club .flexwap .flexcol figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;-webkit-transition:all ease .3s;transition:all ease .3s;position:absolute;left:0;bottom:0;-webkit-transform:translateY(45%);transform:translateY(45%)}
 .join-the-club .flexwap .flexcol:hover figure img{-webkit-transform:translateY(25%);transform:translateY(25%)}
-.intro-content-block{background-image:url("assets/img/intro.png");background-position:bottom left;background-repeat:no-repeat;background-size:90%}
-.intro-content-block .wrapper{width:100%;margin:0 auto;padding-top:100px;padding-bottom:100px;text-align:center;color:#818386}
+.intro-content-block{background-color:#fff;position:relative}
+.intro-content-block div.bg{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-image:url("assets/img/intro.png");background-position:bottom left;background-repeat:no-repeat;background-size:90%}
+.intro-content-block div.bg.aos-animate{-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
+.intro-content-block .wrapper{width:100%;margin:0 auto;padding-top:100px;padding-bottom:100px;text-align:center;color:#818386;position:relative;z-index:5}
 .intro-content-block .wrapper h2{margin:0}
 .intro-content-block .wrapper p{font-size:1.5rem;line-height:1.7;letter-spacing:.03em}
 .numbers-content .flexwap{-webkit-box-align:center;-ms-flex-align:center;align-items:center}

@@ -43,7 +43,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
           <?php } ?>
           <div class="flexwrap <?php echo $column_class ?>">
             <?php if ( $title || $content ) { ?>
-              <div class="textcol">
+              <div class="textcol" data-aos="fade-right">
                 <div class="inside">
                   <?php if (!$has_paper_edge) { ?>
                     <?php if ($title) { ?>
@@ -71,7 +71,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
               </div>
             <?php } ?>
             <?php if ( $image ) { ?>
-              <div class="imagecol">
+              <div class="imagecol" data-aos="fade-left">
                 <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
               </div>
             <?php } ?>
@@ -100,7 +100,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
       </style>
       <div id="fullwidth_content_repeatable--<?php echo $i ?>" class="fullwidth_content_repeatable repeatable" style="background-color:<?php echo $bgcolor ?>;color:<?php echo $textcolor ?>">
         <div class="wrapper">
-          <div class="textwrap"><?php echo anti_email_spam($content) ?></div>
+          <div class="textwrap" data-aos="fade-up"><?php echo anti_email_spam($content) ?></div>
         </div>
       </div>
       <?php } ?>
@@ -120,7 +120,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
       <div class="two_column_image_and_downloads repeatable">
         <div class="flexwrap <?php echo $column_class ?>">
           <?php if ( $title || $buttons ) { ?>
-            <div class="textcol">
+            <div class="textcol" data-aos="fade-right">
               <div class="inside">
                 <?php if ($title) { ?>
                   <h2 class="s-title"><?php echo $title ?></h2>
@@ -142,7 +142,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
             </div>
           <?php } ?>
           <?php if ( $image ) { ?>
-            <div class="imagecol">
+            <div class="imagecol" data-aos="fade-left">
               <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
             </div>
           <?php } ?>
@@ -169,7 +169,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
         <?php } ?>
         <div class="flexwrap <?php echo $column_class ?>">
           <?php if ($content_repeater) { ?>
-            <div class="textcol">
+            <div class="textcol" data-aos="fade-right">
               <div class="inside">
               <?php foreach ($content_repeater as $c) { 
                 $c_icon = $c['icon'];
@@ -196,7 +196,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
           <?php } ?>
 
           <?php if ($gallery) { $count = count($gallery); ?>
-          <div class="imagecol">
+          <div class="imagecol" data-aos="fade-left">
             <div class="gallery-column galler-count-<?php echo $count ?>">
             <?php foreach ($gallery as $g) { ?>
               <figure>
@@ -234,7 +234,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
         </style>
         <?php } ?>
         <div id="simple_fullwidth_content_normal--<?php echo $i ?>" class="simple_fullwidth_content_normal repeatable">
-          <div class="wrapper">
+          <div class="wrapper" data-aos="fade-up">
             <?php if ($title) { ?>
               <div class="wrapper titlediv">
                 <h2 class="s-title"><?php echo $title ?></h2>

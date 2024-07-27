@@ -6,6 +6,9 @@
 
 
 jQuery(document).ready(function ($) {
+
+  AOS.init();
+  
   var params = {}; location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) { params[k] = v });
   let dateNow = new Date();
   let month = dateNow.getMonth()+1;

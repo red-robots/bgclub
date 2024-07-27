@@ -38,8 +38,9 @@
 
     <?php if( $intro_content = get_field('intro_content') ) { ?>
     <section class="intro-content-block">
+      <div class="bg" data-aos="fade-up-left"></div>
       <div class="wrapper">
-        <?php echo $intro_content ?>
+        <div data-aos="zoom-in-up"><?php echo $intro_content ?></div>
       </div>
     </section>
     <?php } ?>
@@ -51,7 +52,7 @@
     <section class="numbers-content">
       <div class="flexwap">
         <?php if ($number_title ) { ?>
-        <div class="flexcol titleCol">
+        <div class="flexcol titleCol" data-aos="fade-right" data-aos-duration="1500">
           <h2><?php echo $number_title ?></h2>
         </div>
         <?php } ?>
@@ -62,7 +63,7 @@
             $description = $n['description'];
             $bgcolor = ($n['bgcolor']) ? $n['bgcolor'] : 'transparent';
             if ($number || $description) { ?>
-            <div class="block" style="background-color:<?php echo $bgcolor ?>">
+            <div class="block" data-aos="flip-up" style="background-color:<?php echo $bgcolor ?>">
               <?php if ($number) { 
                 $number = trim($number);
                 $dataNum = str_replace('%','',$number);
@@ -91,17 +92,17 @@
     ?>
     <section class="events-content-block">
       <div class="wrapper">
-        <h2 class="section-title"><?php echo $event_title ?></h2>
+        <h2 class="section-title" data-aos="fade-down" data-aos-duration="1500"><?php echo $event_title ?></h2>
         <?php if ($shortcode_left || $shortcode_right) { ?>
         <div class="flexwrap">
           <?php if ($shortcode_left && do_shortcode($shortcode_left) ) { ?>
-          <div class="flexcol left">
+          <div class="flexcol left" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="800">
             <?php echo do_shortcode($shortcode_left); ?>
           </div>
           <?php } ?>
 
           <?php if ($shortcode_right && do_shortcode($shortcode_right) ) { ?>
-          <div class="flexcol right">
+          <div class="flexcol right" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
             <div id="eventCalendarList"></div>
             <?php 
               if(strpos($shortcode_right, 'show=') !== false) {

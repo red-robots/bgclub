@@ -59,6 +59,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  *  Date Modified: 04.04.2024
  */
 jQuery(document).ready(function ($) {
+  AOS.init();
   var params = {};
   location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) {
     params[k] = v;
