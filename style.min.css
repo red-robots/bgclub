@@ -1393,13 +1393,12 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .join-the-club .flexwap{margin-left:-10px;margin-right:-10px}
 .join-the-club .flexwap .flexcol{width:50%;padding:0 10px;text-align:center}
 .join-the-club .flexwap .flexcol .inner{position:relative}
-.join-the-club .flexwap .flexcol .caption{padding:20px;position:absolute;top:0;left:0;width:100%;z-index:10;padding-top:10%}
+.join-the-club .flexwap .flexcol .caption{padding:7% 20px 20px;position:relative;top:0;left:0;width:100%;z-index:10}
 .join-the-club .flexwap .flexcol .caption .title{font-size:3rem;font-weight:800;line-height:1.3;letter-spacing:-0.03em;color:#fff}
 .join-the-club .flexwap .flexcol .caption .btn{display:inline-block;text-decoration:none;padding:10px 20px;border-radius:100px;-webkit-box-shadow:5px 8px 4px rgba(0,0,0,.2);box-shadow:5px 8px 4px rgba(0,0,0,.2);text-transform:uppercase;letter-spacing:.2em;color:#fff;border:1px solid #fff;font-size:16px;font-weight:800;line-height:1.2;min-width:220px;text-align:center;margin-top:20px}
 .join-the-club .flexwap .flexcol .caption .btn:hover,.join-the-club .flexwap .flexcol .caption .btn:focus{background:#3b3e37 !important}
 .join-the-club .flexwap .flexcol figure{margin:0;overflow:hidden;position:relative;padding-bottom:80%}
-.join-the-club .flexwap .flexcol figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;-webkit-transition:all ease .3s;transition:all ease .3s;position:absolute;left:0;bottom:0;-webkit-transform:translateY(45%);transform:translateY(45%)}
-.join-the-club .flexwap .flexcol:hover figure img{-webkit-transform:translateY(25%);transform:translateY(25%)}
+.join-the-club .flexwap .flexcol figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;-webkit-transition:all ease .3s;transition:all ease .3s;position:absolute;left:0;bottom:0}
 .intro-content-block{background-color:#fff;position:relative}
 .intro-content-block div.bg{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-image:url("assets/img/intro.png");background-position:bottom left;background-repeat:no-repeat;background-size:90%}
 .intro-content-block div.bg.aos-animate{-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:fadeInUp;animation-name:fadeInUp}

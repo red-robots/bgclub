@@ -243,13 +243,13 @@ a,input,button,textarea,select {
         position: relative;
       }
       .caption {
-        padding: 20px;
-        position: absolute;
+        padding: 7% 20px 20px;
+        // position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 10;
-        padding-top: 10%;
         .title {
           font-size: 3rem;
           font-weight: 800;
@@ -292,15 +292,15 @@ a,input,button,textarea,select {
           position: absolute;
           left: 0;
           bottom: 0;
-          transform: translateY(45%);
+          // transform: translateY(45%);
         }
       }
 
-      &:hover {
-        figure img {
-          transform: translateY(25%);
-        }
-      }
+      // &:hover {
+      //   figure img {
+      //     transform: translateY(25%);
+      //   }
+      // }
     }
   }
 }
