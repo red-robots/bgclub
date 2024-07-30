@@ -6,7 +6,7 @@
     <?php if( $clubs = get_field('clubs') ) { ?>
     <section class="join-the-club">
       <div class="flexwap">
-        <?php foreach ($clubs as $c) { 
+        <?php $j=1; foreach ($clubs as $c) { 
           $title = $c['title'];
           $btn = $c['button'];
           $image = $c['image'];
@@ -14,8 +14,9 @@
           $btnTitle = (isset($btn['title']) && $btn['title']) ? $btn['title'] : '';
           $btnUrl = (isset($btn['url']) && $btn['url']) ? $btn['url'] : '';
           $btnTarget = (isset($btn['target']) && $btn['target']) ? $btn['target'] : '_self';
+          $animate = ($j==2) ? 'fade-left':'fade-right';
           if($title) { ?>
-          <div class="flexcol">
+          <div class="flexcol" data-aos="<?php echo $animate ?>">
             <div class="inner" style="background-color:<?php echo $bgcolor ?>">
               <div class="caption">
                 <div class="title"><?php echo $title ?></div>
@@ -30,7 +31,7 @@
               </figure>
             </div>
           </div>
-          <?php } ?>
+          <?php $j++; } ?>
         <?php } ?>
       </div>
     </section>
