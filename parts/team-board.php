@@ -45,6 +45,8 @@ if($department) { ?>
           'post_type'         => $post_type,
           'posts_per_page'    => $perpage,
           'post_status'       => 'publish',
+          'orderby'           => 'menu_order',
+          'order'             => 'ASC',
           'tax_query' => array(
             array (
               'taxonomy' => $taxonomy,
