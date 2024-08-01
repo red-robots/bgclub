@@ -1679,6 +1679,7 @@ body.page-template-default:not(.home):not(.events) #primary{padding-left:6vw;pad
 }@media screen and (min-width:1599px){.newsletter-footer-widget .flexwrap .textCol{min-height:40em}
 .newsletter-footer-widget .flexwrap .textCol .inner{padding:50px 10vw}
 }@media screen and (min-width:1600px){.about-core-section h2.title{padding:0 15vw}
+}@media screen and (min-width:2000px){.two_column_image_and_text .flexwrap .imagecol img{position:relative !important;width:100% !important;height:auto !important}
 }@media screen and (max-width:1280px){.wrapper{max-width:100%}
 }@media screen and (max-width:1230px){.site-header{overflow:hidden}
 .site-header .wrapper{position:relative}

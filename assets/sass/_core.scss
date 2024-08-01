@@ -960,6 +960,18 @@ a,input,button,textarea,select {
       text-decoration: none;
     }
   }
+
+  @media screen and (min-width:2000px) {
+    .flexwrap {
+      .imagecol {
+        img {
+          position: relative!important;
+          width: 100%!important;
+          height: auto!important;
+        }
+      }
+    }
+  }
 }
 .fullwidth_content_repeatable {
   .wrapper {
