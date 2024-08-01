@@ -68,7 +68,7 @@ if($department) { ?>
               $name = get_the_title();
             ?>
             <div class="infobox">
-              <a href="javascript:void(0)" data-href="<?php echo get_permalink(); ?>" class="infocontent infolink popupinfo">
+              <a href="javascript:void(0)" data-href="<?php echo get_permalink(); ?>" class="infocontent infolink popupinfo" data-aos="zoom-out-up">
                 <?php if ($photo) { ?>
                 <figure>
                   <img src="<?php echo $photo['url'] ?>" alt="<?php echo $photo['alt'] ?>" />

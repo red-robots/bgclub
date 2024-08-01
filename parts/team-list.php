@@ -59,7 +59,7 @@ if($department) { ?>
             <div class="infobox">
               <div class="infocontent">
                 <?php if ($photo) { ?>
-                <figure>
+                <figure data-aos="zoom-out" data-aos-duration="600">
                   <img src="<?php echo $photo['url'] ?>" alt="<?php echo $photo['alt'] ?>" />
                 </figure>  
                 <?php } ?>
