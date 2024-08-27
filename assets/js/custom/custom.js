@@ -137,6 +137,8 @@ jQuery(document).ready(function ($) {
   //   } 
   // });
 
+  
+
   $(document).on('click','#menu-toggle', function(e){
     e.preventDefault();
     $(this).toggleClass('active');

@@ -162,35 +162,35 @@ jQuery(document).ready(function ($) {
 
   $(document).on('click', 'ul.menu-wrapper .dropdownListBtn', function () {
     $(this).parent().find('ul.sub-menu').slideToggle();
-  });
-  $('.numbers-content').on('inview', function (event, isInView) {
-    if (isInView) {
-      // $('.numbers-content .number span.count').each(function(){
-      //   $(this).rCounter({
-      //     'duration':50
-      //   });
-      // });
-      $('.numbers-content .number span.count').each(function () {
-        var $this = $(this);
-        var actualNumber = $this.attr('data-number').trim();
-        var number = actualNumber.replace(/\D/g, '');
-        jQuery({
-          Counter: 0
-        }).animate({
-          Counter: number
-        }, {
-          duration: 1000,
-          easing: 'swing',
-          step: function step() {
-            $this.text(Math.ceil(this.Counter));
-          },
-          complete: function complete() {
-            $this.text(actualNumber);
-          }
-        });
-      });
-    }
-  });
+  }); // $('.numbers-content').on('inview', function(event, isInView) {
+  //   if (isInView) {
+  //     // $('.numbers-content .number span.count').each(function(){
+  //     //   $(this).rCounter({
+  //     //     'duration':50
+  //     //   });
+  //     // });
+  //     $('.numbers-content .number span.count').each(function () {
+  //       var $this = $(this);
+  //       var actualNumber = $this.attr('data-number').trim();
+  //       var number = actualNumber.replace(/\D/g,'');
+  //       jQuery({
+  //           Counter: 0
+  //       }).animate({
+  //           Counter: number
+  //       }, {
+  //           duration: 1000,
+  //           easing: 'swing',
+  //           step: function () {
+  //               $this.text(Math.ceil(this.Counter));
+  //           },
+  //           complete: function() {
+  //             $this.text(actualNumber);
+  //           }
+  //       });
+  //     });
+  //   } 
+  // });
+
   $(document).on('click', '#menu-toggle', function (e) {
     e.preventDefault();
     $(this).toggleClass('active');
