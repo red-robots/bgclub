@@ -1,13 +1,17 @@
 <?php
 /**
- * Template Name: Team
+ * Template Name: News
  */
 
-get_header(); ?>
+get_header(); 
+global $post;
+$slug = $post->post_name;
+?>
 
 <div id="primary" class="content-area-full team-page-template">
   <main id="main" class="site-main wrapper-small" role="main">
-    <?php while ( have_posts() ) : the_post(); ?>
+
+		<?php while ( have_posts() ) : the_post(); ?>
       <div class="hero-section">
         <div class="wrapper">
           <h1><?php the_title(); ?></h1>
@@ -18,10 +22,10 @@ get_header(); ?>
       <?php } ?>
     <?php endwhile; ?>
 
-    <?php get_template_part('parts/team-list'); ?>
+		<?php include( locate_template('parts/news-listing.php') ); ?>
 
-  </main>
-</div>
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
 get_footer();

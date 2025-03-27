@@ -18,6 +18,10 @@ $posttypes_exceptions = ["tribe_event_series"];
 get_header(); 
 ?>
 
+<?php if ($postType=='post') { ?>
+<?php get_template_part( 'parts/content', 'news' ); ?>
+<?php } else { ?>
+
 <div id="primary" class="content-area-full content-default page-default-template post-type-<?php echo $postType ?> <?php echo $has_banner ?>">
   
   <main id="main" class="site-main wrapper" role="main">
@@ -50,10 +54,7 @@ get_header();
         <?php } ?>
       </div>
 
-
-
 		<?php endwhile; ?>
-
 	</main><!-- #main -->
 
   <?php if($postType=='post' || $postType=='stories') { ?>
@@ -62,6 +63,8 @@ get_header();
   </aside>
   <?php } ?>			
 </div><!-- #primary -->
+
+<?php } ?>  
 
 <?php
 get_footer();

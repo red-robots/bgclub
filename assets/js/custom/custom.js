@@ -137,6 +137,45 @@ jQuery(document).ready(function ($) {
   //   } 
   // });
 
+  var s=2;
+  $(document).on("click","#sbloadmore",function(e){
+    e.preventDefault();
+    var target = $(this);
+    var maxpageNum = $(this).data("maxpagenum");
+    var currentPage = $(this).data("nextpage");
+    var end = s+1;
+    var currentURL = window.location.href;
+    if(s<=maxpageNum) {
+      var baseURL = '';
+      if( $("#pagination a.page-numbers").length > 0 ) {
+        $("#pagination a.page-numbers").each(function(k){
+          if(k==0) {
+            var link = $(this).attr("href");
+            var parts = link.split("pg=");
+            baseURL = parts[0];
+          }
+        });
+      }
+      if(baseURL) {
+        var new_base_url = baseURL + 'pg=' + s;
+        $.get(new_base_url,function(data){
+          var output = $.parseHTML(data);
+          var items = $(data).find(".recent-posts").html();
+          $(".recent-posts").append(items);
+          $("#widget-articles").addClass('addedNewItems');
+          var container = $('#recentPosts'),
+              scrollTo = $('.morediv');
+          container.animate({
+              scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+          });
+        });
+      }
+    }
+    if(end>maxpageNum) {
+      $(".morediv").html('<span class="end">No more posts to load.</span>');
+    }
+    s++;
+  });
   
 
   $(document).on('click','#menu-toggle', function(e){
