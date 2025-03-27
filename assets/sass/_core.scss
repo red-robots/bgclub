@@ -2221,7 +2221,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     @include tab {
       width: 70%;
       margin-bottom: 0;
-      padding-right: 7%;
+      padding-right: 5%;
     }
     li {
       margin-bottom: 0.8em;
@@ -2265,7 +2265,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
       font-family: $font_secondary;
       font-size: 13px;
       font-weight: 500;
-      color: $secondary;
+      color: $textcolor;
       margin-bottom: 5px
     }
   }
@@ -2449,7 +2449,8 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
 
   }
 }
-
+.morediv.endpage,
+.morediv.endpage div { display: none!important; }
 
 @media screen and (max-width: 1024px) {
   .site-header .header-inner .site-logo img {

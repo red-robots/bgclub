@@ -1702,7 +1702,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 #content .site-main.single-post .post-header{width:100%;margin-bottom:25px}
 #content .site-main.single-post .post-header h2{font-family:"Manrope",sans-serif;font-size:1.5rem;font-weight:500;line-height:1.3;color:#006fba;text-transform:none;margin:0;position:relative}
 #content .site-main.single-post .post-header h2:after{content:"";display:block;width:8%;height:2px;background:#7fb02c;margin:20px 0 0}
-#content .site-main.single-post .post-header .post-date{font-family:"Jost",sans-serif;font-size:13px;font-weight:500;color:#7fb02c;margin-bottom:5px}
+#content .site-main.single-post .post-header .post-date{font-family:"Jost",sans-serif;font-size:13px;font-weight:500;color:#6f6f6f;margin-bottom:5px}
 #content .site-main.single-post .entry-content p{font-family:"Manrope",sans-serif}
 #content .site-main.single-post #sidebar{width:100%;float:left;font-family:"Jost",sans-serif;font-size:13px;border-top:2px solid #7fb02c;padding-top:30px}
 #content .site-main.single-post #sidebar .widget .inside{padding-left:0}
@@ -1732,10 +1732,11 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .breadcrumb a#nextpost:before{-webkit-transform:translateY(1px) rotate(45deg);transform:translateY(1px) rotate(45deg)}
 .breadcrumb a#nextpost:after{-webkit-transform:translateY(5px) rotate(-45deg);transform:translateY(5px) rotate(-45deg)}
 .breadcrumb a#nextpost:hover:before,.breadcrumb a#nextpost:hover:after{margin-right:-3px}
+.morediv.endpage,.morediv.endpage div{display:none !important}
 @media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
 }@media(min-width:880px){.news-results .fcol{width:50%;padding:20px 20px}
 #content .site-main.single-post{padding-top:60px;padding-bottom:60px}
-#content .site-main.single-post .hentry{width:70%;margin-bottom:0;padding-right:7%}
+#content .site-main.single-post .hentry{width:70%;margin-bottom:0;padding-right:5%}
 #content .site-main.single-post #sidebar{width:30%;border-top:0;padding-top:0;border-left:1px solid #7fb02c}
 #content .site-main.single-post #sidebar .widget .inside{padding-left:10%}
 #content .site-main.single-post #sidebar .wtitle{text-align:left}

@@ -46,7 +46,7 @@ $prev_id = ( isset($lists[$currentIndex-1]) && $lists[$currentIndex-1] ) ? $list
 			<?php } ?>
 
 			<header class="post-header">
-				<div class="post-date"><?php echo get_the_date('m/d/Y') ?></div>
+				<div class="post-date">Posted on: <?php echo get_the_date('m/d/Y') ?></div>
 				<h2><?php the_title(); ?></h2>
 			</header>
 
