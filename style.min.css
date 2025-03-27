@@ -1704,7 +1704,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 #content .site-main.single-post .post-header h2:after{content:"";display:block;width:8%;height:2px;background:#7fb02c;margin:20px 0 0}
 #content .site-main.single-post .post-header .post-date{font-family:"Jost",sans-serif;font-size:13px;font-weight:500;color:#6f6f6f;margin-bottom:5px}
 #content .site-main.single-post .entry-content p{font-family:"Manrope",sans-serif}
-#content .site-main.single-post #sidebar{width:100%;float:left;font-family:"Jost",sans-serif;font-size:13px;border-top:2px solid #7fb02c;padding-top:30px}
+#content .site-main.single-post #sidebar{display:none;width:100%;float:left;font-family:"Jost",sans-serif;font-size:13px;border-top:2px solid #7fb02c;padding-top:30px}
 #content .site-main.single-post #sidebar .widget .inside{padding-left:0}
 #content .site-main.single-post #sidebar .wtitle{margin:0 0 20px;font-family:"Jost",sans-serif;font-size:1em;font-weight:500;line-height:1.2;letter-spacing:1px;text-transform:uppercase;color:#7fb02c;position:relative;text-align:center}
 #content .site-main.single-post #sidebar .wtitle span{display:inline-block;position:relative}
@@ -1720,6 +1720,8 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 #content .site-main.single-post #sidebar .morediv a{display:block;font-size:16px;font-weight:500;line-height:1.2;color:#006fba;-webkit-transition:all ease .3s;transition:all ease .3s}
 #content .site-main.single-post #sidebar .morediv a:hover,#content .site-main.single-post #sidebar .morediv a:focus{color:#7fb02c}
 #content .site-main.single-post #sidebar .morediv .end{margin-top:-10px;display:block;color:#ccc}
+#content .site-main.single-post .hentry{width:100%}
+#content .site-main.single-post:has(.recent-posts) #sidebar{display:block}
 .breadcrumb{color:#7fb02c;margin-top:8px;padding-left:15px}
 .breadcrumb span{display:inline-block;padding:0 6px;line-height:1}
 .breadcrumb a{display:inline-block;text-decoration:none;position:relative;font-family:"Manrope",sans-serif;font-weight:500;font-style:italic}
@@ -1736,12 +1738,14 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 @media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
 }@media(min-width:880px){.news-results .fcol{width:50%;padding:20px 20px}
 #content .site-main.single-post{padding-top:60px;padding-bottom:60px}
-#content .site-main.single-post .hentry{width:70%;margin-bottom:0;padding-right:5%}
-#content .site-main.single-post #sidebar{width:30%;border-top:0;padding-top:0;border-left:1px solid #7fb02c}
+#content .site-main.single-post .hentry{margin-bottom:0}
+#content .site-main.single-post #sidebar{border-top:0;padding-top:0;border-left:1px solid #7fb02c}
 #content .site-main.single-post #sidebar .widget .inside{padding-left:10%}
 #content .site-main.single-post #sidebar .wtitle{text-align:left}
 #content .site-main.single-post #sidebar .wtitle span:after{margin:12px 0 0}
 #content .site-main.single-post #sidebar .morediv{padding-left:10%}
+#content .site-main.single-post:has(.recent-posts) .hentry{width:70%;margin-bottom:0;padding-right:5%}
+#content .site-main.single-post:has(.recent-posts) #sidebar{width:30%}
 }@media screen and (min-width:961px){.two_column_image_and_text .flexwrap .textcol,.two_column_image_and_text .flexwrap .imagecol{width:50%}
 .two_column_image_and_text .flexwrap .textcol{padding:50px}
 .fullwidth_content_repeatable .wrapper{min-height:500px}

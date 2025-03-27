@@ -2219,9 +2219,8 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     margin-bottom: 30px;
     color: $textcolor;
     @include tab {
-      width: 70%;
       margin-bottom: 0;
-      padding-right: 5%;
+      // padding-right: 5%;
     }
     li {
       margin-bottom: 0.8em;
@@ -2275,6 +2274,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   }
 
   #sidebar {
+    display: none;
     width: 100%;
     float: left;
     font-family: $font_secondary;
@@ -2282,7 +2282,6 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     border-top: 2px solid $secondary;
     padding-top: 30px;
     @include tab {
-      width: 30%;
       border-top: none;
       padding-top: 0;
       border-left: 1px solid $secondary;
@@ -2386,7 +2385,27 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
       
   }
 
+  .hentry {
+    width: 100%;
+  }
 }
+
+#content .site-main.single-post:has(.recent-posts) {
+  .hentry {
+    @include tab {
+      width: 70%;
+      margin-bottom: 0;
+      padding-right: 5%;
+    }
+  }
+  #sidebar {
+    display: block;
+    @include tab {
+      width: 30%;
+    }
+  }
+}
+
 .breadcrumb {
   color: $secondary;
   margin-top: 8px;
