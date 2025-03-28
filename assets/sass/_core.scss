@@ -2386,12 +2386,15 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   }
 
   .hentry {
+    max-width: 1000px;
     width: 100%;
+    margin: 0 auto;
   }
 }
 
 #content .site-main.single-post:has(.recent-posts) {
   .hentry {
+    margin: 0 0;
     @include tab {
       width: 70%;
       margin-bottom: 0;
