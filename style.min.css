@@ -1512,6 +1512,19 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .fullwidth_content_repeatable .wrapper{min-height:300px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .fullwidth_content_repeatable .wrapper .textwrap{width:100%;font-size:2.2rem;font-weight:300;line-height:1.5}
 .fullwidth_content_repeatable.adjust-padding-bottom .wrapper{padding-bottom:50px}
+.repeatable--donors_content{padding:50px 0 20px}
+.repeatable--donors_content .repeatable-inner{max-width:1200px;width:100%;margin:0 auto;color:#6f6f6f}
+.repeatable--donors_content .wrapper{max-width:100%}
+.repeatable--donors_content h2.s-title{font-size:clamp(2.15rem,8vw,38px);font-weight:600;line-height:1.2;margin:0;padding-top:65px;color:#707070;border-top:1px solid #707070}
+.repeatable--donors_content .gallery-column{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;gap:1em;padding-top:30px;padding-bottom:0}
+.repeatable--donors_content .gallery-column figure{margin:0;width:calc(20% - 1em);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.repeatable--donors_content .gallery-column figure img{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s}
+.repeatable--donors_content .gallery-column figure a.image-anchor-link{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s}
+.repeatable--donors_content .gallery-column figure a.image-anchor-link:hover,.repeatable--donors_content .gallery-column figure a.image-anchor-link:focus{-webkit-transform:translateY(-4px);transform:translateY(-4px)}
+.repeatable--donors_content .gallery-column figure a.image-anchor-link:focus{outline:1px dotted #94d1dd}
+.repeatable--donors_content .gallery-column figure img{width:auto;height:100px}
+.repeatable--donors_content.repeatable--donors_content-1 h2.s-title{padding-top:0;margin-top:0;border-top:0}
+.repeatable--donors_content.last{padding-bottom:80px}
 .simple_fullwidth_content_normal{padding:50px 0}
 .simple_fullwidth_content_normal h1,.simple_fullwidth_content_normal h2,.simple_fullwidth_content_normal h3,.simple_fullwidth_content_normal h4,.simple_fullwidth_content_normal h5,.simple_fullwidth_content_normal h6{margin:0 0 5px}
 .two_column_image_and_downloads{background:#e0e1e3}
@@ -1783,6 +1796,7 @@ body.page-template-default:not(.home):not(.events) #primary{padding-left:6vw;pad
 }@media screen and (min-width:1600px){.about-core-section h2.title{padding:0 15vw}
 }@media screen and (min-width:2000px){.two_column_image_and_text .flexwrap .imagecol img{position:relative !important;width:100% !important;height:auto !important}
 }@media screen and (max-width:1280px){.wrapper{max-width:100%}
+.repeatable--donors_content .gallery-column figure{width:calc(33.333% - 1em)}
 }@media screen and (max-width:1230px){.site-header{overflow:hidden}
 .site-header .wrapper{position:relative}
 .menu-toggle{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:50px;height:50px;position:absolute;top:50%;right:30px;-webkit-transform:translateY(-50%);transform:translateY(-50%);z-index:9999}
@@ -1841,6 +1855,7 @@ body.logged-in.admin-bar .main-navigation .primary-menu-container{margin-top:45p
 }@media screen and (max-width:768px){.all-events-list .button-group .button-block{width:100%;text-align:center}
 .about-intro .flexwrap .flexcol{width:100% !important}
 .about-intro .flexwrap figure img{position:relative;height:auto}
+.repeatable--donors_content .gallery-column figure{width:calc(50% - 1em)}
 .modalContent .teamInfo.half .details,.modalContent .teamInfo.half .photo{width:100%}
 .modalContent .teamInfo.half .photo{max-width:350px;width:100%;margin:30px auto 0}
 .modalContent .teamInfo.half .photo .info{text-align:center}
@@ -1852,6 +1867,7 @@ body.logged-in.admin-bar .main-navigation .primary-menu-container{margin-top:45p
 .boxes-type-container .team-images-block .infobox{width:100%}
 .numbers-content .numCol .block .number{font-size:3rem}
 .numbers-content .numCol .block .description{font-size:1.1rem}
+}@media screen and (max-width:480px){.repeatable--donors_content .gallery-column figure img{width:35vw;height:auto}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
 100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}

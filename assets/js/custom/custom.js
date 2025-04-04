@@ -39,6 +39,11 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  if( $('.repeatable--donors_content').length ) {
+    $('.repeatable--donors_content').eq(0).addClass('first');
+    $('.repeatable--donors_content').last().addClass('last');
+  }
+
   $(window).on('load resize', function(){
     verticalGalleryColumn();
   });
