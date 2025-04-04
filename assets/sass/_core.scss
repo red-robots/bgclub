@@ -114,6 +114,19 @@ a,input,button,textarea,select {
   .announcementText {
     text-align: center;
     letter-spacing: 0.05em;
+    a {
+      display: inline-block;
+      color: #035167;
+      text-decoration: underline;
+      transition: all ease .2s;
+      &:hover, &:focus {
+        color: #b7f9fe;
+      }
+      &:focus {
+        outline: 1px dotted #035167;
+        text-decoration: none!important;
+      }
+    }
   }
 }
 

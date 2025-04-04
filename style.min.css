@@ -1369,6 +1369,9 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .announcement{background:#59bae6;color:#fff}
 .announcement .wrapper{padding-top:15px;padding-bottom:15px}
 .announcement .announcementText{text-align:center;letter-spacing:.05em}
+.announcement .announcementText a{display:inline-block;color:#035167;text-decoration:underline;-webkit-transition:all ease .2s;transition:all ease .2s}
+.announcement .announcementText a:hover,.announcement .announcementText a:focus{color:#b7f9fe}
+.announcement .announcementText a:focus{outline:1px dotted #035167;text-decoration:none !important}
 .menu-toggle{display:none}
 .site-header{position:relative;z-index:999}
 .site-header .wrapper{padding-top:15px;padding-bottom:15px}
