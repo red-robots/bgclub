@@ -71,7 +71,34 @@ jQuery(document).ready(function ($) {
   var monthName = dateNow.toLocaleString('default', {
     month: 'long'
   });
-  var currentDate = monthName + ' ' + day + ', ' + year; // if( $('.events-content-block .simcal-day-label').length ) {
+  var currentDate = monthName + ' ' + day + ', ' + year;
+  scrolling_screen();
+  $(window).on('scroll', function () {
+    scrolling_screen();
+  });
+
+  function scrolling_screen() {
+    var adminBarHeight = 0;
+    var announcementHeight = 0;
+    var headerHeight = $('.site-header').height();
+
+    if ($('body').hasClass('admin-bar')) {
+      if ($('.announcement.show').length) {
+        adminBarHeight = $('#wpadminbar').height();
+        announcementHeight = $('.announcement.show').height();
+      }
+    }
+
+    var totalHeight = adminBarHeight + announcementHeight + headerHeight;
+
+    if ($(window).scrollTop() > 200) {
+      $('body').addClass('scrolling');
+      $('.site-header').css('margin-top', adminBarHeight + 'px');
+    } else {
+      $('body').removeClass('scrolling');
+      $('.site-header').removeAttr('style');
+    }
+  } // if( $('.events-content-block .simcal-day-label').length ) {
   //   $('.events-content-block .simcal-day-label .simcal-date-format').each(function(){
   //     var parent = $(this).parents('dt.simcal-day-label');
   //     var date = $(this).text().trim();
@@ -86,6 +113,7 @@ jQuery(document).ready(function ($) {
   //     }
   //   });
   // }
+
 
   if ($('.repeatable.has-paper-edge').length) {
     $('.repeatable.has-paper-edge').each(function () {
