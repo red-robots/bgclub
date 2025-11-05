@@ -1660,6 +1660,10 @@ body.error404 .innerText{text-align:center}
 .sitemap-links ul.menu>li{list-style:none;text-align:left}
 .sitemap-links ul.menu>li>a{font-size:18px}
 .sitemap-links ul.menu>li ul.sub-menu a{font-size:16px}
+.donate-btn{display:none;position:absolute;z-index:5}
+.donate-btn a{background-color:#f8ad00;border-radius:50px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;letter-spacing:.1em;line-height:1.1;color:#fff;min-width:125px;text-transform:uppercase;padding:10px 25px;text-decoration:none}
+.donate-btn a *{-webkit-transition:all ease .3s;transition:all ease .3s}
+.donate-btn a:hover{background-color:#7fb02c}
 ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .site-main .intro-text .simcal-calendar{margin-top:80px;margin-bottom:80px;border:1px solid #ccc}
 .site-main .intro-text .simcal-align-right:has(.post-edit-link){margin:10px 0;padding:0 20px;display:inline-block;float:right}
@@ -1752,7 +1756,8 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .breadcrumb a#nextpost:after{-webkit-transform:translateY(5px) rotate(-45deg);transform:translateY(5px) rotate(-45deg)}
 .breadcrumb a#nextpost:hover:before,.breadcrumb a#nextpost:hover:after{margin-right:-3px}
 .morediv.endpage,.morediv.endpage div{display:none !important}
-@media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
+@media(min-width:768px){.donate-btn{display:inline-block;top:22px;right:98px}
+}@media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
 }@media(min-width:880px){.news-results .fcol{width:50%;padding:20px 20px}
 #content .site-main.single-post{padding-top:60px;padding-bottom:60px}
 #content .site-main.single-post .hentry{margin-bottom:0}
@@ -1768,7 +1773,8 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .fullwidth_content_repeatable .wrapper{min-height:500px}
 .two_column_icons_and_gallery .flexwrap.half .textcol,.two_column_icons_and_gallery .flexwrap.half .imagecol{width:50%}
 .newsletter-footer-widget .flexwrap .imageCol img{height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
-}@media(min-width:980px){.news-section-wrapper{padding-top:80px;padding-bottom:100px}
+}@media(min-width:980px){.donate-btn{top:29px}
+.news-section-wrapper{padding-top:80px;padding-bottom:100px}
 .news-results .flexwrap{margin-left:-20px;margin-right:-20px}
 .news-results .fcol{padding:30px 20px;width:33.33%}
 }@media screen and (min-width:1025px){.two_column_image_and_text .flexwrap.half{min-height:600px}
@@ -1786,9 +1792,13 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .two_column_image_and_downloads .flexwrap.half .imagecol{width:60%}
 .two_column_icons_and_gallery .flexwrap .textcol .inside{padding:0 5vw}
 .two_column_icons_and_gallery .flexwrap .imagecol .gallery-column.multiple-images figure img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
+}@media screen and (min-width:1230px){.main-navigation ul>li{padding:6px 0}
+.main-navigation.has-donate-btn{margin-right:135px}
+.donate-btn{right:20px}
 }@media screen and (min-width:1300px){.intro-content-block .wrapper{max-width:70vw;padding-top:15vw;padding-bottom:10vw}
 }@media screen and (min-width:1380px){.simple_fullwidth_content_normal{padding:80px 0}
-}@media screen and (min-width:1400px){.about-intro .flexwrap.half .flexcol.textCol{padding:5vw 3vw}
+}@media screen and (min-width:1400px){.main-navigation ul>li{padding:6px 5px}
+.about-intro .flexwrap.half .flexcol.textCol{padding:5vw 3vw}
 .about-fullwidth .wrapper{padding-top:5vw;padding-bottom:5vw}
 }@media screen and (min-width:1500px){.events-content-block .post-item{padding:4vw 3vw}
 .events-content-block .post-item .inside .textcol{padding-left:2vw}

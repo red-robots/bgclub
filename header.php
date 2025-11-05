@@ -40,7 +40,11 @@ const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v
 </head>
 <body <?php body_class(); ?>>
 
-<?php get_template_part('parts/announcement'); ?>
+<?php
+  get_template_part('parts/announcement');
+
+  $donate = get_field('donate_link','option');
+?>
 
 <div id="page" class="site cf">
   <div id="overlay"></div>
@@ -52,10 +56,10 @@ const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v
           <div class="site-logo"><?php the_custom_logo(); ?></div>
         <?php } ?>
 
-        <a href="#" id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
+        <a href="#" id="menu-toggle" class="menu-toggle <?php echo ($donate) ? 'has-donate-btn' : ''; ?>" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></a>
 
         <div class="navOverlay"></div>
-        <nav id="site-navigation" class="main-navigation" role="navigation">
+        <nav id="site-navigation" class="main-navigation <?php echo ($donate) ? 'has-donate-btn' : ''; ?>" role="navigation">
           <?php
           wp_nav_menu(
             array(
@@ -68,6 +72,17 @@ const params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v
           );
           ?>
         </nav>
+        <?php 
+          $donate_button_text = (isset($donate['title']) && $donate['title']) ? $donate['title'] : '';
+          $donate_button_link = (isset($donate['url']) && $donate['url']) ? $donate['url'] : '';
+          $donate_button_target = (isset($donate['target']) && $donate['target']) ? $donate['target'] : '_self';
+
+          if($donate_button_text && $donate_button_link) {
+        ?>
+          <div class="donate-btn">
+            <a href="<?php echo $donate_button_link; ?>" target="<?php echo $donate_button_target; ?>"><?php echo $donate_button_text; ?></a>
+          </div>
+        <?php } ?>
       </div>
     </div>
   </header>

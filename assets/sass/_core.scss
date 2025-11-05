@@ -183,6 +183,13 @@ a,input,button,textarea,select {
     display: inline-block;
     position: relative;
     padding: 6px 5px;
+
+    @media screen and (min-width: 1230px) {
+      padding: 6px 0;
+    }
+    @media screen and (min-width: 1400px) {
+      padding: 6px 5px;
+    }
   }
   ul > li > a {
     display: inline-block;
@@ -198,7 +205,13 @@ a,input,button,textarea,select {
   ul > li:hover > a,
   ul > li > a:hover {
     color: $green;
-  } 
+  }
+
+  @media screen and (min-width: 1230px) {
+    &.has-donate-btn {
+      margin-right: 135px;
+    }
+  }
 }
 
 .main-navigation ul > li > a {
@@ -1848,6 +1861,48 @@ body.error404 {
   }
   ul.menu > li  ul.sub-menu a {
     font-size: 16px;
+  }
+}
+.donate-btn {
+  display: none;
+  position: absolute;
+  z-index: 5;
+
+  @include xs {
+    display: inline-block;
+    top: 22px;
+    right: 98px;
+  }
+
+  @include mid {
+    top: 29px;
+  }
+
+  @media screen and (min-width: 1230px) {
+    right: 20px;
+  }
+
+  a {
+    background-color: $yellow;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    letter-spacing: .1em;
+    line-height: 1.1;
+    color: #FFF;
+    min-width: 125px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    text-decoration: none;
+    * {
+      transition: all ease .3s;
+    }
+    &:hover {
+      background-color: $green;
+    }
   }
 }
 
