@@ -282,7 +282,6 @@ jQuery(document).ready(function ($) {
 
   // Top Supporters - Homepage
   if ($('.support-slider').length) {
-    console.log(1);
     $('.support-slider').slick({
       dots: true,
       infinite: true,
@@ -292,21 +291,51 @@ jQuery(document).ready(function ($) {
       prevArrow:'<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
       nextArrow:'<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
       responsive: [{
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
+          slidesToScroll: 3
         }
       }, {
-        breakpoint: 600,
+        breakpoint: 880,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
         }
       }, {
-        breakpoint: 480,
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+    });
+  }
+
+  //Donors page
+  if ($('.gallery-slider').length) {
+    $('.gallery-slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      prevArrow:'<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+      nextArrow:'<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+      responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      }, {
+        breakpoint: 880,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

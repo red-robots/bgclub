@@ -1038,10 +1038,25 @@ a,input,button,textarea,select {
     font-size: clamp(2.15rem, 8vw, 38px);
     font-weight: 600;
     line-height: 1.2;
-    margin: 0 0;
+    margin: 0 0 30px;
     padding-top: 65px;
     color: #707070;
     border-top: 1px solid #e0e0e0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+
+    &:after {
+      content: "";
+      background-color: $blue;
+      height: 5px;
+      width: 80px;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
   .gallery-column {
     display: flex;
@@ -2744,7 +2759,8 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   }
 }
 
-.support-slider.slick-slider {
+.support-slider.slick-slider,
+.gallery-slider.slick-slider {
   margin: 20px auto;
   max-width: 280px;
 
@@ -2772,7 +2788,9 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
 
 /* Styling the navigation arrows */
 .support-slider .slick-prev,
-.support-slider .slick-next {
+.support-slider .slick-next,
+.gallery-slider .slick-prev,
+.gallery-slider .slick-next {
   background-color: $blue;
   color: white;
   font-size: 24px;
@@ -2782,8 +2800,10 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   text-align: center;
   z-index: 10;
 
-  &:hover {
-    background-color: $green;
+  &:hover,
+  &:active {
+    background-color: $green !important;
+    color: white !important;
   }
 
   &:before {
@@ -2791,16 +2811,19 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   }
 }
 
-.support-slider .slick-prev {
+.support-slider .slick-prev,
+.gallery-slider .slick-prev {
   left: -50px;
 }
 
-.support-slider .slick-next {
+.support-slider .slick-next,
+.gallery-slider .slick-next {
   right: -50px;
 }
 
 /* Styling the pagination dots */
-.support-slider .slick-dots li button:before {
+.support-slider .slick-dots li button:before,
+.gallery-slider .slick-dots li button:before {
   content: "";
   top: 50%;
   left: 50%;
@@ -2812,17 +2835,20 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   background-color: $gray;
 }
 
-.support-slider .slick-dots li.slick-active button:before {
+.support-slider .slick-dots li.slick-active button:before,
+.gallery-slider .slick-dots li.slick-active button:before {
   background-color: $blue;
 }
 
 /* Styling individual slides */
-.support-slider .slick-slide {
+.support-slider .slick-slide,
+.gallery-slider .slick-slide {
   padding: 10px;
   text-align: center;
 }
 
-.support-slider .slick-slide img {
+.support-slider .slick-slide img,
+.gallery-slider .slick-slide img {
   max-width: 100%;
   height: auto;
 }

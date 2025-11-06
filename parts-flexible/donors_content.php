@@ -20,19 +20,21 @@
       <?php if ($gallery) { $count = count($gallery); ?>
       <div class="wrapper">
         <div class="gallery-column galler-count-<?php echo $count ?>">
-        <?php foreach ($gallery as $g) { 
-          $websiteUrl = get_field('attachment_website', $g['ID']);
-        ?>
-        <figure>
-          <?php if ($websiteUrl) { ?>
-            <a href="<?php echo $websiteUrl ?>" class="image-anchor-link" target="_blank">
-              <img src="<?php echo $g['url'] ?>" alt="<?php echo $g['title'] ?>" class="gallery">
-            </a>
-          <?php } else { ?>
-            <img src="<?php echo $g['url'] ?>" alt="<?php echo $g['title'] ?>" class="gallery">
-          <?php } ?>
-        </figure>
-        <?php } ?>
+          <div class="gallery-slider">
+            <?php foreach ($gallery as $g) { 
+              $websiteUrl = get_field('attachment_website', $g['ID']);
+            ?>
+              <figure>
+                <?php if ($websiteUrl) { ?>
+                  <a href="<?php echo $websiteUrl ?>" class="image-anchor-link" target="_blank">
+                    <img src="<?php echo $g['url'] ?>" alt="<?php echo $g['title'] ?>" class="gallery">
+                  </a>
+                <?php } else { ?>
+                  <img src="<?php echo $g['url'] ?>" alt="<?php echo $g['title'] ?>" class="gallery">
+                <?php } ?>
+              </figure>
+            <?php } ?>
+          </div>
         </div>
       </div>  
       <?php } ?>
