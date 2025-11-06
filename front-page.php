@@ -131,9 +131,11 @@
       </div>
     </section>
     <?php
-        }
+      }
 
-        get_template_part( 'parts/top', 'supporters' );    
+      get_template_part( 'parts/top', 'supporters' );
+
+      get_template_part( 'parts/social', 'news' );  
     ?>
 
   <?php endwhile; ?>

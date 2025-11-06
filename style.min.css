@@ -1816,6 +1816,19 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .support-slider .slick-dots li.slick-active button:before{background-color:#006fba}
 .support-slider .slick-slide{padding:10px;text-align:center}
 .support-slider .slick-slide img{max-width:100%;height:auto}
+.social-container h2{color:#fff;font-size:36px;margin-bottom:15px;text-align:center;width:100%}
+.social-container .flexwap{margin-left:-10px;margin-right:-10px}
+.social-container .flexwap .flexcol{display:-webkit-box;display:-ms-flexbox;display:flex;width:50%;padding:0 10px;text-align:center}
+.social-container .flexwap .flexcol .inner{background-color:#7fb02c;position:relative;width:100%}
+.social-container .flexwap .flexcol .caption{padding:7% 20px 20px;position:relative;top:0;left:0;width:100%;z-index:10}
+.social-container .flexwap .flexcol .caption .title{font-size:3rem;font-weight:800;line-height:1.3;letter-spacing:-0.03em;color:#fff}
+.social-container .flexwap .flexcol .caption .btn{display:inline-block;text-decoration:none;padding:10px 20px;border-radius:100px;-webkit-box-shadow:5px 8px 4px rgba(0,0,0,.2);box-shadow:5px 8px 4px rgba(0,0,0,.2);text-transform:uppercase;letter-spacing:.2em;color:#fff;border:1px solid #fff;font-size:16px;font-weight:800;line-height:1.2;min-width:220px;text-align:center;margin-top:20px}
+.social-container .flexwap .flexcol .caption .btn:hover,.social-container .flexwap .flexcol .caption .btn:focus{background:#3b3e37 !important}
+.social-container .flexwap.col-1{width:100%}
+.social-container .news-results .flexwrap{margin-left:15px;margin-right:15px}
+.social-container .news-results .fcol{width:100%}
+.social-container .news-results .fcol .inside{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.social-container .news-results .feat-image a{height:100%}
 @media(min-width:768px){.donate-btn{display:inline-block;top:22px;right:98px}
 .support-slider.slick-slider{max-width:620px}
 }@media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
@@ -1839,6 +1852,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .news-section-wrapper{padding-top:80px;padding-bottom:100px}
 .news-results .flexwrap{margin-left:-20px;margin-right:-20px}
 .news-results .fcol{padding:30px 20px;width:33.33%}
+.social-container .news-results .fcol{padding:0 15px 30px}
 }@media screen and (min-width:1025px){.two_column_image_and_text .flexwrap.half{min-height:600px}
 .two_column_image_and_text .flexwrap.half .textcol,.two_column_image_and_text .flexwrap.half .imagecol{width:50%}
 .two_column_image_and_text .flexwrap.half .textcol{padding:30px 5vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -1855,6 +1869,8 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .two_column_icons_and_gallery .flexwrap .textcol .inside{padding:0 5vw}
 .two_column_icons_and_gallery .flexwrap .imagecol .gallery-column.multiple-images figure img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
 }@media(min-width:1200px){.support-slider.slick-slider{max-width:970px}
+.social-container .news-results .feat-image{width:50%}
+.social-container .news-results .textwrap{text-align:left;width:50%}
 }@media screen and (min-width:1230px){.main-navigation ul>li{padding:6px 0}
 .main-navigation.has-donate-btn{margin-right:135px}
 .donate-btn{right:20px}
@@ -1928,6 +1944,7 @@ body.logged-in.admin-bar .main-navigation .primary-menu-container{margin-top:45p
 .site-footer .footer-flexwrap .flexcol{width:100% !important;padding:10px 0;text-align:center}
 .site-footer .footer-flexwrap .flexcol.footer-logo{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-bottom:20px}
 .site-footer:before{height:120px;top:-120px}
+.social-container .flexwap .flexcol{width:100%}
 }@media screen and (max-width:768px){.all-events-list .button-group .button-block{width:100%;text-align:center}
 .about-intro .flexwrap .flexcol{width:100% !important}
 .about-intro .flexwrap figure img{position:relative;height:auto}
