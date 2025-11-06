@@ -2893,10 +2893,18 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     }
   }
 
-  .ig-wrapper #sb_instagram {
-    #sbi_images {
-      .sbi_item {
-        background-color: #FFF;
+  .ig-wrapper {
+    padding: 0 20px;
+
+    @include tab {
+      padding: 0 30px;
+    }
+
+    #sb_instagram {
+      #sbi_images {
+        .sbi_item {
+          background-color: #FFF;
+        }
       }
     }
   }
