@@ -161,6 +161,7 @@ function social_icons() {
         'instagram' => 'fab fa-instagram',
         'youtube'   => 'fab fa-youtube',
         'vimeo'  => 'fab fa-vimeo',
+        'flickr'   => 'fab fa-flickr',
     );
     return $social_types;
 }
