@@ -2712,4 +2712,112 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   }
 }
 
+// Top Supporters - Homepage using slick
+.support-container {
+  padding: 15px 0 50px;
+  text-align: center;
 
+  h2,
+  .content {
+    color: $color_text_main;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .content {
+    margin: 0 auto 30px;
+    max-width: 770px;
+    a {
+      color: $blue;
+      font-weight: 700;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+.support-slider.slick-slider {
+  margin: 20px auto;
+  max-width: 280px;
+
+  @include xs {
+    max-width: 620px;
+  }
+
+  @include tab {
+    max-width: 890px;
+  }
+
+  @include desk {
+    max-width: 970px;
+  }
+
+  .slider-info {
+    a {
+      display: block;
+    }
+    figure {
+      margin: 0 1em;
+    }
+  }
+}
+
+/* Styling the navigation arrows */
+.support-slider .slick-prev,
+.support-slider .slick-next {
+  background-color: $blue;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 10;
+
+  &:hover {
+    background-color: $green;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+.support-slider .slick-prev {
+  left: -50px;
+}
+
+.support-slider .slick-next {
+  right: -50px;
+}
+
+/* Styling the pagination dots */
+.support-slider .slick-dots li button:before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 4px;
+  border-radius: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: $gray;
+}
+
+.support-slider .slick-dots li.slick-active button:before {
+  background-color: $blue;
+}
+
+/* Styling individual slides */
+.support-slider .slick-slide {
+  padding: 10px;
+  text-align: center;
+}
+
+.support-slider .slick-slide img {
+  max-width: 100%;
+  height: auto;
+}

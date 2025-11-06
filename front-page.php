@@ -130,7 +130,11 @@
         <?php } ?>
       </div>
     </section>
-    <?php } ?>
+    <?php
+        }
+
+        get_template_part( 'parts/top', 'supporters' );    
+    ?>
 
   <?php endwhile; ?>
   </main>
