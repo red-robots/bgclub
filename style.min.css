@@ -1705,6 +1705,7 @@ body.error404 .innerText{text-align:center}
 .donate-btn a{background-color:#f8ad00;border-radius:50px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;letter-spacing:.1em;line-height:1.1;color:#fff;min-width:125px;text-transform:uppercase;padding:10px 25px;text-decoration:none}
 .donate-btn a *{-webkit-transition:all ease .3s;transition:all ease .3s}
 .donate-btn a:hover{background-color:#7fb02c}
+.scrolling .donate-btn{top:16px}
 ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .site-main .intro-text .simcal-calendar{margin-top:80px;margin-bottom:80px;border:1px solid #ccc}
 .site-main .intro-text .simcal-align-right:has(.post-edit-link){margin:10px 0;padding:0 20px;display:inline-block;float:right}
