@@ -23,7 +23,7 @@
       <div class="flexcol">
         <div class="inner">
           <h2><?php echo ($title) ? $title : 'Social'; ?></h2>
-          <?php echo do_shortcode($shortcode); ?>
+          <div class="ig-wrapper"><?php echo do_shortcode($shortcode); ?></div>
         </div>
       </div>
     <?php endif; ?>

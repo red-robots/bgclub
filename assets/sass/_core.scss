@@ -2836,7 +2836,6 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     text-align: center;
     width: 100%;
   }
-
   .flexwap {
     margin-left: -10px;
     margin-right: -10px;
@@ -2891,6 +2890,14 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     }
     &.col-1 {
       width: 100%;
+    }
+  }
+
+  .ig-wrapper #sb_instagram {
+    #sbi_images {
+      .sbi_item {
+        background-color: #FFF;
+      }
     }
   }
 

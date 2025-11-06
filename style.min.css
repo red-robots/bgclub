@@ -1825,6 +1825,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .social-container .flexwap .flexcol .caption .btn{display:inline-block;text-decoration:none;padding:10px 20px;border-radius:100px;-webkit-box-shadow:5px 8px 4px rgba(0,0,0,.2);box-shadow:5px 8px 4px rgba(0,0,0,.2);text-transform:uppercase;letter-spacing:.2em;color:#fff;border:1px solid #fff;font-size:16px;font-weight:800;line-height:1.2;min-width:220px;text-align:center;margin-top:20px}
 .social-container .flexwap .flexcol .caption .btn:hover,.social-container .flexwap .flexcol .caption .btn:focus{background:#3b3e37 !important}
 .social-container .flexwap.col-1{width:100%}
+.social-container .ig-wrapper #sb_instagram #sbi_images .sbi_item{background-color:#fff}
 .social-container .news-results .flexwrap{margin-left:15px;margin-right:15px}
 .social-container .news-results .fcol{width:100%}
 .social-container .news-results .fcol .inside{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
