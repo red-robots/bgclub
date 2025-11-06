@@ -2903,8 +2903,15 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     #sb_instagram {
       #sbi_images {
         .sbi_item {
+          border-radius: 8px;
           background-color: #FFF;
+          .sbi_photo {
+            border-radius: 8px;
+          }
         }
+      }
+      .sbi_photo_wrap {
+        padding: 15px 15px 0;
       }
     }
   }

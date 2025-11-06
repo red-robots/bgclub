@@ -1826,7 +1826,9 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .social-container .flexwap .flexcol .caption .btn:hover,.social-container .flexwap .flexcol .caption .btn:focus{background:#3b3e37 !important}
 .social-container .flexwap.col-1{width:100%}
 .social-container .ig-wrapper{padding:0 20px}
-.social-container .ig-wrapper #sb_instagram #sbi_images .sbi_item{background-color:#fff}
+.social-container .ig-wrapper #sb_instagram #sbi_images .sbi_item{border-radius:8px;background-color:#fff}
+.social-container .ig-wrapper #sb_instagram #sbi_images .sbi_item .sbi_photo{border-radius:8px}
+.social-container .ig-wrapper #sb_instagram .sbi_photo_wrap{padding:15px 15px 0}
 .social-container .news-results .flexwrap{margin-left:15px;margin-right:15px}
 .social-container .news-results .fcol{width:100%}
 .social-container .news-results .fcol .inside{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
