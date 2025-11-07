@@ -20,7 +20,7 @@
   <div class="flexwap <?php echo $colClass; ?>">
     
     <?php if($shortcode): ?>
-      <div class="flexcol">
+      <div class="flexcol" data-aos="fade-right">
         <div class="inner">
           <h2><?php echo ($title) ? $title : 'Social'; ?></h2>
           <div class="ig-wrapper"><?php echo do_shortcode($shortcode); ?></div>
@@ -30,7 +30,7 @@
 
     <!-- News -->
     <?php if ( $posts ) { ?>
-      <div class="flexcol">
+      <div class="flexcol" data-aos="fade-right">
         <div class="inner">
           <div class="news-results">
             <div id="newsContent">

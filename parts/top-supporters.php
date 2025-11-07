@@ -8,16 +8,16 @@
 ?>
 <section class="support-container">
   <div class="wrapper">
-    <h2><?php echo $title; ?></h2>
+    <h2 data-aos="fade-down"><?php echo $title; ?></h2>
     <?php if($content): ?>
-      <div class="content">
+      <div class="content" data-aos="fade-down">
         <?php echo $content; ?>
       </div>
     <?php
       endif;
     
       if( have_rows('companies') ): ?>
-        <div class="support-slider">
+        <div class="support-slider" data-aos="fade-down">
           <?php while( have_rows('companies') ): the_row(); 
               $image = get_sub_field('company_image');
               //$name = get_sub_field('company_name');

@@ -371,6 +371,7 @@ jQuery(document).ready(function ($) {
         }
       }]
     });
+    AOS.init();
   } //Donors page
 
 
@@ -403,5 +404,6 @@ jQuery(document).ready(function ($) {
         }
       }]
     });
+    AOS.init();
   }
 });
