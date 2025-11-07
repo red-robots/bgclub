@@ -1564,7 +1564,7 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .fullwidth_content_repeatable_bgimage .button-link a{border-radius:50px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;font-weight:18px;font-weight:600;letter-spacing:.1em;line-height:1.1;width:190px;padding:12px 25px;text-decoration:none}
 .fullwidth_content_repeatable_bgimage .button-link a *{-webkit-transition:all ease .3s;transition:all ease .3s}
 .fullwidth_content_repeatable_bgimage .button-link a:hover{background-color:#f8ad00}
-.fullwidth_content_repeatable.has-overlay{position:relative;z-index:1}
+.fullwidth_content_repeatable.has-overlay{background-position:center center;background-repeat:no-repeat;background-size:cover;position:relative;z-index:1}
 .fullwidth_content_repeatable.has-overlay .wrapper{position:relative;z-index:2}
 .fullwidth_content_repeatable.has-overlay:after{content:"";height:100%;width:100%;position:absolute;opacity:.6;left:0;top:0;z-index:1}
 .repeatable--donors_content{padding:50px 0 20px}
