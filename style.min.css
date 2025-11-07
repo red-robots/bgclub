@@ -1561,7 +1561,6 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .repeatable--donors_content .wrapper{max-width:100%}
 .repeatable--donors_content h2.s-title{font-size:clamp(2.15rem,8vw,38px);font-weight:600;line-height:1.2;margin:0 0 30px;padding-top:65px;color:#707070;border-top:1px solid #e0e0e0;text-align:center;position:relative;padding-bottom:30px}
 .repeatable--donors_content h2.s-title:after{content:"";background-color:#006fba;height:5px;width:80px;margin:0 auto;position:absolute;bottom:0;left:0;right:0}
-.repeatable--donors_content .gallery-column{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;gap:1em;padding-top:30px;padding-bottom:0}
 .repeatable--donors_content .gallery-column figure{margin:0;width:calc(20% - 1em);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .repeatable--donors_content .gallery-column figure img{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s}
 .repeatable--donors_content .gallery-column figure a.image-anchor-link{display:inline-block;-webkit-transition:all ease .3s;transition:all ease .3s}

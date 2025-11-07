@@ -1059,12 +1059,12 @@ a,input,button,textarea,select {
     }
   }
   .gallery-column {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-    padding-top: 30px;
-    padding-bottom: 0;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // gap: 1em;
+    // padding-top: 30px;
+    // padding-bottom: 0;
     figure {
       margin: 0 0;
       width: calc(20% - 1em);
