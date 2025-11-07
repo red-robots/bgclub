@@ -21,8 +21,8 @@
                     <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
                 </figure>
                 <?php } ?>
-                <?php if ($title) { ?>
-                  <h3 class="s-title"><?php echo $title ?></h3>
+                <?php if ($document_title) { ?>
+                  <h3 class="s-title"><?php echo $document_title; ?></h3>
                 <?php } ?>
                 <?php 
                   $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : 'View';
