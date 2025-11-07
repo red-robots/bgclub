@@ -10,7 +10,8 @@ if( have_rows('flexible_content', $post_id) ) { ?>
     include( locate_template('parts-flexible/two_column_icons_and_gallery.php') ); 
     include( locate_template('parts-flexible/simple_fullwidth_content_normal.php') ); 
     include( locate_template('parts-flexible/donors_content.php') );
-    include( locate_template('parts-flexible/fullwidth_content_bgimage.php') ); 
+    include( locate_template('parts-flexible/fullwidth_content_bgimage.php') );
+    include( locate_template('parts-flexible/three_column_image_and_downloads.php') );
     ?>
 
   <?php $i++; endwhile; ?>

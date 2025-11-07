@@ -1038,32 +1038,6 @@ a,input,button,textarea,select {
         font-size: 16px;
       }
     }
-    .button-link {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-      a {
-        border-radius: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        font-weight: 18px;
-        font-weight: 600;
-        letter-spacing: .1em;
-        line-height: 1.1;
-        width: 190px;
-        padding: 12px 25px;
-        text-decoration: none;
-        * {
-          transition: all ease .3s;
-        }
-        &:hover {
-          background-color: $yellow;
-        }
-      }
-    }
   }
   &.has-overlay {
     background-position: center center;
@@ -1084,6 +1058,34 @@ a,input,button,textarea,select {
       left: 0;
       top: 0;
       z-index: 1;
+    }
+  }
+}
+.button-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  a {
+    background-color: $yellow;
+    border-radius: 50px;
+    color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    font-weight: 18px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    line-height: 1.1;
+    width: 190px;
+    padding: 12px 25px;
+    text-decoration: none;
+    * {
+      transition: all ease .3s;
+    }
+    &:hover {
+      background-color: $green;
     }
   }
 }
@@ -1357,6 +1359,48 @@ a,input,button,textarea,select {
         float: left;
         img {
           float: left;
+        }
+      }
+    }
+  }
+}
+
+.three_column_image_and_downloads {
+  h2 {
+    text-align: center;
+  }
+  .flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+    .flexcol {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      @include tab {
+        width: 33.333%;
+      }
+
+      .inside {
+        width: 100%;
+        padding: 50px 30px;
+        text-align: center;
+        @media screen and (min-width: 1025px) {
+          padding: 50px 5vw;
+        }
+      }
+      .s-title {
+        font-size: 28px;
+        color: $gray;
+        margin: 0 0 20px;
+      }
+
+      figure {
+        margin: 0 0 20px;
+        img {
+          width: 100%;
+          height: auto;
         }
       }
     }
