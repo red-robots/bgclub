@@ -1022,6 +1022,67 @@ a,input,button,textarea,select {
   &.adjust-padding-bottom .wrapper {
     padding-bottom: 50px;
   }
+  &_bgimage {
+    text-align: center;
+    .flexwrap {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+
+      h2 {
+        font-size: 36px;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .button-link {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      a {
+        border-radius: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        font-weight: 18px;
+        font-weight: 600;
+        letter-spacing: .1em;
+        line-height: 1.1;
+        width: 190px;
+        padding: 12px 25px;
+        text-decoration: none;
+        * {
+          transition: all ease .3s;
+        }
+        &:hover {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  &.has-overlay {
+    position: relative;
+    z-index: 1;
+    .wrapper {
+      position: relative;
+      z-index: 2;
+    }
+    &:after {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      opacity: 0.6;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
 }
 .repeatable--donors_content {
   padding: 50px 0 20px;
