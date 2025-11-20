@@ -23,7 +23,7 @@
 
         <?php if ($title || $content) { ?>
         <div class="textBlock">
-          <div class="wrap">
+          <div class="wrap" data-aos="fade-right">
             <?php if ($title) { ?>
             <h2 class="title"><?php echo $title ?></h2>
             <?php } ?>  
