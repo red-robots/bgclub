@@ -3088,6 +3088,14 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
 }
 
 .two_column_text_number_blocks {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &.next--two_column_image_and_text {
+    padding-bottom: 0;
+  }
+  &.prev--two_column_image_and_text {
+    padding-top: 0;
+  }
   .section-intro {
     margin-bottom: 20px;
     h2 {

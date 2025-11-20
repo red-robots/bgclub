@@ -121,6 +121,18 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  if ($('.repeatable').length) {
+    $('.repeatable').each(function () {
+      if ($(this).next().hasClass('two_column_image_and_text')) {
+        $(this).addClass('next--two_column_image_and_text');
+      }
+
+      if ($(this).prev().hasClass('two_column_image_and_text')) {
+        $(this).addClass('prev--two_column_image_and_text');
+      }
+    });
+  }
+
   if ($('.repeatable--donors_content').length) {
     $('.repeatable--donors_content').eq(0).addClass('first');
     $('.repeatable--donors_content').last().addClass('last');
