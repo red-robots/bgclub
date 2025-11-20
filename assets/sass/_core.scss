@@ -3120,6 +3120,9 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
           @include mid {
             padding: 30px 6vw;
           }
+          h2 {
+            margin: 0 0;
+          }
         }
       }
       .numbersBlock.numbers-content {

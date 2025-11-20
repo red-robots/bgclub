@@ -1861,6 +1861,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .two_column_text_number_blocks .section-columns .flexwrap .textBlock,.two_column_text_number_blocks .section-columns .flexwrap .numbersBlock{width:100%}
 .two_column_text_number_blocks .section-columns .flexwrap .textBlock{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap{width:100%;padding:30px 30px}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap h2{margin:0}
 .two_column_text_number_blocks .section-columns .flexwrap .numbersBlock.numbers-content .numCol .block{min-height:20vw}
 .two_column_text_number_blocks .section-columns .flexwrap .numbersBlock.numbers-content .flexcol{width:100%}
 .two_column_text_number_blocks .section-columns .flexwrap.numbers-block-left{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
