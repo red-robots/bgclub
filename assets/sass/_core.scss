@@ -3097,9 +3097,12 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     padding-top: 0;
   }
   .section-intro {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     h2 {
       margin: 0 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
     }
   }
   .section-columns {
