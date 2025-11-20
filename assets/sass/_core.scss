@@ -3111,7 +3111,10 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
           padding: 30px;
         }
       }
-      .numbersBlock {
+      .numbersBlock.numbers-content {
+        .numCol .block {
+          min-height: 20vw;
+        }
         .flexcol {
           width: 100%;
         }
