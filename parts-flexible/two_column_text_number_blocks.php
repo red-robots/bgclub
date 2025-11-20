@@ -4,7 +4,7 @@
   $content = get_sub_field('textcontent');
   $numbers = get_sub_field('numbers');
   $numbers_position = get_sub_field('numbers_block_position');
-  $column_class = ( ($title || $content) && $image ) ? 'half':'full';
+  $column_class = ( ($title || $content) && $numbers ) ? 'half':'full';
   if($numbers_position) {
     $column_class .=' numbers-block-' . $numbers_position;
   }
