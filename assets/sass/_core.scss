@@ -3108,7 +3108,10 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
         align-items: center;
         .wrap {
           width: 100%;
-          padding: 30px;
+          padding: 30px 30px;
+          @include mid {
+            padding: 30px 6vw;
+          }
         }
       }
       .numbersBlock.numbers-content {
@@ -3125,7 +3128,10 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     }
     .flexwrap.half {
       .textBlock, .numbersBlock {
-        width: 50%;
+        width: 100%;
+        @include mid {
+          width: 50%;
+        }
       }
     }
   }

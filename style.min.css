@@ -1857,11 +1857,11 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .two_column_text_number_blocks .section-columns .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .two_column_text_number_blocks .section-columns .flexwrap .textBlock,.two_column_text_number_blocks .section-columns .flexwrap .numbersBlock{width:100%}
 .two_column_text_number_blocks .section-columns .flexwrap .textBlock{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap{width:100%;padding:30px}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap{width:100%;padding:30px 30px}
 .two_column_text_number_blocks .section-columns .flexwrap .numbersBlock.numbers-content .numCol .block{min-height:20vw}
 .two_column_text_number_blocks .section-columns .flexwrap .numbersBlock.numbers-content .flexcol{width:100%}
 .two_column_text_number_blocks .section-columns .flexwrap.numbers-block-left{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
-.two_column_text_number_blocks .section-columns .flexwrap.half .textBlock,.two_column_text_number_blocks .section-columns .flexwrap.half .numbersBlock{width:50%}
+.two_column_text_number_blocks .section-columns .flexwrap.half .textBlock,.two_column_text_number_blocks .section-columns .flexwrap.half .numbersBlock{width:100%}
 @media(min-width:768px){.donate-btn{display:inline-block;top:22px;right:98px}
 .support-slider.slick-slider,.gallery-slider.slick-slider{max-width:620px}
 }@media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
@@ -1888,6 +1888,8 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .news-results .flexwrap{margin-left:-20px;margin-right:-20px}
 .news-results .fcol{padding:30px 20px;width:33.33%}
 .social-container .news-results .fcol{padding:0 15px 30px}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap{padding:30px 6vw}
+.two_column_text_number_blocks .section-columns .flexwrap.half .textBlock,.two_column_text_number_blocks .section-columns .flexwrap.half .numbersBlock{width:50%}
 }@media screen and (min-width:1025px){.two_column_image_and_text .flexwrap.half{min-height:600px}
 .two_column_image_and_text .flexwrap.half .textcol,.two_column_image_and_text .flexwrap.half .imagecol{width:50%}
 .two_column_image_and_text .flexwrap.half .textcol{padding:30px 5vw;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
