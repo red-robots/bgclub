@@ -24,7 +24,7 @@ a {
     text-decoration: none;
   }
 }
-.sr {
+.sr, .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -73,6 +73,8 @@ a,input,button,textarea,select {
     background: $orange;
   }
 }
+
+
 .site {
   overflow: hidden;
 }
@@ -1181,6 +1183,9 @@ a,input,button,textarea,select {
   }
 }
 
+p:has(img.aligncenter) {
+  text-align: center;
+}
 .simple_fullwidth_content_normal {
   padding: 50px 0;
   @media screen and (min-width: 1380px) {
@@ -1372,6 +1377,7 @@ a,input,button,textarea,select {
   .flexwrap {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     .flexcol {
       width: 100%;
       display: flex;

@@ -1392,7 +1392,7 @@ html,body,*,::before,::after{box-sizing:border-box;-moz-box-sizing:border-box;-w
 p{letter-spacing:.03em}
 a,input,button,textarea{-webkit-transition:all ease .3s;transition:all ease .3s}
 a:hover{text-decoration:none}
-.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;color:#fff;background:#000;display:inline-block}
+.sr,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;color:#fff;background:#000;display:inline-block}
 body{font-family:"Manrope",sans-serif;font-size:16px;line-height:1.5}
 h1,h2,h3,h4,h5,h6{font-family:"Manrope",sans-serif !important;font-weight:bold;line-height:1.2}
 h2{font-size:50px;font-weight:700;letter-spacing:.01em}
@@ -1580,6 +1580,7 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .repeatable--donors_content .gallery-column figure img{width:auto;height:100px}
 .repeatable--donors_content.repeatable--donors_content-1 h2.s-title{padding-top:0;margin-top:0;border-top:0}
 .repeatable--donors_content.last{padding-bottom:80px}
+p:has(img.aligncenter){text-align:center}
 .simple_fullwidth_content_normal{padding:50px 0}
 .simple_fullwidth_content_normal h1,.simple_fullwidth_content_normal h2,.simple_fullwidth_content_normal h3,.simple_fullwidth_content_normal h4,.simple_fullwidth_content_normal h5,.simple_fullwidth_content_normal h6{margin:0 0 5px}
 .two_column_image_and_downloads{background:#e0e1e3}
@@ -1607,7 +1608,7 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .two_column_icons_and_gallery .flexwrap.half{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .two_column_icons_and_gallery .flexwrap.half.gallery-right{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .three_column_image_and_downloads h2{text-align:center}
-.three_column_image_and_downloads .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.three_column_image_and_downloads .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .three_column_image_and_downloads .flexwrap .flexcol{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
 .three_column_image_and_downloads .flexwrap .flexcol .inside{width:100%;padding:50px 30px;text-align:center}
 .three_column_image_and_downloads .flexwrap .flexcol .s-title{font-size:28px;color:#818386;margin:0 0 20px}
