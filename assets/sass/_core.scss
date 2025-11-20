@@ -3126,6 +3126,9 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
           h2 {
             margin: 0 0;
           }
+          @include max(979px) {
+            text-align: center;
+          }
         }
       }
       .numbersBlock.numbers-content {
