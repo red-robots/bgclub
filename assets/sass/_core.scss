@@ -3090,6 +3090,9 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
 .two_column_text_number_blocks {
   .section-intro {
     margin-bottom: 20px;
+    h2 {
+      margin: 0 0;
+    }
   }
   .section-columns {
     .flexwrap {
@@ -3112,7 +3115,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     .flexwrap.numbers-block-left {
       flex-direction: row-reverse;
     }
-    .flexwrap:has(.textBlock):has(.numbersBlock) {
+    .flexwrap.half {
       .textBlock, .numbersBlock {
         width: 50%;
       }
