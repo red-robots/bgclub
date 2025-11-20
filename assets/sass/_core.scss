@@ -3086,3 +3086,37 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
     }
   }
 }
+
+.two_column_text_number_blocks {
+  .section-intro {
+    margin-bottom: 20px;
+  }
+  .section-columns {
+    .flexwrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .textBlock, .numbersBlock {
+        width: 100%;
+      }
+      .textBlock {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .wrap {
+          width: 100%;
+          padding: 30px;
+        }
+      }
+    }
+    .flexwrap.numbers-block-left {
+      flex-direction: row-reverse;
+    }
+    .flexwrap:has(.textBlock):has(.numbersBlock) {
+      .textBlock, .numbersBlock {
+        width: 50%;
+      }
+    }
+  }
+}
+

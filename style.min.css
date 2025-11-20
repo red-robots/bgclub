@@ -1852,6 +1852,13 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .social-container .news-results .fcol{width:100%}
 .social-container .news-results .fcol .inside{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .social-container .news-results .feat-image a{height:100%}
+.two_column_text_number_blocks .section-intro{margin-bottom:20px}
+.two_column_text_number_blocks .section-columns .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock,.two_column_text_number_blocks .section-columns .flexwrap .numbersBlock{width:100%}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap{width:100%;padding:30px}
+.two_column_text_number_blocks .section-columns .flexwrap.numbers-block-left{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.two_column_text_number_blocks .section-columns .flexwrap:has(.textBlock):has(.numbersBlock) .textBlock,.two_column_text_number_blocks .section-columns .flexwrap:has(.textBlock):has(.numbersBlock) .numbersBlock{width:50%}
 @media(min-width:768px){.donate-btn{display:inline-block;top:22px;right:98px}
 .support-slider.slick-slider,.gallery-slider.slick-slider{max-width:620px}
 }@media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}

@@ -12,6 +12,7 @@ if( have_rows('flexible_content', $post_id) ) { ?>
     include( locate_template('parts-flexible/donors_content.php') );
     include( locate_template('parts-flexible/fullwidth_content_bgimage.php') );
     include( locate_template('parts-flexible/three_column_image_and_downloads.php') );
+    include( locate_template('parts-flexible/two_column_text_number_blocks.php') );
     ?>
 
   <?php $i++; endwhile; ?>
