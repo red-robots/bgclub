@@ -51,7 +51,6 @@
   "dependencies": {
     "ansi-colors": "^4.1.1",
     "beeper": "^3.0.0",
-    "caniuse-lite": "^1.0.30001504",
     "chokidar": "^3.5.2",
     "date-format": "^3.0.0",
     "debug": "^4.3.3",

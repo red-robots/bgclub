@@ -2,6 +2,8 @@
   $title = get_sub_field('title');
   $content = get_sub_field('details');
   $gallery = get_sub_field('images');
+  $hide_indicators = get_sub_field('hide_carousel_indicators');
+  $has_indicators = ($hide_indicators) ? '' : 'true';
   if($title || $content || $gallery) { ?>
   <div class="repeatable-content repeatable--<?php echo get_row_layout() ?> repeatable--<?php echo get_row_layout() ?>-<?php echo $i ?>">
     <div class="repeatable-inner">
@@ -20,7 +22,7 @@
       <?php if ($gallery) { $count = count($gallery); ?>
       <div class="wrapper">
         <div class="gallery-column galler-count-<?php echo $count ?>">
-          <div class="gallery-slider">
+          <div class="gallery-slider" data-has-indicators="<?php echo $has_indicators ?>">
             <?php foreach ($gallery as $g) { 
               $websiteUrl = get_field('attachment_website', $g['ID']);
             ?>
