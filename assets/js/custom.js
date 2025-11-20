@@ -344,7 +344,7 @@ jQuery(document).ready(function ($) {
 
   if ($('.support-slider').length) {
     $('.support-slider').slick({
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 300,
       slidesToShow: 5,
