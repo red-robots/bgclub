@@ -431,6 +431,9 @@ a,input,button,textarea,select {
   background: #EDEEEF;
   padding-top: 40px;
   padding-bottom: 80px;
+  &:has(.flexcol.empty) {
+    padding-top: 60px;
+  }
   h2.section-title {
     text-align: center;
     color: #818386;
@@ -439,6 +442,7 @@ a,input,button,textarea,select {
   .flexwrap {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     .flexcol.left {
       width: 70%;
     }
@@ -460,6 +464,33 @@ a,input,button,textarea,select {
     }
     .flexcol.fullwidth {
       width: 100%!important;
+    }
+    
+    .flexcol:empty,
+    .flexcol.empty {
+      display: none;
+    }
+
+    &:has(.flexcol.empty) {
+      .flexcol {
+        width: auto;
+      }
+      .flexcol:has(.simcal-event-details) {
+        #eventCalendarList {
+          width: 100%;
+          @include tab {
+            column-count: 2;
+            .simcal-event-details {
+              margin-top: 0;
+              margin-bottom: 30px;
+            }
+          }
+        }
+        .buttondiv {
+          display: flex;
+          justify-content: center;
+        }
+      }
     }
   }
 

@@ -424,5 +424,13 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  if ($('.events-content-block .flexcol').length) {
+    $('.events-content-block .flexcol').each(function () {
+      if ($(this).text().trim().replace(/\s+/g, '') == '' && $(this).find('img').length == 0) {
+        $(this).addClass('empty');
+      }
+    });
+  }
+
   AOS.init();
 });

@@ -1458,13 +1458,18 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .numbers-content .numCol .block .number{font-family:"Jost",sans-serif;font-size:5rem;font-weight:600;line-height:1.1;letter-spacing:-0.02em;margin-bottom:10px}
 .numbers-content .numCol .block .description{font-size:25px;font-weight:300;line-height:1.5;letter-spacing:.03em}
 .events-content-block{background:#edeeef;padding-top:40px;padding-bottom:80px}
+.events-content-block:has(.flexcol.empty){padding-top:60px}
 .events-content-block h2.section-title{text-align:center;color:#818386;margin:0 0 35px}
-.events-content-block .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.events-content-block .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .events-content-block .flexwrap .flexcol.left{width:70%}
 .events-content-block .flexwrap .flexcol.right{width:30%;padding-left:30px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .events-content-block .flexwrap .flexcol.right #gcalendarData,.events-content-block .flexwrap .flexcol.right #gCalendarList,.events-content-block .flexwrap .flexcol.right .buttondiv{width:100%}
 .events-content-block .flexwrap .flexcol.right .buttondiv{margin-top:20px}
 .events-content-block .flexwrap .flexcol.fullwidth{width:100% !important}
+.events-content-block .flexwrap .flexcol:empty,.events-content-block .flexwrap .flexcol.empty{display:none}
+.events-content-block .flexwrap:has(.flexcol.empty) .flexcol{width:auto}
+.events-content-block .flexwrap:has(.flexcol.empty) .flexcol:has(.simcal-event-details) #eventCalendarList{width:100%}
+.events-content-block .flexwrap:has(.flexcol.empty) .flexcol:has(.simcal-event-details) .buttondiv{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .events-content-block #gcalendarData .simcal-calendar{height:1px;min-height:1px;overflow:hidden;opacity:0}
 .events-content-block #gcalendarData .simcal-calendar p{margin:0}
 .events-content-block #gcalendarData .simcal-calendar a.post-edit-link{display:none}
@@ -1873,7 +1878,9 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 @media(min-width:768px){.donate-btn{display:inline-block;top:22px;right:98px}
 .support-slider.slick-slider,.gallery-slider.slick-slider{max-width:620px}
 }@media screen and (min-width:821px){.all-events-list .news .post-item{width:50%}
-}@media(min-width:880px){.three_column_image_and_downloads .flexwrap .flexcol{width:33.333%}
+}@media(min-width:880px){.events-content-block .flexwrap:has(.flexcol.empty) .flexcol:has(.simcal-event-details) #eventCalendarList{-webkit-column-count:2;-moz-column-count:2;column-count:2}
+.events-content-block .flexwrap:has(.flexcol.empty) .flexcol:has(.simcal-event-details) #eventCalendarList .simcal-event-details{margin-top:0;margin-bottom:30px}
+.three_column_image_and_downloads .flexwrap .flexcol{width:33.333%}
 .news-results .fcol{width:50%;padding:20px 20px}
 #content .site-main.single-post{padding-top:60px;padding-bottom:60px}
 #content .site-main.single-post .hentry{margin-bottom:0}
