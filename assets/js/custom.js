@@ -71,7 +71,6 @@ jQuery(document).ready(function ($) {
     month: 'long'
   });
   var currentDate = monthName + ' ' + day + ', ' + year;
-  AOS.init();
   scrolling_screen();
   $(window).on('scroll', function () {
     scrolling_screen();
@@ -424,4 +423,6 @@ jQuery(document).ready(function ($) {
       }]
     });
   }
+
+  AOS.init();
 });

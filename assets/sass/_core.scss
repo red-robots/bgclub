@@ -2848,9 +2848,12 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
 
 // Top Supporters - Homepage using slick
 .support-container {
-  padding: 15px 0 50px;
+  padding: 50px 0 50px;
   text-align: center;
-
+  min-height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   h2,
   .content {
     color: $color_text_main;
@@ -3119,9 +3122,14 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
         align-items: center;
         .wrap {
           width: 100%;
-          padding: 30px 30px;
+          padding: 40px 30px 60px;
           @include mid {
             padding: 30px 6vw;
+          }
+          div.buttons {
+            display: inline-flex;
+            gap: 1rem;
+            margin-top: 25px;
           }
           h2 {
             margin: 0 0;
@@ -3129,6 +3137,15 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
           @include max(979px) {
             text-align: center;
           }
+        }
+        &.text-align-right .text {
+          text-align: right;
+          @include max(979px) {
+            text-align: center;
+          }
+        }
+        &.text-align-center .text {
+          text-align: center;
         }
       }
       .numbersBlock.numbers-content {

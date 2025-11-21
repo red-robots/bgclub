@@ -1817,7 +1817,7 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .breadcrumb a#nextpost:after{-webkit-transform:translateY(5px) rotate(-45deg);transform:translateY(5px) rotate(-45deg)}
 .breadcrumb a#nextpost:hover:before,.breadcrumb a#nextpost:hover:after{margin-right:-3px}
 .morediv.endpage,.morediv.endpage div{display:none !important}
-.support-container{padding:15px 0 50px;text-align:center}
+.support-container{padding:50px 0 50px;text-align:center;min-height:450px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .support-container h2,.support-container .content{color:#868686}
 .support-container h2{font-size:36px;font-weight:700}
 .support-container .content{margin:0 auto 30px;max-width:770px}
@@ -1861,8 +1861,11 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .two_column_text_number_blocks .section-columns .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .two_column_text_number_blocks .section-columns .flexwrap .textBlock,.two_column_text_number_blocks .section-columns .flexwrap .numbersBlock{width:100%}
 .two_column_text_number_blocks .section-columns .flexwrap .textBlock{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap{width:100%;padding:30px 30px}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap{width:100%;padding:40px 30px 60px}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap div.buttons{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;gap:1rem;margin-top:25px}
 .two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap h2{margin:0}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock.text-align-right .text{text-align:right}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock.text-align-center .text{text-align:center}
 .two_column_text_number_blocks .section-columns .flexwrap .numbersBlock.numbers-content .numCol .block{min-height:20vw}
 .two_column_text_number_blocks .section-columns .flexwrap .numbersBlock.numbers-content .flexcol{width:100%}
 .two_column_text_number_blocks .section-columns .flexwrap.numbers-block-left{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
@@ -1969,6 +1972,7 @@ body.logged-in.admin-bar .main-navigation .primary-menu-container{margin-top:45p
 .site-footer .footer-inner{padding-top:20px;padding-bottom:20px}
 .site-footer .footer-flexwrap .flexcol{width:50%;padding:30px 0}
 }@media screen and (max-width:979px){.two_column_text_number_blocks .section-columns .flexwrap .textBlock .wrap{text-align:center}
+.two_column_text_number_blocks .section-columns .flexwrap .textBlock.text-align-right .text{text-align:center}
 }@media screen and (max-width:960px){.two_column_image_and_text .flexwrap .imagecol{width:100% !important;padding-bottom:65%}
 .two_column_icons_and_gallery .flexwrap .imagecol{height:unset !important}
 .two_column_icons_and_gallery .flexwrap .imagecol .gallery-column figure{height:auto !important;width:100% !important;float:left}

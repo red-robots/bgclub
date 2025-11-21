@@ -14,8 +14,6 @@ jQuery(document).ready(function ($) {
   let monthName = dateNow.toLocaleString('default', { month: 'long' });
   let currentDate = monthName + ' ' + day + ', ' + year;
 
-  AOS.init();
-
   scrolling_screen();
   $(window).on('scroll', function(){
     scrolling_screen();
@@ -362,7 +360,11 @@ jQuery(document).ready(function ($) {
       }]
     });
   }
+
+  AOS.init();
+
 }); 
+
 
 
 

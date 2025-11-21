@@ -17,7 +17,7 @@
       endif;
     
       if( have_rows('companies') ): ?>
-        <div class="support-slider" data-aos="fade-down">
+        <div class="support-slider">
           <?php while( have_rows('companies') ): the_row(); 
               $image = get_sub_field('company_image');
               //$name = get_sub_field('company_name');
@@ -31,7 +31,6 @@
                     <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>">
                   </figure>
                 <?php if( $link ){ echo '</a>'; } ?>
-                <!-- <p><?php echo $name; ?></p> -->
               </div>
           <?php
               endif;
