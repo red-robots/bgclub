@@ -42,7 +42,7 @@
 
         <?php if ($title || $content) { ?>
         <div class="textBlock text-align-<?php echo $text_alignment ?>">
-          <div class="wrap" data-aos="fade-right">
+          <div class="wrap" data-aos="fade-right" data-aos-delay="500">
             <?php if ($title) { ?>
             <h2 class="title"><?php echo $title ?></h2>
             <?php } ?>  
