@@ -59,7 +59,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  *  Date Modified: 04.04.2024
  */
 jQuery(document).ready(function ($) {
-  AOS.init();
   var params = {};
   location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) {
     params[k] = v;
@@ -72,6 +71,7 @@ jQuery(document).ready(function ($) {
     month: 'long'
   });
   var currentDate = monthName + ' ' + day + ', ' + year;
+  AOS.init();
   scrolling_screen();
   $(window).on('scroll', function () {
     scrolling_screen();

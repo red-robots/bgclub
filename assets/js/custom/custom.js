@@ -4,10 +4,7 @@
  *  Date Modified: 04.04.2024
  */
 
-
 jQuery(document).ready(function ($) {
-
-  AOS.init();
   
   var params = {}; location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) { params[k] = v });
   let dateNow = new Date();
@@ -17,10 +14,13 @@ jQuery(document).ready(function ($) {
   let monthName = dateNow.toLocaleString('default', { month: 'long' });
   let currentDate = monthName + ' ' + day + ', ' + year;
 
+  AOS.init();
+
   scrolling_screen();
   $(window).on('scroll', function(){
     scrolling_screen();
   });
+  
   
   function scrolling_screen() {
     var adminBarHeight = 0;
