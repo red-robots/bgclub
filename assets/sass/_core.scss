@@ -1033,6 +1033,13 @@ a,input,button,textarea,select {
   }
 }
 .fullwidth_content_repeatable {
+  .inner-content {
+    position: relative;
+    z-index: 10;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .wrapper {
     min-height: 300px;
     display: flex;
@@ -1043,9 +1050,16 @@ a,input,button,textarea,select {
       font-size: 2.2rem;
       font-weight: 300;
       line-height: 1.5;
+      &.embed {
+        min-height: 30em;
+      }
       @media screen and (min-width: 1025px) {
         max-width: 1000px;
         margin: 0 auto;
+        &.embed {
+          max-width: 1200px;
+          min-height: 40em;
+        }
       }
     }
     @media screen and (min-width: 961px) {
@@ -1082,7 +1096,7 @@ a,input,button,textarea,select {
       position: relative;
       z-index: 2;
     }
-    &:after {
+    .inner-content:after {
       content: '';
       height: 100%;
       width: 100%;
@@ -3124,6 +3138,10 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
 .two_column_text_number_blocks {
   padding-top: 50px;
   padding-bottom: 50px;
+  .s-title.fullwidth {
+    text-align: center;
+    color: $color_text_main;
+  }
   &.next--two_column_image_and_text {
     padding-bottom: 0;
   }
@@ -3199,6 +3217,120 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
         }
       }
     }
+
+    &.watch-section {
+
+      .textBlock, .numbersBlock {
+        opacity: 0;
+        transition-property: opacity, transform;
+        transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+        transition-duration: .5s;
+      }
+      .textBlock {
+        transform: translate3d(-100px, 0, 0);
+      }
+      .numbersBlock {
+        transform: translate3d(100px, 0, 0);
+        transition-delay: 0.5s;
+      }
+      &.in-view {
+        .textBlock, .numbersBlock {
+          opacity: 1;
+          transform: translateZ(0);
+        }
+      }
+    }
+  }
+
+  &:has(.watch-section) {
+    .s-title.fullwidth {
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+      transition-duration: .5s;
+      transform: translate3d(0, 100px, 0);
+    }
+    &:has(.in-view) .s-title.fullwidth {
+      opacity: 1;
+      transform: translateZ(0);
+    }
   }
 }
+
+.two_column_image_and_text {
+  &.watch-section {
+    .textcol, .imagecol {
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+      transition-duration: .5s;
+    }
+    .image-left {
+      .imagecol {
+        transform: translate3d(-100px, 0, 0);
+      }
+      .textcol {
+        transform: translate3d(100px, 0, 0);
+        transition-delay: 0.5s;
+      }
+    }
+    .image-right {
+      .imagecol {
+        transform: translate3d(100px, 0, 0);
+      }
+      .textcol {
+        transform: translate3d(-100px, 0, 0);
+        transition-delay: 0.5s;
+      }
+    }
+    &.in-view {
+      .textcol, .imagecol {
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+  }
+}
+
+.fullwidth_content_repeatable {
+  &.watch-section {
+    overflow: hidden;
+    .inner-content {
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+      transition-duration: .5s;
+      transform: translate3d(0, 100px, 0);
+    }
+    &.in-view .inner-content {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+}
+
+body:has(.site-main .watch-section) {
+  .newsletter-footer-widget.watch-section {
+    .textcol, .imagecol {
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+      transition-duration: .5s;
+    }
+    .imagecol {
+      transform: translate3d(-100px, 0, 0);
+    }
+    .textcol {
+      transform: translate3d(100px, 0, 0);
+      transition-delay: 0.5s;
+    }
+    &.in-view {
+      .textcol, .imagecol {
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+  }
+}
+
 

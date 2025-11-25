@@ -58,6 +58,26 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  *	Developed by: Lisa DeBona
  *  Date Modified: 04.04.2024
  */
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelectorAll(".watch-section")) {
+    var sections = document.querySelectorAll(".watch-section");
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view");
+        }
+      });
+    }, {
+      threshold: 0.5 // Trigger when 50% of section is visible
+
+    });
+    sections.forEach(function (sec) {
+      return observer.observe(sec);
+    });
+  }
+});
 jQuery(document).ready(function ($) {
   var params = {};
   location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) {

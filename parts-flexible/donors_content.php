@@ -6,7 +6,7 @@
   $has_indicators = ($hide_indicators) ? '' : 'true';
   if($title || $content || $gallery) { ?>
   <div class="repeatable-content repeatable--<?php echo get_row_layout() ?> repeatable--<?php echo get_row_layout() ?>-<?php echo $i ?>">
-    <div class="repeatable-inner">
+    <div class="repeatable-inner" data-aos="fade-up">
       
       <?php if ($title || $content) { ?>
       <div class="wrapper">

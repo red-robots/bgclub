@@ -4,6 +4,26 @@
  *  Date Modified: 04.04.2024
  */
 
+document.addEventListener("DOMContentLoaded", function () {
+  if( document.querySelectorAll(".watch-section") ) {
+    const sections = document.querySelectorAll(".watch-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view");
+        }
+      });
+    }, {
+        threshold: 0.5  // Trigger when 50% of section is visible
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  }
+});
+
+
 jQuery(document).ready(function ($) {
   
   var params = {}; location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) { params[k] = v });

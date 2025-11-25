@@ -8,14 +8,16 @@
   $button_color = (get_sub_field('button_color')) ? get_sub_field('button_color') : '#7FB02C';
   $button_text_color = (get_sub_field('button_text_color')) ? get_sub_field('button_text_color') : '#FFFFFF';
   $has_class = ($bgimage) ? 'has-overlay' : '';
+  $is_in_view = (isset($has__embed__script) && $has__embed__script) ? ' watch-section':'';
+
   if($title || $content) { ?>
   <?php if($overlaycolor || $textcolor || $bgimage){ ?>
     <style>
       <?php if($bgimage) { ?>
-        #fullwidth_content_repeatable--<?php echo $i ?>{
+        #fullwidth_content_repeatable--<?php echo $i ?> .inner-content {
           background-image: url('<?php echo $bgimage['url']; ?>');
         }
-        #fullwidth_content_repeatable--<?php echo $i ?>.has-overlay:after{
+        #fullwidth_content_repeatable--<?php echo $i ?>.has-overlay .inner-content:after{
           background-color: <?php echo $overlaycolor; ?>
         }
       <?php } ?>
@@ -40,22 +42,24 @@
     </style>
     <?php } ?>
 
-    <div id="fullwidth_content_repeatable--<?php echo $i ?>" class="fullwidth_content_repeatable fullwidth_content_repeatable_bgimage repeatable <?php echo $has_class; ?>">
-      <div class="wrapper">
-        <div class="flexwrap">
-          <h2><?php echo $title; ?></h2>
-          <div class="textwrap"><?php echo $content; ?></div>
-          <?php 
-            $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
-            $button_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
-            $button_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
+    <div id="fullwidth_content_repeatable--<?php echo $i ?>" class="fullwidth_content_repeatable fullwidth_content_repeatable_bgimage repeatable <?php echo $has_class; ?><?php echo $is_in_view; ?>"<?php echo (empty($is_in_view)) ? ' data-aos="fade-up"':'' ?>>
+      <div class="inner-content">
+        <div class="wrapper">
+          <div class="flexwrap">
+            <h2><?php echo $title; ?></h2>
+            <div class="textwrap"><?php echo $content; ?></div>
+            <?php 
+              $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
+              $button_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
+              $button_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
 
-            if($button_text && $button_link) {
-          ?>
-            <div class="button-link">
-              <a href="<?php echo $button_link; ?>" target="<?php echo $button_target; ?>"><?php echo $button_text; ?></a>
-            </div>
-          <?php } ?>
+              if($button_text && $button_link) {
+            ?>
+              <div class="button-link">
+                <a href="<?php echo $button_link; ?>" target="<?php echo $button_target; ?>"><?php echo $button_text; ?></a>
+              </div>
+            <?php } ?>
+          </div>
         </div>
       </div>
     </div>

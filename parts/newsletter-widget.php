@@ -5,7 +5,7 @@ $newsletter_title2 = get_field('newsletter_title2','option');
 $newsletter_text = get_field('newsletter_text','option');
 $newsletter_html = get_field('newsletter_html','option');
 if($newsletter_image || $newsletter_html || $newsletter_text ) { ?>
-<section class="newsletter-footer-widget">
+<section class="newsletter-footer-widget watch-section">
   <div class="flexwrap">
     <?php if ($newsletter_image) { ?>
     <figure class="imageCol" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="300" data-aos-offset="100">

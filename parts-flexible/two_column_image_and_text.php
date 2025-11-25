@@ -13,8 +13,10 @@
     $column_class .=' image-' . $image_position;
   }
   $paper_edge = ($has_paper_edge) ? ' has-paper-edge':'';
+  $is_in_view = (isset($has__embed__script) && $has__embed__script) ? ' watch-section':'';
+
   if($title || $content || $image) { ?>
-  <div class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> repeatable<?php echo $paper_edge ?>">
+  <div class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> repeatable<?php echo $paper_edge ?><?php echo $is_in_view ?>">
     <style>
       .two_column_image_and_text--<?php echo $i ?> h2,
       .two_column_image_and_text--<?php echo $i ?> p {color:<?php echo $textcolor ?>;}

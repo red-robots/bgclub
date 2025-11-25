@@ -1,4 +1,5 @@
 <?php 
+$has__embed__script = '';
 $post_id = get_the_ID();
 if( have_rows('flexible_content', $post_id) ) { ?>
   <?php $i=1; while( have_rows('flexible_content',$post_id) ): the_row(); ?>
