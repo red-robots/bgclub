@@ -29,13 +29,22 @@
       <?php } ?>
     </style>
 
-    <?php if ($title) { ?>
-    <div class="wrapper">
-      <h2 class="s-title fullwidth"><?php echo $title ?></h2>
+    <?php if ($title || $section_intro) { ?>
+    <div class="section_intro">
+      <div class="wrapper">
+        <?php if ($title) { ?>
+        <h2 class="s-title fullwidth"><?php echo $title ?></h2>
+        <?php } ?>
+        <?php if ($section_intro) { ?>
+        <div class="intro">
+          <?php echo anti_email_spam($section_intro) ?>
+        </div>
+        <?php } ?> 
+      </div>
     </div>
     <?php } ?> 
-    
-    <?php if ($title || $content || $numbers) { 
+
+    <?php if ($content || $numbers) { 
       $is_in_view = (isset($has__embed__script) && $has__embed__script) ? ' watch-section':'';
     ?>
     <div class="section-columns<?php echo $is_in_view ?>">

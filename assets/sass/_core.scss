@@ -3148,10 +3148,18 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   &.prev--two_column_image_and_text {
     padding-top: 0;
   }
-  .section-intro {
+  .section_intro {
     margin-bottom: 40px;
+    color: $color_text_main;
+    text-align: center;
+    h2,p,li {
+      color: $color_text_main!important;
+    }
     h2 {
       margin: 0 0;
+    }
+    p:first-child {
+      margin-top: 0;
     }
     p:last-child {
       margin-bottom: 0;
@@ -3243,14 +3251,14 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn {
   }
 
   &:has(.watch-section) {
-    .s-title.fullwidth {
+    .section_intro {
       opacity: 0;
       transition-property: opacity, transform;
       transition-timing-function: cubic-bezier(.25, .25, .75, .75);
       transition-duration: .5s;
       transform: translate3d(0, 100px, 0);
     }
-    &:has(.in-view) .s-title.fullwidth {
+    &:has(.in-view) .section_intro {
       opacity: 1;
       transform: translateZ(0);
     }
