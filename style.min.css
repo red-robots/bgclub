@@ -1558,6 +1558,7 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .two_column_image_and_text.has-paper-edge .s-title.fullwidth{width:100%;text-align:center;margin:0;padding:60px 0 40px}
 .two_column_image_and_text p a{display:inline-block}
 .two_column_image_and_text p a:hover,.two_column_image_and_text p a:focus{-webkit-transform:translateY(-2px);transform:translateY(-2px);opacity:.82;text-decoration:none}
+.fullwidth_content_repeatable:has(.textwrap.embed){padding-top:30px;padding-bottom:30px}
 .fullwidth_content_repeatable .inner-content{position:relative;z-index:10;background-size:cover;background-position:center;background-repeat:no-repeat}
 .fullwidth_content_repeatable .wrapper{min-height:300px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .fullwidth_content_repeatable .wrapper .textwrap{width:100%;font-size:2.2rem;font-weight:300;line-height:1.5}
@@ -1895,6 +1896,15 @@ ul.menu-wrapper li.menu-item-has-children .dropdownListBtn{display:none}
 .fullwidth_content_repeatable.watch-section{overflow:hidden}
 .fullwidth_content_repeatable.watch-section .inner-content{opacity:0;-webkit-transition-property:opacity,-webkit-transform;transition-property:opacity,-webkit-transform;transition-property:opacity,transform;transition-property:opacity,transform,-webkit-transform;-webkit-transition-timing-function:cubic-bezier(0.25,0.25,0.75,0.75);transition-timing-function:cubic-bezier(0.25,0.25,0.75,0.75);-webkit-transition-duration:.5s;transition-duration:.5s;-webkit-transform:translate3d(0,100px,0);transform:translate3d(0,100px,0)}
 .fullwidth_content_repeatable.watch-section.in-view .inner-content{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}
+.top_text_3_column_images{padding-top:80px;padding-bottom:80px}
+.top_text_3_column_images .wrapper{max-width:960px;width:100%}
+.top_text_3_column_images .section-intro{text-align:center}
+.top_text_3_column_images .section-intro h2{margin:0}
+.top_text_3_column_images .section-intro .textwrap,.top_text_3_column_images .section-intro p{color:#6f6f6f}
+.top_text_3_column_images .gallery-column{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:-12px;margin-right:-12px}
+.top_text_3_column_images .gallery-column figure{margin:0;width:33.333%;padding:10px}
+.top_text_3_column_images .gallery-column figure img{width:100%;height:auto}
+.top_text_3_column_images:has(.section-intro):has(.gallery-column) .section-gallery{margin-top:50px}
 body:has(.site-main .watch-section) .newsletter-footer-widget.watch-section .textcol,body:has(.site-main .watch-section) .newsletter-footer-widget.watch-section .imagecol{opacity:0;-webkit-transition-property:opacity,-webkit-transform;transition-property:opacity,-webkit-transform;transition-property:opacity,transform;transition-property:opacity,transform,-webkit-transform;-webkit-transition-timing-function:cubic-bezier(0.25,0.25,0.75,0.75);transition-timing-function:cubic-bezier(0.25,0.25,0.75,0.75);-webkit-transition-duration:.5s;transition-duration:.5s}
 body:has(.site-main .watch-section) .newsletter-footer-widget.watch-section .imagecol{-webkit-transform:translate3d(-100px,0,0);transform:translate3d(-100px,0,0)}
 body:has(.site-main .watch-section) .newsletter-footer-widget.watch-section .textcol{-webkit-transform:translate3d(100px,0,0);transform:translate3d(100px,0,0);-webkit-transition-delay:.5s;transition-delay:.5s}
@@ -2032,6 +2042,7 @@ body.logged-in.admin-bar .main-navigation .primary-menu-container{margin-top:45p
 .modalContent .teamInfo.half .details,.modalContent .teamInfo.half .photo{width:100%}
 .modalContent .teamInfo.half .photo{max-width:350px;width:100%;margin:30px auto 0}
 .modalContent .teamInfo.half .photo .info{text-align:center}
+.top_text_3_column_images .gallery-column figure{max-width:350px;width:100%;margin:10px auto}
 }@media screen and (max-width:600px){.all-events-list .button-group .button-block{padding:5px 10px}
 .all-events-list .button-group .button-block a{display:block;width:100%}
 }@media screen and (max-width:500px){.modalWrapper .modalContainer{padding-left:20px;padding-right:20px}

@@ -6,6 +6,13 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   if( document.querySelectorAll(".watch-section") ) {
+    if( document.querySelectorAll('.repeatable') ) {
+      document.querySelectorAll('.repeatable').forEach(function(element,key){
+        element.classList.add('watch-section');
+        element.classList.remove('aos-animate');
+      });
+    }
+
     const sections = document.querySelectorAll(".watch-section");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -18,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, {
         threshold: 0.5  // Trigger when 50% of section is visible
     });
-
     sections.forEach(sec => observer.observe(sec));
   }
 });
