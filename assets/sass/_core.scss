@@ -3389,4 +3389,42 @@ body:has(.site-main .watch-section) {
   }
 }
 
+.site-content:has([class*="wp-block"]) {
+  overflow: hidden;
+  #primary {
+    padding-top: 0!important;
+    h1.page-title {
+      margin: 0 0;
+      padding: 30px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      min-height: 230px;
+      background: $secondary;
+      color: #FFF!important;
+      position: relative;
+      z-index: 2;
+      &:before {
+        content:"";
+        display: block;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background: $secondary;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+      span {
+        color: #FFF!important;
+        position: relative;
+        z-index: 5;
+      }
+    }
+  }
+}
+
 
